@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Collectfees_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7e6617fd-1257-4e73-a644-6db6f51cec11">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="feeCode" class="java.lang.String">
+		<fieldDescription><![CDATA[feeCode]]></fieldDescription>
+	</field>
+	<field name="feeName" class="java.lang.String">
+		<fieldDescription><![CDATA[feeName]]></fieldDescription>
+	</field>
+	<field name="totcost" class="java.lang.Double">
+		<fieldDescription><![CDATA[totcost]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="2" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement uuid="e136d320-aa44-4827-b50d-a3b7f6341868" x="42" y="12" width="170" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{feeCode}==null?"":$F{feeCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="054bf7a4-a102-4fd5-b6c5-dd494adb4ebd" x="382" y="12" width="170" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totcost}==null?"":$F{totcost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="22dddf66-da62-47e9-b692-c7bbc8a9a6ca" x="212" y="12" width="170" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{feeName}?"":$F{feeName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

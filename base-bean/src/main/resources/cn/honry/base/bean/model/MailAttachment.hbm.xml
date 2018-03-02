@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+	<class name="MailAttachment" table="T_OA_MAIL_ATTACHMENT">
+		<id name="id" type="java.lang.String">
+			<column name="ID"/>
+			<generator class="uuid"/>
+		</id>
+		<property name="cid" type="java.lang.String">
+			<column name="CID"/>
+		</property>
+		<property name="mid" type="java.lang.String">
+			<column name="MID"/>
+		</property>
+		<property name="fileName" type="java.lang.String">
+			<column name="FILE_NAME"/>
+		</property>
+		<property name="fileUrl" type="java.lang.String">
+			<column name="FILE_URL"/>
+		</property>
+		<property name="fileSize" type="java.lang.Integer">
+			<column name="FILE_SIZE"/>
+		</property>
+		<property name="createTime" type="java.sql.Timestamp">
+			<column name="CREATETIME"/>
+		</property>
+		<property name="updateTime" type="java.sql.Timestamp">
+			<column name="UPDATETIME"/>
+		</property>
+	</class>
+</hibernate-mapping>

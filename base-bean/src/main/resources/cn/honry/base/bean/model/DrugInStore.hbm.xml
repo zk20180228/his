@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="DrugInStore" table="T_DRUG_INSTORE" >
+        <comment>入库记录表</comment>
+        <id name="id" type="java.lang.String">
+            <column name="ID" />
+            <generator class="uuid" />
+        </id>
+        <property name="drugDeptCode" type="java.lang.String">
+            <column name="DRUG_DEPT_CODE" >
+                <comment>库存科室 0-全部部门</comment>
+            </column>
+        </property>
+        <property name="inBillCode" type="java.lang.String">
+            <column name="IN_BILL_CODE" >
+                <comment>入库单流水号</comment>
+            </column>
+        </property>
+        <property name="serialCode" type="java.lang.String">
+            <column name="SERIAL_CODE" >
+                <comment>序号</comment>
+            </column>
+        </property>
+        <property name="groupCode" type="java.lang.String">
+            <column name="GROUP_CODE" >
+                <comment>批次号</comment>
+            </column>
+        </property>
+        <property name="inListCode" type="java.lang.String">
+            <column name="IN_LIST_CODE" >
+                <comment>入库单据号(6位时间+6位流水号)</comment>
+            </column>
+        </property>
+        <property name="inType" type="java.lang.String">
+            <column name="IN_TYPE">
+                <comment>入库类型 1一般 2发票3核准4入库退库5特殊入库6手工退药7赠送8各科室退药9外部入库申请</comment>
+            </column>
+        </property>
+        <property name="inKind" type="java.lang.String">
+            <column name="IN_KIND" >
+                <comment>入库分类</comment>
+            </column>
+        </property>
+        <property name="outBillCode" type="java.lang.String">
+            <column name="OUT_BILL_CODE" >
+                <comment>出库单号</comment>
+            </column>
+        </property>
+        <property name="outSerialCode" type="java.lang.String">
+            <column name="OUT_SERIAL_CODE" >
+                <comment>出库单序号</comment>
+            </column>
+        </property>
+        <property name="outListCode" type="java.lang.String">
+            <column name="OUT_LIST_CODE" >
+                <comment>出库单据号</comment>
+            </column>
+        </property>
+        <property name="drugCode" type="java.lang.String">
+            <column name="DRUG_CODE" >
+                <comment>药品编码</comment>
+            </column>
+        </property>
+        <property name="tradeName" type="java.lang.String">
+            <column name="TRADE_NAME" >
+                <comment>药品商品名</comment>
+            </column>
+        </property>
+        <property name="drugType" type="java.lang.String">
+            <column name="DRUG_TYPE" >
+                <comment>药品类别</comment>
+            </column>
+        </property>
+        <property name="drugQuality" type="java.lang.String">
+            <column name="DRUG_QUALITY" >
+                <comment>药品性质</comment>
+            </column>
+        </property>
+        <property name="specs" type="java.lang.String">
+            <column name="SPECS" >
+                <comment>规格</comment>
+            </column>
+        </property>
+        <property name="packUnit" type="java.lang.String">
+            <column name="PACK_UNIT" >
+                <comment>包装单位</comment>
+            </column>
+        </property>
+        <property name="packQty" type="java.lang.Double">
+            <column name="PACK_QTY" precision="18" scale="4">
+                <comment>包装数</comment>
+            </column>
+        </property>
+        <property name="minUnit" type="java.lang.String">
+            <column name="MIN_UNIT" >
+                <comment>最小单位</comment>
+            </column>
+        </property>
+        <property name="showFlag" type="java.lang.Integer">
+            <column name="SHOW_FLAG" >
+                <comment>显示的单位标记 1 包装单位2最小单位</comment>
+            </column>
+        </property>
+        <property name="showUnit" type="java.lang.String">
+            <column name="SHOW_UNIT" >
+                <comment>显示的单位</comment>
+            </column>
+        </property>
+        <property name="batchNo" type="java.lang.String">
+            <column name="BATCH_NO" >
+                <comment>批号</comment>
+            </column>
+        </property>
+        <property name="validDate" type="java.util.Date">
+            <column name="VALID_DATE" length="7">
+                <comment>有效期</comment>
+            </column>
+        </property>
+        <property name="producerCode" type="java.lang.String">
+            <column name="PRODUCER_CODE" >
+                <comment>生产厂家</comment>
+            </column>
+        </property>
+        <property name="companyCode" type="java.lang.String">
+            <column name="COMPANY_CODE" >
+                <comment>供货单位代码</comment>
+            </column>
+        </property>
+        <property name="retailPrice" type="java.lang.Double">
+            <column name="RETAIL_PRICE" precision="18" scale="4">
+                <comment>零售价</comment>
+            </column>
+        </property>
+        <property name="wholesalePrice" type="java.lang.Double">
+            <column name="WHOLESALE_PRICE" precision="18" scale="4">
+                <comment>批发价</comment>
+            </column>
+        </property>
+        <property name="purchasePrice" type="java.lang.Double">
+            <column name="PURCHASE_PRICE" precision="18" scale="4">
+                <comment>购入价</comment>
+            </column>
+        </property>
+        <property name="inNum" type="java.lang.Double">
+            <column name="IN_NUM" precision="18" scale="4">
+                <comment>入库数</comment>
+            </column>
+        </property>
+        <property name="retailCost" type="java.lang.Double">
+            <column name="RETAIL_COST" precision="18" scale="4">
+                <comment>零售金额</comment>
+            </column>
+        </property>
+        <property name="wholesaleCost" type="java.lang.Double">
+            <column name="WHOLESALE_COST" precision="18" scale="4">
+                <comment>批发金额</comment>
+            </column>
+        </property>
+        <property name="purchaseCost" type="java.lang.Double">
+            <column name="PURCHASE_COST" precision="18" scale="4">
+                <comment>购入金额</comment>
+            </column>
+        </property>
+        <property name="storeNum" type="java.lang.Double">
+            <column name="STORE_NUM" precision="18" scale="4">
+                <comment>入库后库存数量</comment>
+            </column>
+        </property>
+        <property name="storeCost" type="java.lang.Double">
+            <column name="STORE_COST" precision="18" scale="4">
+                <comment>入库后库存总金额</comment>
+            </column>
+        </property>
+        <property name="specialFlag" type="java.lang.Integer">
+            <column name="SPECIAL_FLAG">
+                <comment>特殊标记，1是，0否</comment>
+            </column>
+        </property>
+        <property name="inState" type="java.lang.Integer">
+            <column name="IN_STATE" >
+                <comment>入库状态，0-申请，1-审批（发票入库），2-核准</comment>
+            </column>
+        </property>
+        <property name="applyNum" type="java.lang.Double">
+            <column name="APPLY_NUM" precision="18" scale="4">
+                <comment>申请入库量</comment>
+            </column>
+        </property>
+        <property name="applyOpercode" type="java.lang.String">
+            <column name="APPLY_OPERCODE" >
+                <comment>申请入库操作员</comment>
+            </column>
+        </property>
+        <property name="applyDate" type="java.util.Date">
+            <column name="APPLY_DATE" length="7">
+                <comment>申请入库日期</comment>
+            </column>
+        </property>
+        <property name="examNum" type="java.lang.Double">
+            <column name="EXAM_NUM" precision="18" scale="4">
+                <comment>审批数量</comment>
+            </column>
+        </property>
+        <property name="examOpercode" type="java.lang.String">
+            <column name="EXAM_OPERCODE" >
+                <comment>审批人（药库发票入库人）</comment>
+            </column>
+        </property>
+        <property name="examDate" type="java.util.Date">
+            <column name="EXAM_DATE" length="7">
+                <comment>审批日期（药库发票入库日期）</comment>
+            </column>
+        </property>
+        <property name="approveOpercode" type="java.lang.String">
+            <column name="APPROVE_OPERCODE" >
+                <comment>核准人</comment>
+            </column>
+        </property>
+        <property name="approveDate" type="java.util.Date">
+            <column name="APPROVE_DATE" length="7">
+                <comment>核准日期</comment>
+            </column>
+        </property>
+        <property name="placeCode" type="java.lang.String">
+            <column name="PLACE_CODE" precision="18" scale="4">
+                <comment>货位码</comment>
+            </column>
+        </property>
+        <property name="returnNum" type="java.lang.Double">
+            <column name="RETURN_NUM" precision="18" scale="4">
+                <comment>退库数量</comment>
+            </column>
+        </property>
+        <property name="applyNumber" type="java.lang.String">
+            <column name="APPLY_NUMBER" >
+                <comment>申请序号</comment>
+            </column>
+        </property>
+        <property name="medId" type="java.lang.String">
+            <column name="MED_ID" >
+                <comment>制剂序号－生产序号或检验序号</comment>
+            </column>
+        </property>
+        <property name="invoiceNo" type="java.lang.String">
+            <column name="INVOICE_NO" >
+                <comment>发票号</comment>
+            </column>
+        </property>
+        <property name="deliveryNo" type="java.lang.String">
+            <column name="DELIVERY_NO" >
+                <comment>送药单流水号</comment>
+            </column>
+        </property>
+        <property name="tenderNo" type="java.lang.String">
+            <column name="TENDER_NO" >
+                <comment>招标序号－招标单的序号</comment>
+            </column>
+        </property>
+        <property name="actualRate" type="java.lang.Double">
+            <column name="ACTUAL_RATE" precision="18" scale="4">
+                <comment>实际扣率</comment>
+            </column>
+        </property>
+        <property name="cashFlag" type="java.lang.Integer">
+            <column name="CASH_FLAG" >
+                <comment>现金标志</comment>
+            </column>
+        </property>
+        <property name="payState" type="java.lang.Integer">
+            <column name="PAY_STATE" >
+                <comment>供货商结存付款状态 0 未付 1 未全付 2 付清</comment>
+            </column>
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="REMARK" >
+                <comment>备注</comment>
+            </column>
+        </property>
+        <property name="purcharsePriceFirsttime" type="java.lang.Double">
+            <column name="PURCHARSE_PRICE_FIRSTTIME" precision="18" scale="4">
+                <comment>一般入库时的购入价</comment>
+            </column>
+        </property>
+        <property name="isTenderOffer" type="java.lang.Integer">
+            <column name="IS_TENDER_OFFER" >
+                <comment>招标标记，1是，0否</comment>
+            </column>
+        </property>
+        <property name="invoiceDate" type="java.util.Date">
+            <column name="INVOICE_DATE" length="7">
+                <comment>发票上的发票日期</comment>
+            </column>
+        </property>
+        <property name="inDate" type="java.util.Date">
+            <column name="IN_DATE" length="7">
+                <comment>入库时间，即实际入库发生时间</comment>
+            </column>
+        </property>
+        <property name="sourceCompanyType" type="java.lang.Integer">
+            <column name="SOURCE_COMPANY_TYPE" >
+                <comment>源科室（供货单位）类别 1 院内科室 2 供货单位 3 扩</comment>
+            </column>
+        </property>
+        <property name="opType" type="java.lang.String">
+            <column name="OP_TYPE" >
+                <comment>操作类型</comment>
+            </column>
+        </property>
+       <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT"  />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" />
+        </property>
+        <property name="hospitalId" type="java.lang.Integer">
+            <column name="HOSPITAL_ID">
+                <comment>所属医院</comment>
+            </column>
+        </property>
+        <property name="areaCode" type="java.lang.String">
+            <column name="AREA_CODE" length="20">
+                <comment>所属院区</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

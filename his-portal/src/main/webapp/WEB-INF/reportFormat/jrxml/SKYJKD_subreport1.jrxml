@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SKYJKD_subreport1" language="groovy" pageWidth="1147" pageHeight="802" columnWidth="1147" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="13bd27bb-fc89-4905-9347-d8d05caa0238">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="293"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="icash" class="java.lang.Double">
+		<fieldDescription><![CDATA[icash]]></fieldDescription>
+	</field>
+	<field name="icheck" class="java.lang.Double">
+		<fieldDescription><![CDATA[icheck]]></fieldDescription>
+	</field>
+	<field name="iother" class="java.lang.Double">
+		<fieldDescription><![CDATA[iother]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="ocash" class="java.lang.Double">
+		<fieldDescription><![CDATA[ocash]]></fieldDescription>
+	</field>
+	<field name="ocheck" class="java.lang.Double">
+		<fieldDescription><![CDATA[ocheck]]></fieldDescription>
+	</field>
+	<field name="oother" class="java.lang.Double">
+		<fieldDescription><![CDATA[oother]]></fieldDescription>
+	</field>
+	<field name="scash" class="java.lang.Double">
+		<fieldDescription><![CDATA[scash]]></fieldDescription>
+	</field>
+	<field name="scheck" class="java.lang.Double">
+		<fieldDescription><![CDATA[scheck]]></fieldDescription>
+	</field>
+	<field name="sother" class="java.lang.Double">
+		<fieldDescription><![CDATA[sother]]></fieldDescription>
+	</field>
+	<field name="time" class="java.lang.String">
+		<fieldDescription><![CDATA[time]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="7179ef0b-7a80-4ebb-89f4-637253ca23b8" x="0" y="0" width="104" height="34"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="471e18f0-130c-40e0-b5b7-452c9e7b6215" x="104" y="0" width="100" height="34"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{icash}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="2a8da5a5-e857-4473-8871-d4ba14521256" x="204" y="0" width="100" height="34"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{icheck}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d9d37b7f-b6aa-45e7-84c4-ee66e98fef55" x="304" y="0" width="100" height="34"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{iother}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="47289f02-1baa-4fef-b6be-4d94c6373b8a" x="404" y="0" width="100" height="34"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ocash}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1d528be1-f271-406e-a364-b8908fc9bd0c" x="504" y="0" width="100" height="34"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ocheck}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="043783da-94fc-4f30-a424-be8592bc44d7" x="604" y="0" width="100" height="34"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oother}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="7ebab24e-e533-400b-86d1-ca8daa0d1667" x="704" y="0" width="100" height="34"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{scash}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="048d308c-8d03-4e50-bde5-8bd23d4b5ef1" x="804" y="0" width="100" height="34"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{scheck}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="58b9ae52-f6f2-4831-b1ea-00cb8673d7cd" x="904" y="0" width="100" height="34"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sother}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="af48fee7-cfd1-4caa-8506-012a0881d128" x="1004" y="0" width="104" height="34"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

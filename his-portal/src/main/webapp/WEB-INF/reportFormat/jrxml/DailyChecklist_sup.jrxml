@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DailyChecklist_sup" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4ba7ae38-b9ca-4d41-a319-61f4a0d76053">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="unitPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[unitPrice]]></fieldDescription>
+	</field>
+	<field name="totCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost]]></fieldDescription>
+	</field>
+	<field name="qty" class="java.lang.Double">
+		<fieldDescription><![CDATA[qty]]></fieldDescription>
+	</field>
+	<field name="money" class="java.lang.Double">
+		<fieldDescription><![CDATA[money]]></fieldDescription>
+	</field>
+	<field name="inpatientNo" class="java.lang.String">
+		<fieldDescription><![CDATA[inpatientNo]]></fieldDescription>
+	</field>
+	<field name="feeRate" class="java.lang.Double">
+		<fieldDescription><![CDATA[feeRate]]></fieldDescription>
+	</field>
+	<field name="drug_name" class="java.lang.String">
+		<fieldDescription><![CDATA[drug_name]]></fieldDescription>
+	</field>
+	<field name="drugCode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCode]]></fieldDescription>
+	</field>
+	<field name="currentUnit" class="java.lang.String">
+		<fieldDescription><![CDATA[currentUnit]]></fieldDescription>
+	</field>
+	<field name="combNoflag" class="java.lang.String">
+		<fieldDescription><![CDATA[combNoflag]]></fieldDescription>
+	</field>
+	<field name="combNo" class="java.lang.String">
+		<fieldDescription><![CDATA[combNo]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField>
+				<reportElement uuid="24e27b3f-092c-4e6d-86e2-0b29193ea07b" x="313" y="0" width="64" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{unitPrice}?"":$F{unitPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f5001a2b-002c-4667-b873-615ce20b5df5" x="10" y="0" width="74" height="14" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{drugCode}?"":$F{drugCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="33f52d83-b0bf-45b7-8b9d-95024ac5a151" x="84" y="0" width="138" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{drug_name}?"":$F{drug_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="856b9429-3805-4d10-9638-5b45723897d3" x="259" y="0" width="54" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{currentUnit}?"":$F{currentUnit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7d73b107-97f2-4e47-8a2d-4dc622521e06" x="377" y="0" width="49" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{qty}?"":$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ce51229a-c17e-49d0-accd-36c59c51c4fb" x="426" y="0" width="38" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{totCost}?"":$F{totCost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c4b58304-d865-456b-b028-1acb0f34ebac" x="464" y="0" width="56" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{feeRate}?"":$F{feeRate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="856b9429-3805-4d10-9638-5b45723897d3" x="222" y="0" width="37" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{combNoflag}?"":$F{combNoflag}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

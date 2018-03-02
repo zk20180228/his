@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PYBQ_SUB" pageWidth="595" pageHeight="842" columnWidth="169" leftMargin="30" rightMargin="396" topMargin="0" bottomMargin="0" uuid="41d77912-3bee-40e2-8333-aba427e5fee5">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="ID" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="applyNum" class="java.lang.String">
+		<fieldDescription><![CDATA[applyNum]]></fieldDescription>
+	</field>
+	<field name="cardNo" class="java.lang.String">
+		<fieldDescription><![CDATA[cardNo]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="clinicCode" class="java.lang.String">
+		<fieldDescription><![CDATA[clinicCode]]></fieldDescription>
+	</field>
+	<field name="createTimeDay" class="java.lang.String">
+		<fieldDescription><![CDATA[createTimeDay]]></fieldDescription>
+	</field>
+	<field name="createTimeMon" class="java.lang.String">
+		<fieldDescription><![CDATA[createTimeMon]]></fieldDescription>
+	</field>
+	<field name="createTimeYear" class="java.lang.String">
+		<fieldDescription><![CDATA[createTimeYear]]></fieldDescription>
+	</field>
+	<field name="deptName" class="java.lang.String">
+		<fieldDescription><![CDATA[deptName]]></fieldDescription>
+	</field>
+	<field name="dfqCexp" class="java.lang.String">
+		<fieldDescription><![CDATA[dfqCexp]]></fieldDescription>
+	</field>
+	<field name="doctCode" class="java.lang.String">
+		<fieldDescription><![CDATA[doctCode]]></fieldDescription>
+	</field>
+	<field name="dose" class="java.lang.String">
+		<fieldDescription><![CDATA[dose]]></fieldDescription>
+	</field>
+	<field name="drugedDate" class="java.lang.String">
+		<fieldDescription><![CDATA[drugedDate]]></fieldDescription>
+	</field>
+	<field name="mark" class="java.lang.String">
+		<fieldDescription><![CDATA[mark]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="openedDate" class="java.lang.String">
+		<fieldDescription><![CDATA[openedDate]]></fieldDescription>
+	</field>
+	<field name="operName" class="java.lang.String">
+		<fieldDescription><![CDATA[operName]]></fieldDescription>
+	</field>
+	<field name="patientName" class="java.lang.String">
+		<fieldDescription><![CDATA[patientName]]></fieldDescription>
+	</field>
+	<field name="pres" class="java.util.List">
+		<fieldDescription><![CDATA[pres]]></fieldDescription>
+	</field>
+	<field name="recipeCost" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[recipeCost]]></fieldDescription>
+	</field>
+	<field name="recipeNo" class="java.lang.String">
+		<fieldDescription><![CDATA[recipeNo]]></fieldDescription>
+	</field>
+	<field name="sex" class="java.lang.String">
+		<fieldDescription><![CDATA[sex]]></fieldDescription>
+	</field>
+	<field name="specs" class="java.lang.String">
+		<fieldDescription><![CDATA[specs]]></fieldDescription>
+	</field>
+	<field name="tName" class="java.lang.String">
+		<fieldDescription><![CDATA[tName]]></fieldDescription>
+	</field>
+	<field name="tSendName" class="java.lang.String">
+		<fieldDescription><![CDATA[tSendName]]></fieldDescription>
+	</field>
+	<field name="useName" class="java.lang.String">
+		<fieldDescription><![CDATA[useName]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="10" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5d0a9a12-c8fc-463f-904b-97cd047a6a07" key="textField-1" x="-30" y="0" width="65" height="10"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e573bde1-5e77-44b6-b268-277c2d057630" key="textField-2" x="35" y="0" width="52" height="10"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{specs}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="a717f4ec-c698-4636-aaed-38a6bf7643b9" key="textField-3" x="87" y="0" width="52" height="10"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{applyNum}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

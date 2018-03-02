@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="EmrRecordMain" table="T_EMR_RECORD_MAIN">
+        <comment>患者电子病历</comment>
+        <id name="id" type="java.lang.String">
+            <column name="REC_ID" length="50" />
+            <generator class="uuid" />
+        </id>
+        <property name="code" type="java.lang.String">
+            <column name="REC_CODE">
+            </column>
+        </property>
+        <property name="date" type="java.sql.Timestamp">
+            <column name="REC_DATE">
+            </column>
+        </property>
+        <property name="paperDate" type="java.sql.Timestamp">
+            <column name="REC_PAPERDATE">
+            </column>
+        </property>
+        <property name="paperPerson" type="java.lang.String">
+            <column name="REC_PAPERPERSON">
+            </column>
+        </property>
+        <property name="state" type="java.lang.Integer">
+            <column name="REC_STATE">
+            </column>
+        </property>
+        <property name="signDate" type="java.sql.Timestamp">
+            <column name="REC_SIGNDATE">
+            </column>
+        </property>
+        <property name="signPerson" type="java.lang.String">
+            <column name="REC_SIGNPERSON">
+            </column>
+        </property>
+        <property name="cardId" type="java.lang.String">
+            <column name="REC_CARDID">
+            </column>
+        </property>
+        <property name="patientName" type="java.lang.String">
+            <column name="REC_PATIENTNAME">
+            </column>
+        </property>
+        <property name="patientSex" type="java.lang.String">
+            <column name="REC_PATIENTSEX">
+            </column>
+        </property>
+        <property name="patientAge" type="java.lang.Integer">
+            <column name="REC_PATIENTAGE">
+            </column>
+        </property>
+        <property name="patientBirth" type="java.sql.Timestamp">
+            <column name="REC_PATIENTBIRTH">
+            </column>
+        </property>
+        <property name="inDate" type="java.sql.Timestamp">
+            <column name="REC_INDATE">
+            </column>
+        </property>
+        <property name="outDate" type="java.sql.Timestamp">
+            <column name="REC_OUTDATE">
+            </column>
+        </property>
+        <property name="outDept" type="java.lang.String">
+            <column name="REC_OURDEPT">
+            </column>
+        </property>
+        <property name="dignose" type="java.lang.String">
+            <column name="REC_DIGNOSE">
+            </column>
+        </property>
+        <property name="inpatientDoc" type="java.lang.String">
+            <column name="REC_INPATIENTDOC">
+            </column>
+        </property>
+        <property name="attendingDoc" type="java.lang.String">
+            <column name="REC_ATTENDINGDOC">
+            </column>
+        </property>
+       
+        <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER"  />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER"  />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG">
+                <comment>停用标志</comment>
+            </column>
+        </property>
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG">
+                <comment>删除标志</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
+
+
+
+
+
+

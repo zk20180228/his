@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="WBYCFD_SUB" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="202d53f1-e89c-4d24-85a9-b445709b523d">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="inpatientNo" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="billclassName" class="java.lang.String">
+		<fieldDescription><![CDATA[billclassName]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="deptDrugName" class="java.lang.String">
+		<fieldDescription><![CDATA[deptDrugName]]></fieldDescription>
+	</field>
+	<field name="deptName" class="java.lang.String">
+		<fieldDescription><![CDATA[deptName]]></fieldDescription>
+	</field>
+	<field name="drugCommonname" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCommonname]]></fieldDescription>
+	</field>
+	<field name="drugDispensSumList" class="java.util.List">
+		<fieldDescription><![CDATA[drugDispensSumList]]></fieldDescription>
+	</field>
+	<field name="drugDosageform" class="java.lang.String">
+		<fieldDescription><![CDATA[drugDosageform]]></fieldDescription>
+	</field>
+	<field name="drugId" class="java.lang.String">
+		<fieldDescription><![CDATA[drugId]]></fieldDescription>
+	</field>
+	<field name="drugNameinputcode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugNameinputcode]]></fieldDescription>
+	</field>
+	<field name="drugNamepinyin" class="java.lang.String">
+		<fieldDescription><![CDATA[drugNamepinyin]]></fieldDescription>
+	</field>
+	<field name="drugNamewb" class="java.lang.String">
+		<fieldDescription><![CDATA[drugNamewb]]></fieldDescription>
+	</field>
+	<field name="drugRetailprice" class="java.lang.Double">
+		<fieldDescription><![CDATA[drugRetailprice]]></fieldDescription>
+	</field>
+	<field name="qtys" class="java.lang.Integer">
+		<fieldDescription><![CDATA[qtys]]></fieldDescription>
+	</field>
+	<field name="spec" class="java.lang.String">
+		<fieldDescription><![CDATA[spec]]></fieldDescription>
+	</field>
+	<field name="totCosts" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCosts]]></fieldDescription>
+	</field>
+	<field name="unit" class="java.lang.String">
+		<fieldDescription><![CDATA[unit]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement uuid="cc2b70b9-b594-42bb-a19f-d920a55a3496" x="0" y="0" width="81" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugCommonname}==null?"":$F{drugCommonname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2bac6c1e-5e2a-4b43-afa4-7cd4d4f00476" x="81" y="0" width="35" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{spec}==null?"":$F{spec}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="33b7e4c0-6145-4c2d-9571-aa189ffcaabf" x="116" y="0" width="40" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unit}==null?"":$F{unit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="91f0d679-6aa5-49f0-803b-c1b4ea52845e" x="156" y="0" width="30" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugDosageform}==null?"":$F{drugDosageform}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="270e82f0-ed66-45bb-9b5c-d4d0ee496ca9" x="216" y="0" width="30" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugRetailprice}==null?"":$F{drugRetailprice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2122e6d0-a23e-4588-b59a-6820d4b25b85" x="246" y="0" width="35" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCosts}==null?"":$F{totCosts}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6b799772-2119-43dc-b840-ac8e4f002d52" x="281" y="0" width="60" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{billclassName}==null?"":$F{billclassName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="210e82ac-ca04-4c37-915d-4a408646d9e1" x="341" y="0" width="59" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deptDrugName}==null?"":$F{deptDrugName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d24e7dc2-521a-4dcb-a3f3-47e6a1a73137" x="400" y="0" width="70" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugId}==null?"":$F{drugId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c75c506f-b632-41dd-92e7-409ccb79a933" x="470" y="0" width="68" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deptName}==null?"":$F{deptName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1e03a1f7-8bdf-4724-825c-beda610e4125" x="186" y="0" width="30" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtys}==null?"":$F{qtys}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

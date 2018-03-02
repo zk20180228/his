@@ -1,0 +1,143 @@
+.medchangeskin,.changecolor{
+	background:#d4ecfb !important;
+}
+
+.tableCss .TDlabel{
+	background:#d4ecfb !important;
+}
+.tableLabel{
+	background-color:#d4ecfb !important;
+}
+.tabs-header, .tabs-tool {
+    background-color: #7bbfea;
+}
+.tabs li a.tabs-inner {
+	border-color:#0086cd;
+    background-color: #7bbfea;
+    background: -webkit-linear-gradient(top,#e0f3ff 0,#7bc1ef 100%);
+    background: -moz-linear-gradient(top,#e0f3ff 0,#7bc1ef 100%);
+    background: -o-linear-gradient(top,#e0f3ff 0,#7bc1ef 100%);
+    background: linear-gradient(to bottom,#e0f3ff 0,#7bc1ef 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c4e7fd,endColorstr=#8ac7ef,GradientType=0);
+}
+.tableLabel,.changecolor,td.honry-lable{
+	background-color:#d4ecfb;
+}
+/*home页面*/
+.header{
+	border-color:#0086cd;
+    background-color: #7bbfea;
+    background: -webkit-linear-gradient(top,#e0f3ff 0,#7bc1ef 100%);
+    background: -moz-linear-gradient(top,#e0f3ff 0,#7bc1ef 100%);
+    background: -o-linear-gradient(top,#e0f3ff 0,#7bc1ef 100%);
+    background: linear-gradient(to bottom,#e0f3ff 0,#7bc1ef 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c4e7fd,endColorstr=#8ac7ef,GradientType=0);
+}
+.fc-state-default{
+	text-shadow: 0 0px 0px rgba(255, 255, 255, 0.75) !important;
+}
+/*选择角色样式*/
+.chose ul li{
+	color: #2275d3;
+}
+.chose ul li.selected{
+	background: #649cdb;
+	color:#fff;
+}
+.button .tijiao{
+	background: #2275d3;
+	color: #fff;
+}
+.chose .choseList .prevR{
+	left: 0;
+	background: url("images/prev.png") left center no-repeat;
+}
+.chose .choseList .prevD{
+	left: 0;
+	background: url("images/prev.png") left center no-repeat;
+}
+.chose .choseList .nextR{
+	right: 0;
+	background: url("images/next.png") left center no-repeat;
+}
+.chose .choseList .nextD{
+	right: 0;
+	background: url("images/next.png") left center no-repeat;
+}
+#roleDidId .role-D {
+	background-image: url('images/role-D.png');
+}
+#roleDidId .role-F {
+	background-image: url('images/role-F.png');
+}
+#roleDidId .role-M {
+	background-image: url('images/role-M.png');
+}
+#roleDidId .role-N {
+	background-image: url('images/role-N.png');
+}
+#roleDidId .role-O {
+	background-image: url('images/role-O.png');
+}
+#roleDidId .role-P {
+	background-image: url('images/role-P.png');
+}
+#roleDidId .role-R {
+	background-image: url('images/role-R.png');
+}
+#roleDidId .role-T {
+	background-image: url('images/role-T.png');
+}
+#deptDidId .dept-C {
+	background-image: url('images/dept-C.png');
+}
+#deptDidId .dept-D {
+	background-image: url('images/dept-D.png');
+}
+#deptDidId .dept-F {
+	background-image: url('images/dept-F.png');
+}
+#deptDidId .dept-I {
+	background-image: url('images/dept-I.png');
+}
+#deptDidId .dept-L {
+	background-image: url('images/dept-L.png');
+}
+#deptDidId .dept-N {
+	background-image: url('images/dept-N.png');
+}
+#deptDidId .dept-O {
+	background-image: url('images/dept-O.png');
+}
+#deptDidId .dept-OP {
+	background-image: url('images/dept-OP.png');
+}
+#deptDidId .dept-P {
+	background-image: url('images/dept-P.png');
+}
+#deptDidId .dept-PI {
+	background-image: url('images/dept-PI.png');
+}
+#deptDidId .dept-S {
+	background-image: url('images/dept-S.png');
+}
+#deptDidId .dept-T {
+	background-image: url('images/dept-T.png');
+}
+.main-more{
+	font-size: 13px !important;
+    color: #497bbb !important;
+    margin-right:10px;
+}
+.main-top {
+    background: #2074d4 url('images/main_top_bg.jpg') no-repeat;
+}
+.mainTabds .tabs{
+	border-color: #0086cd;
+}
+table.honry-table td {
+    border: 1px solid #95b8e7;
+}
+/********public样式设计end************/

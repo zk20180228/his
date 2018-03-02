@@ -1,0 +1,22 @@
+/**黑色**/
+.tableCss {
+	border-collapse: collapse;
+	border-right:0px;
+	border-top:0px;
+}
+.tableLabel {
+	background: #474747;
+	text-align: right;
+	width: 70px;
+}
+.tableCss td {
+	border-right: 1px solid #95b8e7;
+	border-bottom: 1px solid #95b8e7;
+	padding: 5px 15px;
+	word-break: keep-all;
+	white-space: nowrap;
+}
+.divLabel {
+	background: #474747;
+	text-align: left;
+}

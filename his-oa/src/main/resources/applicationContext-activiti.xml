@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 流程引擎配置 -->
+	<bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration" >
+		<!-- 数据库连接池 -->
+		<property name="dataSource" ref="bizDataSource" />
+		<!-- 事务 -->
+		<property name="transactionManager" ref="transactionManager"/>
+		<!-- 数据库自动升级 -->
+		<property name="databaseSchemaUpdate" value="true" />
+		<!-- 不创建identity表 -->
+		<property name="dbIdentityUsed" value="false"/>
+		<!-- 作业执行器 -->
+		<property name="jobExecutorActivate" value="false" />
+		<!-- 历史级别 -->
+		<property name="history" value="audit" />
+
+		<!-- 生成流程图的字体 -->
+        <property name="activityFontName" value="宋体"/>
+        <property name="labelFontName" value="宋体"/>
+
+		<!-- 组织机构适配 -->
+<!--         <property name="customSessionFactories"> -->
+<!-- 			<list> -->
+<!-- 				<bean class="" > -->
+<!-- 					<property name="groupEntityManager"> -->
+<!-- 						<bean class=""/> -->
+<!--                     </property> -->
+<!--                </bean> -->
+<!--            </list> -->
+<!-- 		</property> -->
+
+		<!-- 工作日历 -->
+<!-- 		<property name="businessCalendarManager" ref="businessCalendarManager"/> -->
+
+		<property name="eventListeners">
+			<list>
+<!-- 				<bean class="cn.honry.oa.activiti.listener.FunctionEventListener" /> -->
+				<bean class="cn.honry.oa.activiti.listener.HumanTaskEventListener" />
+				<bean class="cn.honry.oa.activiti.listener.AutoCompleteFirstTaskEventListener" />
+				<bean class="cn.honry.oa.activiti.listener.AutoCompleteLastTaskEventListener" />
+<!-- 				<bean class="cn.honry.oa.activiti.listener.SkipEventListener" /> -->
+			</list>
+		</property>
+		
+<!-- 		<property name="typedEventListeners"> -->
+<!-- 			<map> -->
+<!-- 				<entry key="ENTITY_INITIALIZED" > -->
+<!-- 					<list> -->
+<!-- 						<bean class="cn.honry.oa.activiti.listener.UpdateProcessInstanceNameEventListener" /> -->
+<!-- 					</list> -->
+<!-- 				</entry> -->
+<!-- 				<entry key="SEQUENCEFLOW_TAKEN"> -->
+<!-- 					<list> -->
+<!-- 						<bean class="cn.honry.oa.activiti.listener.SequenceFlowEventListener"/> -->
+<!-- 					</list> -->
+<!-- 				</entry> -->
+<!-- 			</map> -->
+<!-- 		</property> -->
+	</bean>
+
+	<!-- 流程引擎 -->
+	<bean id="processEngine" class="cn.honry.oa.activiti.processEngine.ProxyProcessEngineFactoryBean">
+		<property name="processEngineConfiguration" ref="processEngineConfiguration"/>
+		<property name="enabled" value="true"/>
+	</bean>
+	<bean id="applicationContextHelper" class="cn.honry.oa.activiti.bpm.utils.ApplicationContextHelper"/>
+	<!-- 自动部署(流程图) -->
+<!-- 	<bean id="autoDeployer" class="" depends-on="applicationContextHelper"> -->
+<!-- 		<property name="enable" value="${bpm.auto.deploy}"/> -->
+<!-- 		<property name="processEngine" ref="processEngine"/> -->
+<!-- 		<property name="defaultTenantCode" value="${tenant.default.code}"/> -->
+<!-- 		<property name="tenantConnector" ref="tenantConnector"/> -->
+<!--         <property name="deploymentResources"> -->
+<!--             <list> -->
+<!--                 <value>classpath*:/bpmn2/*</value> -->
+<!--             </list> -->
+<!--         </property> -->
+<!-- 	</bean> -->
+
+	<!-- 工作日历 -->
+<!-- 	<bean id="businessCalendarManager" class="cn.honry.oa.activiti.calender.AdvancedBusinessCalendarManagerFactoryBean"> -->
+<!-- 		<property name="workCalendarConnector" ref="workCalendarConnector"/> -->
+<!-- 	</bean> -->
+
+	<bean id="humanTaskService" class="cn.honry.oa.humantask.service.impl.HumanTaskServiceImpl">
+		<property name="humanTaskListeners">
+			<list>
+				<bean class="cn.honry.oa.activiti.listener.TaskDefUserHumanTaskListener"></bean>
+				<bean class="cn.honry.oa.activiti.listener.TaskConfUserHumanTaskListener"></bean>
+				<bean class="cn.honry.oa.activiti.listener.AssigneeAliasHumanTaskListener"></bean>
+			</list>
+		</property>
+	</bean>
+</beans>

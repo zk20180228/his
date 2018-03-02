@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="DrugPreoutstore" table="T_DRUG_PREOUTSTORE" >
+        <comment>入库记录表</comment>
+        <id name="id" type="java.lang.String">
+            <column name="ID" />
+            <generator class="uuid" />
+        </id>
+        <property name="applyNumber" type="java.lang.Integer">
+            <column name="APPLY_NUMBER" >
+                <comment>申请流水号</comment>
+            </column>
+        </property>
+        <property name="drugDeptCode" type="java.lang.String">
+            <column name="DRUG_DEPT_CODE" >
+                <comment>发药部门编码</comment>
+            </column>
+        </property>
+        <property name="class3MeaningCode" type="java.lang.String">
+            <column name="CLASS3_MEANING_CODE" >
+                <comment>出库申请分类</comment>
+            </column>
+        </property>
+        <property name="drugCode" type="java.lang.String">
+            <column name="DRUG_CODE" >
+                <comment>药品编码</comment>
+            </column>
+        </property>
+        <property name="tradeName" type="java.lang.String">
+            <column name="TRADE_NAME" >
+                <comment>药品商品名</comment>
+            </column>
+        </property>
+        <property name="specs" type="java.lang.String">
+            <column name="SPECS">
+                <comment>规格</comment>
+            </column>
+        </property>
+        <property name="applyNum" type="java.lang.Double">
+            <column name="APPLY_NUM" precision="14" scale="4">
+                <comment>申请出库量(每付的总数量)</comment>
+            </column>
+        </property>
+        <property name="days" type="java.lang.Integer">
+            <column name="DAYS" >
+                <comment>付数（草药）</comment>
+            </column>
+        </property>
+        <property name="applyOpercode" type="java.lang.String">
+            <column name="APPLY_OPERCODE" >
+                <comment>申请人编码</comment>
+            </column>
+        </property>
+        <property name="applyDate" type="java.util.Date">
+            <column name="APPLY_DATE" length="7">
+                <comment>申请日期</comment>
+            </column>
+        </property>
+        <property name="patientId" type="java.lang.String">
+            <column name="PATIENT_ID" >
+                <comment>患者编号</comment>
+            </column>
+        </property>
+       <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT"  />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" />
+        </property>
+        <property name="hospitalId" type="java.lang.Integer">
+            <column name="HOSPITAL_ID">
+                <comment>所属医院</comment>
+            </column>
+        </property>
+        <property name="areaCode" type="java.lang.String">
+            <column name="AREA_CODE" length="20">
+                <comment>所属院区</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="EmrTimeRule" table="T_EMR_TIMERULE" >
+        <id name="id" type="java.lang.String">
+            <column name="TR_ID" length="50"/>
+            <generator class="uuid" />
+        </id>
+        <property name="code" type="java.lang.String">
+            <column name="TR_CODE" length="20" />
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="TR_NAME" length="100" />
+        </property>
+        <property name="desc" type="java.lang.String">
+            <column name="TR_DESC" length="1000" />
+        </property>
+        <property name="group" type="java.lang.String">
+            <column name="TR_GROUP" length="50" />
+        </property>
+        <property name="responsibilityEvel" type="java.lang.String">
+            <column name="TR_RESPONSIBILITYLEVEL" />
+        </property>
+        <property name="value" type="java.lang.Integer">
+            <column name="TR_VALUE" />
+        </property>
+        <property name="tip" type="java.lang.String">
+            <column name="TR_TIP" />
+        </property>
+        <property name="warn" type="java.lang.String">
+            <column name="TR_WARN" />
+        </property>
+        <property name="trSet" type="java.lang.String">
+            <column name="TR_SET" />
+        </property>
+        <property name="op" type="java.lang.Integer">
+            <column name="TR_OP" />
+        </property>
+        <property name="loop" type="java.lang.Integer">
+            <column name="TR_LOOP" />
+        </property>
+        <property name="loopGap" type="java.lang.Integer">
+            <column name="TR_LOOPGAP" />
+        </property>
+        <property name="dispose" type="java.lang.Integer">
+            <column name="TR_DISPOSE" />
+        </property>
+        <property name="relationRule" type="java.lang.String">
+            <column name="TR_RELATIENRULE" />
+        </property>
+        <property name="emrType" type="java.lang.String">
+            <column name="TR_EMRTYPE" />
+        </property>
+        <property name="deductpionts" type="java.lang.Double">
+            <column name="TR_DEDUCTPOINTS" />
+        </property>
+      
+         <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER" length="50" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" length="50" />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" length="50"/>
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" length="50"/>
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" />
+        </property>
+    </class>
+</hibernate-mapping>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="MatFiles" table="T_MAT_FILES" >
+        <comment>物资文件附件附属表</comment>
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="50" />
+            <generator class="uuid" />
+        </id>
+        <property name="fileKind" type="java.lang.Integer">
+            <column name="FILE_KIND">
+                <comment>文件类别(0产品注册附件,1厂商许可证,2字典附件)</comment>
+            </column>
+        </property>
+        <property name="fileName" type="java.lang.String">
+            <column name="FILE_NAME" length="100">
+                <comment>名称</comment>
+            </column>
+        </property>
+        <property name="foreignCode" type="java.lang.String">
+            <column name="FOREIGN_CODE" length="50">
+                <comment>对应主表的主键</comment>
+            </column>
+        </property>
+        <property name="orderNo" type="java.math.BigDecimal">
+            <column name="ORDER_NO" precision="22" scale="0">
+                <comment>排列序号</comment>
+            </column>
+        </property>
+        <property name="filePath" type="java.lang.String">
+            <column name="FILE_PATH" length="200">
+                <comment>文件路径</comment>
+            </column>
+        </property>
+        <property name="memo" type="java.lang.String">
+            <column name="MEMO" length="100">
+                <comment>备注</comment>
+            </column>
+        </property>
+        <property name="operCode" type="java.lang.String">
+            <column name="OPER_CODE" length="6">
+                <comment>操作员</comment>
+            </column>
+        </property>
+        <property name="operDate" type="java.util.Date">
+            <column name="OPER_DATE" length="7">
+                <comment>操作日期</comment>
+            </column>
+        </property>
+        <property name="file" type="java.sql.Blob">
+            <column name="FILE_">
+                <comment>文件</comment>
+            </column>
+        </property>
+         <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" />
+        </property>
+    </class>
+</hibernate-mapping>

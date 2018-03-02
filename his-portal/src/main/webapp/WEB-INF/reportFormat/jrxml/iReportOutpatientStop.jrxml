@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="iReportOutpatientStop" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="168f9e2f-e374-45a7-8e7f-f94d0d419f38">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\workspaceHis1.5\\his\\his-portal\\src\\main\\webapp\\WEB-INF\\reportFormat\\jasper\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="firstData" class="java.lang.String"/>
+	<parameter name="endData" class="java.lang.String"/>
+	<parameter name="hName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="itemList" class="java.util.List">
+		<fieldDescription><![CDATA[itemList]]></fieldDescription>
+	</field>
+	<field name="firstData" class="java.lang.String">
+		<fieldDescription><![CDATA[firstData]]></fieldDescription>
+	</field>
+	<field name="endData" class="java.lang.String">
+		<fieldDescription><![CDATA[endData]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="672fcdd9-1383-4e86-91dd-4ed47e9310af" x="146" y="43" width="282" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="18" isBold="true" isItalic="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[科室门诊停诊原因统计表]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="33ff5a61-d634-4179-a478-e4a88c2a88a0" x="116" y="0" width="344" height="43"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b99032e2-1579-4ce9-afbb-b1222e5900f9" x="0" y="0" width="70" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[统计时间：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="89511999-8c2f-4ec7-9b6f-ec3e93b95b15" x="128" y="0" width="18" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[至]]></text>
+			</staticText>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement uuid="ec1569f0-f5e8-46dc-93da-92e74790fb6c" x="70" y="0" width="58" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{firstData}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement uuid="8c58540f-3e20-49c5-9ca0-3db211ee0097" x="146" y="0" width="61" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{endData}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="74cde6c8-c825-4c7b-b38b-a25ffa23c41c" x="0" y="0" width="115" height="43"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[出诊科室]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e584f367-5bb1-4359-bf55-25e7708656e3" x="115" y="23" width="85" height="20"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[生病]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="94db8cb5-f6b5-48ae-95a2-18e23d5587ce" x="200" y="23" width="85" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[出差]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="99d83be2-d192-4aa4-b56e-4ff0a3ea4d6c" x="285" y="23" width="85" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[开会]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a689287c-f769-4bfd-8168-731069ef4109" x="370" y="23" width="85" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[其他]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1ff423ef-d0cf-4149-b924-ae7224a58d05" x="455" y="0" width="100" height="43"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[停诊人次合计 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="351adfa7-c989-45c6-a11d-4f64a93ef865" x="116" y="0" width="339" height="23"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[停诊原因 ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="9e3b3e6a-be74-4980-9f3c-31acc36ba727" x="0" y="0" width="555" height="40"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{itemList})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "iReportOutpatientStop_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

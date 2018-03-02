@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="ZXDzb"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="595"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="mytyle"
+		isDefault="true"
+	/>
+
+	<parameter name="TID" isForPrompting="false" class="java.lang.String">
+		<parameterDescription><![CDATA[$P{TID}]]></parameterDescription>
+	</parameter>
+	<parameter name="PATH" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["D:\\workspace\\his\\his-web\\src\\main\\webapp\\WEB-INF\\reportFormat\\jasper\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="MEDID" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="billNo" isForPrompting="false" class="java.lang.String"/>
+	<queryString><![CDATA[select distinct (select ian.patient_name from t_inpatient_info ian where ian.inpatient_no=c.inpatient_no)as PNAME,c.patient_no as IP,c.inpatient_no
+from t_inpatient_execdrug c where c.del_flg=0 and c.stop_flg=0 and  (c.type_code,c.usage_code,c.drug_type) in (select b.type_code,b.usage_code,b.drug_type from t_inpatient_drugbilldetail b where b.del_flg=0 and b.stop_flg=0 and (b.bill_no)
+in (select a.bill_no from t_inpatient_execbill a where a.bill_no=$P{billNo} and a.del_flg=0 and a.stop_flg=0))]]></queryString>
+
+	<field name="PNAME" class="java.lang.String"/>
+	<field name="IP" class="java.lang.String"/>
+	<field name="INPATIENT_NO" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="60"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="mytyle"
+						x="0"
+						y="0"
+						width="75"
+						height="30"
+						key="textField-19"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{IP}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="mytyle"
+						x="75"
+						y="0"
+						width="75"
+						height="30"
+						key="textField-20"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{PNAME}]]></textFieldExpression>
+				</textField>
+				<subreport  isUsingCache="true">
+					<reportElement
+						style="mytyle"
+						x="75"
+						y="30"
+						width="395"
+						height="30"
+						key="subreport-1"/>
+					<subreportParameter  name="MEDID">
+						<subreportParameterExpression><![CDATA[$F{IP}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="billNo">
+						<subreportParameterExpression><![CDATA[$P{billNo}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="inpatientNo">
+						<subreportParameterExpression><![CDATA[$F{INPATIENT_NO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{PATH} + "ZXDZB2.jasper"]]></subreportExpression>
+				</subreport>
+				<rectangle>
+					<reportElement
+						style="mytyle"
+						x="240"
+						y="0"
+						width="295"
+						height="30"
+						key="rectangle-1"/>
+					<graphicElement stretchType="NoStretch" pen="None"/>
+				</rectangle>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

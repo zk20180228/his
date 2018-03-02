@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+	<class name="MailConfig" table="T_OA_MAIL_CONFIG">
+		<id name="id" type="java.lang.String">
+			<column name="ID"/>
+			<generator class="uuid"/>
+		</id>
+		<property name="type" type="java.lang.String">
+			<column name="TYPE"/>
+		</property>
+		<property name="employeeCode" type="java.lang.String">
+			<column name="EMPLOYEE_CODE"/>
+		</property>
+		<property name="email" type="java.lang.String">
+			<column name="EMAIL"/>
+		</property>
+		<property name="pwd" type="java.lang.String">
+			<column name="PWD"/>
+		</property>
+		<property name="nickName" type="java.lang.String">
+			<column name="NICK_NAME"/>
+		</property>
+		<property name="receiveType" type="java.lang.String">
+			<column name="RECEIVE_TYPE"/>
+		</property>
+		<property name="receiveHost" type="java.lang.String">
+			<column name="RECEIVE_HOST"/>
+		</property>
+		<property name="receivePort" type="java.lang.Integer">
+			<column name="RECEIVE_PORT"/>
+		</property>
+		<property name="receiveSecurity" type="java.lang.String">
+			<column name="RECEIVE_SECURITY"/>
+		</property>
+		<property name="sendHost" type="java.lang.String">
+			<column name="SEND_HOST"/>
+		</property>
+		<property name="sendPort" type="java.lang.Integer">
+			<column name="SEND_PORT"/>
+		</property>
+		<property name="sendSecurity" type="java.lang.String">
+			<column name="SEND_SECURITY"/>
+		</property>
+		<property name="timing" type="java.lang.Integer">
+			<column name="TIMING"/>
+		</property>
+		<property name="companyFlg" type="java.lang.Integer">
+			<column name="COMPANY_FLG"/>
+		</property>
+		<property name="createTime" type="java.sql.Timestamp">
+			<column name="CREATETIME"/>
+		</property>
+		<property name="updateTime" type="java.sql.Timestamp">
+			<column name="UPDATETIME"/>
+		</property>
+	</class>
+</hibernate-mapping>

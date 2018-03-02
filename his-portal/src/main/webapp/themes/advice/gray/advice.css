@@ -1,0 +1,33 @@
+/**灰色*
+.tableCss {
+	border-collapse: collapse;
+	border-right:0px;
+	border-top:0px;
+}
+.tableLabel {
+	background: #F3F3F3;
+	text-align: right;
+	width: 70px;
+}
+.tableCss td {
+	border-right: 1px solid #D3D3D3;
+	border-bottom: 1px solid #D3D3D3;
+	padding: 5px 15px;
+	word-break: keep-all;
+	white-space: nowrap;
+}
+.divLabel {
+	background: #F3F3F3;
+	text-align: left;
+}
+table.honry-table td{
+	border-right: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+}
+td.honry-lable{
+	background:#F3F3F3;
+}
+table.honry-table{
+	border-left: 1px solid #D3D3D3;
+    border-top: 1px solid #D3D3D3;
+}*/

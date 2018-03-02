@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+	<class name="BusinessSpedrug" table="T_BUSINESS_SPEDRUG">
+		<id name="id" type="java.lang.String" length="50">
+			<column name="ID" />
+			<generator class="uuid" />
+		</id>
+		<property name="speType" type="java.lang.Integer">
+			<column name="SPE_TYPE" length="50" >
+				<comment>0：科室 1：医生</comment>
+			</column>
+		</property>
+		<property name="speCode" type="java.lang.String">
+			<column name="SPE_CODE" length="50" />
+		</property>
+		<property name="speName" type="java.lang.String">
+			<column name="SPE_NAME" length="50" />
+		</property>
+		<property name="drugCode" type="java.lang.String">
+			<column name="DRUG_CODE" length="50" />
+		</property>
+		<property name="tradeName" type="java.lang.String">
+			<column name="TRADE_NAME" length="50" />
+		</property>
+		<property name="specs" type="java.lang.String">
+			<column name="SPECS" length="32" />
+		</property>
+		<property name="extend" type="java.lang.String">
+			<column name="EXTEND" length="50" />
+		</property>
+		<property name="memo" type="java.lang.String">
+			<column name="MEMO" length="50" />
+		</property>
+		<property name="operCode" type="java.lang.String">
+			<column name="OPER_CODE" length="50" />
+		</property>
+		<property name="operTime" type="java.sql.Timestamp">
+			<column name="OPER_TIME" length="50" />
+		</property>
+		<property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER" length="50" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" length="50" />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" length="50" />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" length="50" />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" precision="1" scale="0">
+            	<comment>0：正常 1：删除</comment>
+            </column>
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" precision="1" scale="0">
+           		<comment>0:正常 1：停用</comment>
+            </column>
+        </property>
+	</class>
+</hibernate-mapping>

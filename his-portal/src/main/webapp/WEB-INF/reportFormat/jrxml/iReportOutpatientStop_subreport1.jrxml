@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="iReportOutpatientStop_subreport1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e38cc7a4-f139-46ab-ad87-40a9dd9fcf4e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="sumOther" class="java.lang.Integer">
+		<fieldDescription><![CDATA[sumOther]]></fieldDescription>
+	</field>
+	<field name="deptName" class="java.lang.String">
+		<fieldDescription><![CDATA[deptName]]></fieldDescription>
+	</field>
+	<field name="sumEvection" class="java.lang.Integer">
+		<fieldDescription><![CDATA[sumEvection]]></fieldDescription>
+	</field>
+	<field name="sumSick" class="java.lang.Integer">
+		<fieldDescription><![CDATA[sumSick]]></fieldDescription>
+	</field>
+	<field name="sum" class="java.lang.Integer">
+		<fieldDescription><![CDATA[sum]]></fieldDescription>
+	</field>
+	<field name="sumMeet" class="java.lang.Integer">
+		<fieldDescription><![CDATA[sumMeet]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement uuid="c3515df0-20e5-4574-b1d9-c47711eb48e5" x="0" y="0" width="115" height="25"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deptName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="077b94f9-c080-456d-9137-cca28c700ff9" x="115" y="0" width="83" height="25"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{sumSick}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4bd7a440-8b7d-4ddc-8624-ba5acae314c5" x="200" y="0" width="83" height="25"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{sumEvection}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="47dea507-5f67-438c-b77b-90a13979b8e1" x="285" y="0" width="83" height="25"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{sumMeet}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4bf338ca-c5c7-45ae-90a8-c902bcb3c942" x="370" y="0" width="83" height="25"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{sumOther}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="359985cf-6cd9-41a5-a630-fc8cdd772477" x="455" y="0" width="97" height="25"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{sum}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="4bdb9054-574c-461e-aed0-5fbc2acc0e50" x="555" y="0" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement uuid="22bd1c41-97b0-47a6-af45-222a24f4bb31" x="0" y="24" width="556" height="1"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

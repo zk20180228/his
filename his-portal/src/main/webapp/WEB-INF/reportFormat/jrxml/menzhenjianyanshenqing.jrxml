@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="menzhenjianyanshenqing" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="542ee504-97ce-4209-83d2-bfc3deebf28b">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="cId" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\workspace\\his\\his-web\\src\\main\\webapp\\WEB-INF\\reportFormat\\jrxml\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="CLINIC_CODE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DEPT_ID" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="APPLY_DOC" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\workspace\\his\\his-web\\src\\main\\webapp\\WEB-INF\\reportFormat\\jasper\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Medicalrecord_Id" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="hospitalName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="sex" class="java.lang.String">
+		<fieldDescription><![CDATA[sex]]></fieldDescription>
+	</field>
+	<field name="hospitalName" class="java.lang.String">
+		<fieldDescription><![CDATA[hospitalName]]></fieldDescription>
+	</field>
+	<field name="eDept" class="java.lang.String">
+		<fieldDescription><![CDATA[eDept]]></fieldDescription>
+	</field>
+	<field name="advice" class="java.lang.String">
+		<fieldDescription><![CDATA[advice]]></fieldDescription>
+	</field>
+	<field name="nowtime" class="java.lang.String">
+		<fieldDescription><![CDATA[nowtime]]></fieldDescription>
+	</field>
+	<field name="itemName" class="java.lang.String">
+		<fieldDescription><![CDATA[itemName]]></fieldDescription>
+	</field>
+	<field name="historySpecil" class="java.lang.String">
+		<fieldDescription><![CDATA[historySpecil]]></fieldDescription>
+	</field>
+	<field name="dept" class="java.lang.String">
+		<fieldDescription><![CDATA[dept]]></fieldDescription>
+	</field>
+	<field name="age" class="java.lang.String">
+		<fieldDescription><![CDATA[age]]></fieldDescription>
+	</field>
+	<field name="pay" class="java.lang.String">
+		<fieldDescription><![CDATA[pay]]></fieldDescription>
+	</field>
+	<field name="diagnose" class="java.lang.String">
+		<fieldDescription><![CDATA[diagnose]]></fieldDescription>
+	</field>
+	<field name="applyNo" class="java.lang.String">
+		<fieldDescription><![CDATA[applyNo]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[address]]></fieldDescription>
+	</field>
+	<field name="medicalRecordId" class="java.lang.String">
+		<fieldDescription><![CDATA[medicalRecordId]]></fieldDescription>
+	</field>
+	<field name="apply_doc" class="java.lang.String">
+		<fieldDescription><![CDATA[apply_doc]]></fieldDescription>
+	</field>
+	<group name="list1">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band splitType="Stretch"/>
+		</groupHeader>
+		<groupFooter>
+			<band height="392" splitType="Stretch">
+				<staticText>
+					<reportElement uuid="d0212394-b576-463e-be93-0aef40e1e99d" key="staticText-12" x="1" y="0" width="103" height="34"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+					</textElement>
+					<text><![CDATA[ 注  意  事  项 ：]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="67ac3bcf-8a76-4760-8bc7-13ace052ef40" key="textField-10" x="113" y="0" width="421" height="34"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{advice}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="1fc93a2f-559a-4e4f-ac8f-398fd2e05c4f" key="staticText-13" x="1" y="34" width="103" height="34"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+					</textElement>
+					<text><![CDATA[ 就  诊  地  址 ：]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="1fd10e4b-72d6-40eb-ad32-68e83ed02fed" key="textField-11" x="113" y="34" width="421" height="34"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="b08a6005-246f-4af4-84e8-cd92e4b380c4" key="staticText-14" x="15" y="68" width="63" height="28"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+					</textElement>
+					<text><![CDATA[总金额：]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="2afbbd56-1043-41ad-9b12-213508e653e9" key="staticText-15" x="170" y="68" width="89" height="28"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+					</textElement>
+					<text><![CDATA[申请医师：]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="6b2176e4-1bb0-4ab7-aa8f-3760aaaa2d04" key="staticText-16" x="336" y="68" width="83" height="28"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+					</textElement>
+					<text><![CDATA[执行科室：]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="2e5cb40d-1c4a-4afb-ab83-1504e30ffdfa" key="textField-12" x="78" y="68" width="82" height="28"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pay}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="4ac5c50c-56bd-447a-a388-c95ec1324913" key="textField-13" x="259" y="68" width="72" height="28"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{APPLY_DOC}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="8ad54044-d5a6-46ef-baa1-1b2fb5168708" key="staticText-17" x="1" y="139" width="534" height="88"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+					</textElement>
+					<text><![CDATA[  1、生化、免疫类检测项目、空腹采集静脉血送检；
+  2、细菌培养类检测项目、停用抗菌药物3天后、使用无菌器材采集标本送检；无法停用
+  者，须注明使用药物种类；
+  3、常规及其他检测项目，有疑问者随时咨询医护人员；]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="d36c983f-8860-4eb3-acb5-47ef689b97ad" key="line-5" x="0" y="103" width="535" height="1"/>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="c832ac8c-12af-4e87-b463-7b243de94753" key="textField-21" x="420" y="68" width="110" height="29"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{eDept}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="c18631d2-8767-4331-a4d8-e5b7bf654467" key="line-7" x="0" y="-410" width="1" height="513"/>
+				</line>
+				<line>
+					<reportElement uuid="c54bc3e9-fb3b-4536-b9c4-52f1747230ac" key="line-8" x="534" y="34" width="1" height="70"/>
+				</line>
+				<line>
+					<reportElement uuid="38679e18-49c2-4fb8-9ea8-545e21120520" key="line-12" x="534" y="-1" width="1" height="35"/>
+				</line>
+				<line>
+					<reportElement uuid="4a3f7270-6db7-4f3a-9496-a5dd52452065" key="line-17" x="103" y="0" width="1" height="66"/>
+				</line>
+				<line>
+					<reportElement uuid="ab07ad19-82d6-4ad4-b4bc-14f496c29961" key="line-22" x="1" y="34" width="534" height="1"/>
+				</line>
+				<line>
+					<reportElement uuid="69f51798-960e-43ba-b778-e7334df11dee" key="line-23" x="1" y="66" width="534" height="1"/>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="31544bec-663a-4b58-925d-49fbf0058adf" key="staticText-2" x="1" y="43" width="534" height="37"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="18" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[检验申请单]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="5deb875b-33c8-4669-acef-f720bc7bac56" key="line-6" x="0" y="0" width="535" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7031e561-ff12-4316-94cb-929a9466298b" key="line-9" x="534" y="1" width="1" height="79"/>
+			</line>
+			<line>
+				<reportElement uuid="eb470c11-70c6-433a-9e13-cd5fd9c49a02" key="line-13" x="1" y="79" width="534" height="1"/>
+			</line>
+			<image>
+				<reportElement uuid="6d2cfa26-01c3-483a-878a-f10a26579d44" key="image-1" x="401" y="59" width="108" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[com.google.zxing.client.j2se.MatrixToImageWriter.toBufferedImage(new com.google.zxing.MultiFormatWriter().encode($P{CLINIC_CODE},com.google.zxing.BarcodeFormat.CODE_128, 100, 20, null))]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="0c35a53b-d1ce-4269-b812-c53f080bbf31" x="1" y="7" width="533" height="36"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hospitalName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="230" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="789e8953-5930-4182-aba1-59b758ed5da0" key="staticText-9" x="1" y="69" width="103" height="105"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[ 病史 及 特征 ：]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="fb9a201a-966a-455c-ad29-17aca71f9762" key="textField-7" x="113" y="69" width="422" height="105"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{historySpecil}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d20bb350-bc2c-4031-9669-69d6b32c345e" key="staticText-10" x="1" y="174" width="103" height="56"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[ 临  床  诊  断 ：]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="2e2caeeb-4701-4601-ac25-84557ed63c06" key="textField-8" x="113" y="174" width="422" height="56"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagnose}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5295ba9a-46b5-4dea-a1e1-d8257f7b08e3" key="staticText-21" x="1" y="0" width="103" height="34"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[ 申  请  日  期 ：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="491b5596-75a4-4380-b502-437be8f2b760" key="staticText-22" x="1" y="34" width="103" height="35"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[ 姓              名：]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="a651c0f9-03b5-4617-91b9-ba08d5aa3e89" key="textField-15" x="113" y="0" width="141" height="34"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nowtime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e7114a84-fc66-4a7e-9778-25484b40d691" key="staticText-23" x="254" y="0" width="96" height="34"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[  病历号：]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="52ea7146-bad7-4cfc-924a-d7d20a1bea9e" key="textField-16" x="357" y="0" width="178" height="34"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medicalRecordId}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="ff3ce025-bb43-4a02-b1eb-2263608e1aee" key="textField-17" x="113" y="34" width="88" height="35"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1e480f3a-d0ee-46e1-b78a-2e871290cb5d" key="staticText-24" x="201" y="34" width="53" height="35"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[性别：]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c4c386f1-f6c5-4e97-bb53-b4ca30baa341" key="textField-18" x="259" y="34" width="42" height="35"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sex}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="038037bf-953e-4248-b510-f3bf6a7838d5" key="staticText-25" x="301" y="34" width="48" height="35"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[ 年龄：]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1149ea1a-8275-4767-a7de-e231a29d5102" key="textField-19" x="357" y="34" width="44" height="35"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b9fc2e6b-79fc-414b-acff-d31ebd5ca8cc" key="staticText-26" x="401" y="34" width="50" height="35"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[ 科别：]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c6d1ce59-2b62-4c72-a103-f1504d65d501" key="textField-20" x="456" y="34" width="79" height="35"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dept}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="39452f71-c734-42c8-ba7a-d3fdeaa8281b" key="line-10" x="534" y="0" width="1" height="230"/>
+			</line>
+			<line>
+				<reportElement uuid="861377ed-488e-45bb-bc16-9f477c78f5cb" key="line-14" x="1" y="34" width="534" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="ae6d260a-827e-4487-bea7-9e63a290999b" key="line-15" x="103" y="0" width="1" height="230"/>
+			</line>
+			<line>
+				<reportElement uuid="34f976ef-08f9-43f7-aae9-92a4fd26db51" key="line-18" x="1" y="69" width="534" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="04934371-3e2f-4181-bf92-4430e937c2ab" key="line-19" x="1" y="174" width="534" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="9819c0a0-4b83-4f5e-b93c-7b18ca0e10f3" key="line-20" x="0" y="229" width="534" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="fba9427e-c40a-4fe1-afaf-b61b849ffc9f" key="line-25" x="254" y="0" width="1" height="69"/>
+			</line>
+			<line>
+				<reportElement uuid="8067c6a4-b83f-4401-b4ed-0dd877865ffc" key="line-27" x="201" y="34" width="1" height="35"/>
+			</line>
+			<line>
+				<reportElement uuid="02fc0ede-b6e1-4143-8a98-a3ad80d20bf2" key="line-29" x="301" y="34" width="1" height="35"/>
+			</line>
+			<line>
+				<reportElement uuid="81836851-2eae-4076-8a5e-059eeace845f" key="line-30" x="349" y="0" width="1" height="69"/>
+			</line>
+			<line>
+				<reportElement uuid="b2d8d688-f91e-4714-b319-19b7a38dd7b6" key="line-31" x="401" y="35" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement uuid="0a07a168-86ad-4bd8-8f67-e58272f18de2" key="line-32" x="451" y="34" width="1" height="35"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Prevent">
+			<staticText>
+				<reportElement uuid="1ddbfb45-77e3-4e83-9bd6-01e03ecf5065" key="staticText-3" x="1" y="-402" width="91" height="32"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[申请日期：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="39e31216-66f0-4c02-aaa7-b3b022746b6c" key="staticText-4" x="252" y="-402" width="92" height="32"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[病历号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3a42ba38-5a49-489b-b9fd-f18280dcb02c" key="staticText-5" x="1" y="-370" width="91" height="32"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[姓名：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6b7610ed-2a2d-4339-b1bc-fdce0a3272e9" key="staticText-6" x="299" y="-370" width="45" height="32"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[年龄：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c634d687-4074-41b1-800e-81fd52d59a1c" key="staticText-7" x="206" y="-370" width="46" height="32"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[性别：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f6d7da0a-cd8d-49ad-abf3-25559321042d" key="staticText-8" x="387" y="-370" width="46" height="32"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[科别：]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="2e5b89d7-ca50-473d-aa3d-c54cca22b1ef" key="staticText-11" x="1" y="0" width="103" height="100"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[检验项目/样本：]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="22e53b34-5b61-4fb0-adb8-c07eb2227fa0" key="line-11" x="534" y="0" width="1" height="100"/>
+			</line>
+			<line>
+				<reportElement uuid="6208301e-448a-45df-b15a-5db85a20d1dc" key="line-16" x="103" y="0" width="1" height="100"/>
+			</line>
+			<line>
+				<reportElement uuid="2bbf67af-c8c3-40af-a97a-8eddf4c0507c" key="line-21" x="0" y="99" width="534" height="1"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1d8eed3f-4ff3-4620-b219-4d9cb4b66020" key="textField-28" x="113" y="0" width="417" height="99"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{itemName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch">
+			<staticText>
+				<reportElement uuid="a0bb1328-0ed0-4cc4-83e3-c3c27fb10510" key="staticText-18" x="1" y="-275" width="188" height="22"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="14" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[注意事项：]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

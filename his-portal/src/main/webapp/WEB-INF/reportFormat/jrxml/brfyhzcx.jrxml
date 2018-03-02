@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="brfyhzcx" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="002fd491-eda2-4fb6-a264-13d06eb7e94c">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\Workspaces\\his\\his-web\\src\\main\\webapp\\WEB-INF\\reportFormat\\jasper\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="firstTime" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="endTime" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="inpatientNo" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="deptName" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="babyFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[babyFlag]]></fieldDescription>
+	</field>
+	<field name="balanceDate" class="java.util.Date">
+		<fieldDescription><![CDATA[balanceDate]]></fieldDescription>
+	</field>
+	<field name="balanceNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[balanceNo]]></fieldDescription>
+	</field>
+	<field name="balanceOpercode" class="java.lang.String">
+		<fieldDescription><![CDATA[balanceOpercode]]></fieldDescription>
+	</field>
+	<field name="balanceState" class="java.lang.Integer">
+		<fieldDescription><![CDATA[balanceState]]></fieldDescription>
+	</field>
+	<field name="chargeDate" class="java.util.Date">
+		<fieldDescription><![CDATA[chargeDate]]></fieldDescription>
+	</field>
+	<field name="chargeOpercode" class="java.lang.String">
+		<fieldDescription><![CDATA[chargeOpercode]]></fieldDescription>
+	</field>
+	<field name="checkNo" class="java.lang.String">
+		<fieldDescription><![CDATA[checkNo]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="createDept" class="java.lang.String">
+		<fieldDescription><![CDATA[createDept]]></fieldDescription>
+	</field>
+	<field name="createTime" class="java.util.Date">
+		<fieldDescription><![CDATA[createTime]]></fieldDescription>
+	</field>
+	<field name="createUser" class="java.lang.String">
+		<fieldDescription><![CDATA[createUser]]></fieldDescription>
+	</field>
+	<field name="del_flg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[del_flg]]></fieldDescription>
+	</field>
+	<field name="deleteTime" class="java.util.Date">
+		<fieldDescription><![CDATA[deleteTime]]></fieldDescription>
+	</field>
+	<field name="deleteUser" class="java.lang.String">
+		<fieldDescription><![CDATA[deleteUser]]></fieldDescription>
+	</field>
+	<field name="ecoCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[ecoCost]]></fieldDescription>
+	</field>
+	<field name="executeDeptcode" class="java.lang.String">
+		<fieldDescription><![CDATA[executeDeptcode]]></fieldDescription>
+	</field>
+	<field name="executeDeptname" class="java.lang.String">
+		<fieldDescription><![CDATA[executeDeptname]]></fieldDescription>
+	</field>
+	<field name="extCode" class="java.lang.String">
+		<fieldDescription><![CDATA[extCode]]></fieldDescription>
+	</field>
+	<field name="extDate" class="java.util.Date">
+		<fieldDescription><![CDATA[extDate]]></fieldDescription>
+	</field>
+	<field name="extFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[extFlag]]></fieldDescription>
+	</field>
+	<field name="extFlag1" class="java.lang.String">
+		<fieldDescription><![CDATA[extFlag1]]></fieldDescription>
+	</field>
+	<field name="extFlag2" class="java.lang.Integer">
+		<fieldDescription><![CDATA[extFlag2]]></fieldDescription>
+	</field>
+	<field name="extOpercode" class="java.lang.String">
+		<fieldDescription><![CDATA[extOpercode]]></fieldDescription>
+	</field>
+	<field name="feeCode" class="java.lang.String">
+		<fieldDescription><![CDATA[feeCode]]></fieldDescription>
+	</field>
+	<field name="feeDate" class="java.util.Date">
+		<fieldDescription><![CDATA[feeDate]]></fieldDescription>
+	</field>
+	<field name="feeOpercode" class="java.lang.String">
+		<fieldDescription><![CDATA[feeOpercode]]></fieldDescription>
+	</field>
+	<field name="feeoperDeptcode" class="java.lang.String">
+		<fieldDescription><![CDATA[feeoperDeptcode]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="inhosDeptcode" class="java.lang.String">
+		<fieldDescription><![CDATA[inhosDeptcode]]></fieldDescription>
+	</field>
+	<field name="inhosDeptname" class="java.lang.String">
+		<fieldDescription><![CDATA[inhosDeptname]]></fieldDescription>
+	</field>
+	<field name="inpatientFeeInfoList" class="java.util.List">
+		<fieldDescription><![CDATA[inpatientFeeInfoList]]></fieldDescription>
+	</field>
+	<field name="inpatientNo" class="java.lang.String">
+		<fieldDescription><![CDATA[inpatientNo]]></fieldDescription>
+	</field>
+	<field name="invoiceNo" class="java.lang.String">
+		<fieldDescription><![CDATA[invoiceNo]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="nurseCellCode" class="java.lang.String">
+		<fieldDescription><![CDATA[nurseCellCode]]></fieldDescription>
+	</field>
+	<field name="nurseCellName" class="java.lang.String">
+		<fieldDescription><![CDATA[nurseCellName]]></fieldDescription>
+	</field>
+	<field name="operationId" class="java.lang.String">
+		<fieldDescription><![CDATA[operationId]]></fieldDescription>
+	</field>
+	<field name="ownCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[ownCost]]></fieldDescription>
+	</field>
+	<field name="pactCode" class="java.lang.String">
+		<fieldDescription><![CDATA[pactCode]]></fieldDescription>
+	</field>
+	<field name="payCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[payCost]]></fieldDescription>
+	</field>
+	<field name="paykindCode" class="java.lang.String">
+		<fieldDescription><![CDATA[paykindCode]]></fieldDescription>
+	</field>
+	<field name="pubCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[pubCost]]></fieldDescription>
+	</field>
+	<field name="recipeDeptcode" class="java.lang.String">
+		<fieldDescription><![CDATA[recipeDeptcode]]></fieldDescription>
+	</field>
+	<field name="recipeDeptname" class="java.lang.String">
+		<fieldDescription><![CDATA[recipeDeptname]]></fieldDescription>
+	</field>
+	<field name="recipeDoccode" class="java.lang.String">
+		<fieldDescription><![CDATA[recipeDoccode]]></fieldDescription>
+	</field>
+	<field name="recipeDocname" class="java.lang.String">
+		<fieldDescription><![CDATA[recipeDocname]]></fieldDescription>
+	</field>
+	<field name="recipeNo" class="java.lang.String">
+		<fieldDescription><![CDATA[recipeNo]]></fieldDescription>
+	</field>
+	<field name="stockDeptcode" class="java.lang.String">
+		<fieldDescription><![CDATA[stockDeptcode]]></fieldDescription>
+	</field>
+	<field name="stockDeptname" class="java.lang.String">
+		<fieldDescription><![CDATA[stockDeptname]]></fieldDescription>
+	</field>
+	<field name="stop_flg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[stop_flg]]></fieldDescription>
+	</field>
+	<field name="totCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost]]></fieldDescription>
+	</field>
+	<field name="transType" class="java.lang.Integer">
+		<fieldDescription><![CDATA[transType]]></fieldDescription>
+	</field>
+	<field name="updateTime" class="java.util.Date">
+		<fieldDescription><![CDATA[updateTime]]></fieldDescription>
+	</field>
+	<field name="updateUser" class="java.lang.String">
+		<fieldDescription><![CDATA[updateUser]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="9dbbe744-6e55-4ecb-8938-c5df91b8ab24" key="staticText-38" x="149" y="0" width="205" height="30"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[本科室患者费用信息查询]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="db314463-23cf-4fb4-9bcd-57661e4fb0c8" key="staticText-3" x="0" y="30" width="61" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[查询时间：“]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1b979a31-6804-4d77-9603-c50d15058c00" key="textField-2" x="61" y="30" width="93" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{firstTime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="ef890ddd-8ac6-4984-9007-8d4a9789a87a" key="staticText-39" x="154" y="30" width="26" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[至]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="df411847-6f44-4772-8b2d-0a80027814c7" key="textField-3" x="180" y="30" width="107" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{endTime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b9161f80-619d-4dc3-a4dd-cf80f7aab59e" key="staticText-40" x="328" y="30" width="64" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[查询科室：]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="28bcc9de-4d88-4888-bf30-39920213d889" key="textField-4" x="392" y="30" width="88" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{deptName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="383" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="0df47df6-66ee-4fbb-98a6-dbaa67d8bd7d" key="staticText-11" x="0" y="0" width="60" height="30"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[开立科室]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a29a3afb-0633-4544-b234-6163a5327a60" key="staticText-12" x="60" y="0" width="60" height="30"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[开立医师]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b8abcc93-c6d2-4919-81e4-328285ca842f" key="staticText-13" x="179" y="0" width="60" height="30"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c256f442-b67b-487c-8a44-df824b0d259c" key="staticText-14" x="239" y="0" width="60" height="30"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[项目类别]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d7e61e39-56ef-4794-b84a-a65b251561f9" key="staticText-18" x="417" y="0" width="59" height="30"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[收费员]]></text>
+			</staticText>
+			<subreport isUsingCache="true">
+				<reportElement uuid="eac6db57-6a2a-4e7f-8412-5909de7d2b90" key="subreport-1" x="0" y="30" width="535" height="30" forecolor="#FFFFFF"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="inpatientNo">
+					<subreportParameterExpression><![CDATA[$P{inpatientNo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="firstTime">
+					<subreportParameterExpression><![CDATA[$P{firstTime}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="endTime">
+					<subreportParameterExpression><![CDATA[$P{endTime}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{inpatientFeeInfoList})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "brfyhzcxzibiao.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement uuid="ffb66aa5-fdf8-45c0-8c89-ec48a41b146b" key="staticText-20" x="299" y="0" width="59" height="30"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[合计金额]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="76f0ca0e-b621-4b7e-8114-8450110da086" key="staticText-21" x="476" y="0" width="59" height="30"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[收费时间]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="137ed8fd-a69c-42a1-b33a-7697571f77d2" key="staticText-34" x="120" y="0" width="59" height="30"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[住院号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3cd2247f-3bb9-434b-8afe-12e22cbbf0d3" key="staticText-35" x="358" y="0" width="59" height="30"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[记账科室]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

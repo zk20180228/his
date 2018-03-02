@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="YLZBG_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="bc4c3c81-f96a-47b8-9f86-b6a07e098d8e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="areaCode" class="java.lang.String">
+		<fieldDescription><![CDATA[areaCode]]></fieldDescription>
+	</field>
+	<field name="areaName" class="java.lang.String">
+		<fieldDescription><![CDATA[areaName]]></fieldDescription>
+	</field>
+	<field name="changeCause" class="java.lang.String">
+		<fieldDescription><![CDATA[changeCause]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="createDept" class="java.lang.String">
+		<fieldDescription><![CDATA[createDept]]></fieldDescription>
+	</field>
+	<field name="createTime" class="java.util.Date">
+		<fieldDescription><![CDATA[createTime]]></fieldDescription>
+	</field>
+	<field name="createUser" class="java.lang.String">
+		<fieldDescription><![CDATA[createUser]]></fieldDescription>
+	</field>
+	<field name="del_flg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[del_flg]]></fieldDescription>
+	</field>
+	<field name="deleteTime" class="java.util.Date">
+		<fieldDescription><![CDATA[deleteTime]]></fieldDescription>
+	</field>
+	<field name="deleteUser" class="java.lang.String">
+		<fieldDescription><![CDATA[deleteUser]]></fieldDescription>
+	</field>
+	<field name="deptCode" class="java.lang.String">
+		<fieldDescription><![CDATA[deptCode]]></fieldDescription>
+	</field>
+	<field name="deptName" class="java.lang.String">
+		<fieldDescription><![CDATA[deptName]]></fieldDescription>
+	</field>
+	<field name="happenNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[happenNo]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="itemCode" class="java.lang.String">
+		<fieldDescription><![CDATA[itemCode]]></fieldDescription>
+	</field>
+	<field name="itemName" class="java.lang.String">
+		<fieldDescription><![CDATA[itemName]]></fieldDescription>
+	</field>
+	<field name="mark" class="java.lang.String">
+		<fieldDescription><![CDATA[mark]]></fieldDescription>
+	</field>
+	<field name="newDataCode" class="java.lang.String">
+		<fieldDescription><![CDATA[newDataCode]]></fieldDescription>
+	</field>
+	<field name="newDataName" class="java.lang.String">
+		<fieldDescription><![CDATA[newDataName]]></fieldDescription>
+	</field>
+	<field name="oldDataCode" class="java.lang.String">
+		<fieldDescription><![CDATA[oldDataCode]]></fieldDescription>
+	</field>
+	<field name="oldDataName" class="java.lang.String">
+		<fieldDescription><![CDATA[oldDataName]]></fieldDescription>
+	</field>
+	<field name="operCode" class="java.lang.String">
+		<fieldDescription><![CDATA[operCode]]></fieldDescription>
+	</field>
+	<field name="operDate" class="java.util.Date">
+		<fieldDescription><![CDATA[operDate]]></fieldDescription>
+	</field>
+	<field name="stop_flg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[stop_flg]]></fieldDescription>
+	</field>
+	<field name="updateTime" class="java.util.Date">
+		<fieldDescription><![CDATA[updateTime]]></fieldDescription>
+	</field>
+	<field name="updateUser" class="java.lang.String">
+		<fieldDescription><![CDATA[updateUser]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="f195f1e8-05b0-40f9-a793-99c17dc5a5bd" stretchType="RelativeToTallestObject" x="0" y="0" width="66" height="24"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{itemName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="bdfd31fe-3d58-4887-b59e-e51e2bde317f" stretchType="RelativeToTallestObject" x="66" y="0" width="60" height="24"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deptName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="91c439c5-78d9-4088-a736-a9354fa73696" stretchType="RelativeToTallestObject" x="126" y="0" width="50" height="24"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{areaName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="0b48606b-6050-4a71-bbf3-6d0c9144d396" stretchType="RelativeToTallestObject" x="176" y="0" width="60" height="24"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{newDataCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="796582de-b2e1-493c-a612-b1c17747202b" stretchType="RelativeToTallestObject" x="236" y="0" width="60" height="24"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oldDataName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="139f9465-1a83-4f41-b116-1154637b6052" stretchType="RelativeToTallestObject" x="296" y="0" width="60" height="24"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{newDataName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="2d5ba764-ef53-4309-a494-8e35fd2a2cd5" stretchType="RelativeToTallestObject" x="356" y="0" width="66" height="24"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{changeCause}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="67c9a655-ec7f-40b2-a292-2bafa1645b62" stretchType="RelativeToTallestObject" x="422" y="0" width="40" height="24"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{operCode}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy-MM-dd HH:mm:ss" isBlankWhenNull="false">
+				<reportElement uuid="8f30f834-735e-4d56-99c0-76d491df05b4" stretchType="RelativeToTallestObject" x="462" y="0" width="93" height="24"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{operDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

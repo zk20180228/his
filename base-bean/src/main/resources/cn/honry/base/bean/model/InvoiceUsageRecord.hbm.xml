@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="InvoiceUsageRecord" table="T_FINANCE_USAGE_RECORD" >
+    	<id name="id" type="java.lang.String" >
+            <column name="ID"/>
+            <generator class="uuid" />
+        </id>
+        <property name="userId" type="java.lang.String">
+            <column name="USER_ID" >
+                <comment>账务组或员工ID</comment>
+            </column>
+        </property>
+        <property name="userCode" type="java.lang.String">
+            <column name="USER_CODE" >
+                <comment>账务组或员工编码</comment>
+            </column>
+        </property>
+        <property name="userType" type="java.lang.Integer">
+            <column name="USER_TYPE" >
+                <comment>1-组2-员工 </comment>
+            </column>
+        </property>
+        <property name="invoiceNo" type="java.lang.String">
+            <column name="INVOICE_NO" >
+                <comment>发票号</comment>
+            </column>
+        </property>
+        <property name="recoveryOpcd" type="java.lang.String">
+            <column name="RECOVERY_OPCD" >
+                <comment>召回操作员</comment>
+            </column>
+        </property>
+        <property name="recoveryInvoiceNo" type="java.lang.String">
+            <column name="RECOVERY_INVOICE_NO" >
+                <comment>召回发票号</comment>
+            </column>
+        </property>
+        <property name="recoveryDate" type="java.sql.Timestamp">
+            <column name="RECOVERY_DATE" >
+                <comment>召回时间</comment>
+            </column>
+        </property>
+        <property name="invoiceUsestate" type="java.lang.Integer">
+            <column name="INVOICE_USESTATE" >
+                <comment>使用状态(0-未使用 1-已使用 2-召回)</comment>
+            </column>
+        </property>
+        <property name="userName" type="java.lang.String">
+            <column name="USER_NAME" >
+                <comment>组名/员工名</comment>
+            </column>
+        </property>
+        <property name="createUser" type="java.lang.String">
+        	<column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT"  />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME"  />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER"  />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" />
+        </property>
+        <property name="recoveryOpceName" type="java.lang.String">
+            <column name="RECOVERY_OPCD_NAME"  length="50"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,85 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style-type: none;
+}
+.rolemain{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #eaf5f9;
+	margin:0 auto;
+}
+.chose{
+	width: 910px;
+	margin:0 auto;
+	height: 200px;
+	padding: 20px 0 10px;
+}
+.chose h2{
+	font:normal 18px/18px "微软雅黑";
+	color: #666;
+	width: 800px;
+	margin: 0 auto 20px;
+	text-indent: 30px;	
+}
+.role h2{
+	background: url("images/choseRole.png") left center no-repeat;
+}
+.dept h2{
+	background: url("images/choseDept.png") left center no-repeat;
+}
+.chose .choseList{
+	height: 162px;
+	overflow: hidden;
+	position: relative;
+}
+.chose .choseList .choseListMid{
+	width: 840px;
+	margin: 0 auto;
+}
+.chose .choseList a{
+	width: 28px;
+	height: 45px;
+	overflow: hidden;
+	top: 50px;
+	position: absolute;
+}
+.chose ul{
+	overflow: hidden;
+}
+.chose ul li{
+	float: left;
+	margin: 0 18px;
+	width: 132px;
+	height: 156px;
+	border-radius: 5px;
+	text-align: center;	
+	font:normal 16px/16px "微软雅黑";
+	cursor: pointer;
+}
+.chose ul li div{
+	width:100px;
+	height:100px;
+	margin:12px auto 10px;
+}
+.button{
+	margin: 30px auto 0;
+	overflow: hidden;
+}
+.button .tijiao{
+	display: block;
+	margin: 0 auto;
+	width: 304px;
+	height: 54px;
+	background: #017973;
+	border: 0;
+	border-radius: 2px;
+	color: #fff;
+	cursor: pointer;
+	font:normal 16px/54px "微软雅黑";
+}
+
+

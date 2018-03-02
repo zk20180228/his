@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="yizhuzhixingdan_sup" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2d67eda1-d518-4834-b00e-f3d2da05779f">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="applyNo" class="java.lang.String">
+		<fieldDescription><![CDATA[applyNo]]></fieldDescription>
+	</field>
+	<field name="babyFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[babyFlag]]></fieldDescription>
+	</field>
+	<field name="chargeDate" class="java.util.Date">
+		<fieldDescription><![CDATA[chargeDate]]></fieldDescription>
+	</field>
+	<field name="chargeDeptcd" class="java.lang.String">
+		<fieldDescription><![CDATA[chargeDeptcd]]></fieldDescription>
+	</field>
+	<field name="chargeDeptcdName" class="java.lang.String">
+		<fieldDescription><![CDATA[chargeDeptcdName]]></fieldDescription>
+	</field>
+	<field name="chargeFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[chargeFlag]]></fieldDescription>
+	</field>
+	<field name="chargePrndate" class="java.util.Date">
+		<fieldDescription><![CDATA[chargePrndate]]></fieldDescription>
+	</field>
+	<field name="chargePrnflag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[chargePrnflag]]></fieldDescription>
+	</field>
+	<field name="chargePrnusercd" class="java.lang.String">
+		<fieldDescription><![CDATA[chargePrnusercd]]></fieldDescription>
+	</field>
+	<field name="chargeState" class="java.lang.Integer">
+		<fieldDescription><![CDATA[chargeState]]></fieldDescription>
+	</field>
+	<field name="chargeUsercd" class="java.lang.String">
+		<fieldDescription><![CDATA[chargeUsercd]]></fieldDescription>
+	</field>
+	<field name="chargeUsercdName" class="java.lang.String">
+		<fieldDescription><![CDATA[chargeUsercdName]]></fieldDescription>
+	</field>
+	<field name="circultPrnflag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[circultPrnflag]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="classCode" class="java.lang.String">
+		<fieldDescription><![CDATA[classCode]]></fieldDescription>
+	</field>
+	<field name="combNo" class="java.lang.String">
+		<fieldDescription><![CDATA[combNo]]></fieldDescription>
+	</field>
+	<field name="className" class="java.lang.String">
+		<fieldDescription><![CDATA[className]]></fieldDescription>
+	</field>
+	<field name="confirmDate" class="java.util.Date">
+		<fieldDescription><![CDATA[confirmDate]]></fieldDescription>
+	</field>
+	<field name="confirmDeptcd" class="java.lang.String">
+		<fieldDescription><![CDATA[confirmDeptcd]]></fieldDescription>
+	</field>
+	<field name="confirmDeptcdName" class="java.lang.String">
+		<fieldDescription><![CDATA[confirmDeptcdName]]></fieldDescription>
+	</field>
+	<field name="confirmFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[confirmFlag]]></fieldDescription>
+	</field>
+	<field name="confirmUsercd" class="java.lang.String">
+		<fieldDescription><![CDATA[confirmUsercd]]></fieldDescription>
+	</field>
+	<field name="confirmUsercdName" class="java.lang.String">
+		<fieldDescription><![CDATA[confirmUsercdName]]></fieldDescription>
+	</field>
+	<field name="createDept" class="java.lang.String">
+		<fieldDescription><![CDATA[createDept]]></fieldDescription>
+	</field>
+	<field name="createTime" class="java.util.Date">
+		<fieldDescription><![CDATA[createTime]]></fieldDescription>
+	</field>
+	<field name="createUser" class="java.lang.String">
+		<fieldDescription><![CDATA[createUser]]></fieldDescription>
+	</field>
+	<field name="decmpsState" class="java.lang.Integer">
+		<fieldDescription><![CDATA[decmpsState]]></fieldDescription>
+	</field>
+	<field name="decoDate" class="java.util.Date">
+		<fieldDescription><![CDATA[decoDate]]></fieldDescription>
+	</field>
+	<field name="del_flg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[del_flg]]></fieldDescription>
+	</field>
+	<field name="deleteTime" class="java.util.Date">
+		<fieldDescription><![CDATA[deleteTime]]></fieldDescription>
+	</field>
+	<field name="deleteUser" class="java.lang.String">
+		<fieldDescription><![CDATA[deleteUser]]></fieldDescription>
+	</field>
+	<field name="deptCode" class="java.lang.String">
+		<fieldDescription><![CDATA[deptCode]]></fieldDescription>
+	</field>
+	<field name="deptName" class="java.lang.String">
+		<fieldDescription><![CDATA[deptName]]></fieldDescription>
+	</field>
+	<field name="dfqCexp" class="java.lang.String">
+		<fieldDescription><![CDATA[dfqCexp]]></fieldDescription>
+	</field>
+	<field name="dfqFreq" class="java.lang.String">
+		<fieldDescription><![CDATA[dfqFreq]]></fieldDescription>
+	</field>
+	<field name="docCode" class="java.lang.String">
+		<fieldDescription><![CDATA[docCode]]></fieldDescription>
+	</field>
+	<field name="docName" class="java.lang.String">
+		<fieldDescription><![CDATA[docName]]></fieldDescription>
+	</field>
+	<field name="emcFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[emcFlag]]></fieldDescription>
+	</field>
+	<field name="execDate" class="java.util.Date">
+		<fieldDescription><![CDATA[execDate]]></fieldDescription>
+	</field>
+	<field name="execDeptcd" class="java.lang.String">
+		<fieldDescription><![CDATA[execDeptcd]]></fieldDescription>
+	</field>
+	<field name="execDeptcdName" class="java.lang.String">
+		<fieldDescription><![CDATA[execDeptcdName]]></fieldDescription>
+	</field>
+	<field name="execDpcd" class="java.lang.String">
+		<fieldDescription><![CDATA[execDpcd]]></fieldDescription>
+	</field>
+	<field name="execDpnm" class="java.lang.String">
+		<fieldDescription><![CDATA[execDpnm]]></fieldDescription>
+	</field>
+	<field name="execFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[execFlag]]></fieldDescription>
+	</field>
+	<field name="execId" class="java.lang.String">
+		<fieldDescription><![CDATA[execId]]></fieldDescription>
+	</field>
+	<field name="execPrndate" class="java.util.Date">
+		<fieldDescription><![CDATA[execPrndate]]></fieldDescription>
+	</field>
+	<field name="execPrnflag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[execPrnflag]]></fieldDescription>
+	</field>
+	<field name="execPrnusercd" class="java.lang.String">
+		<fieldDescription><![CDATA[execPrnusercd]]></fieldDescription>
+	</field>
+	<field name="execUsercd" class="java.lang.String">
+		<fieldDescription><![CDATA[execUsercd]]></fieldDescription>
+	</field>
+	<field name="execUsercdName" class="java.lang.String">
+		<fieldDescription><![CDATA[execUsercdName]]></fieldDescription>
+	</field>
+	<field name="feeCode" class="java.lang.String">
+		<fieldDescription><![CDATA[feeCode]]></fieldDescription>
+	</field>
+	<field name="firstDay" class="java.lang.Integer">
+		<fieldDescription><![CDATA[firstDay]]></fieldDescription>
+	</field>
+	<field name="happenNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[happenNo]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="inpatientNo" class="java.lang.String">
+		<fieldDescription><![CDATA[inpatientNo]]></fieldDescription>
+	</field>
+	<field name="isMat" class="java.lang.Integer">
+		<fieldDescription><![CDATA[isMat]]></fieldDescription>
+	</field>
+	<field name="itemNote" class="java.lang.String">
+		<fieldDescription><![CDATA[itemNote]]></fieldDescription>
+	</field>
+	<field name="labBarcode" class="java.lang.String">
+		<fieldDescription><![CDATA[labBarcode]]></fieldDescription>
+	</field>
+	<field name="labCode" class="java.lang.String">
+		<fieldDescription><![CDATA[labCode]]></fieldDescription>
+	</field>
+	<field name="listDpcd" class="java.lang.String">
+		<fieldDescription><![CDATA[listDpcd]]></fieldDescription>
+	</field>
+	<field name="listDpcdName" class="java.lang.String">
+		<fieldDescription><![CDATA[listDpcdName]]></fieldDescription>
+	</field>
+	<field name="mainDrug" class="java.lang.Integer">
+		<fieldDescription><![CDATA[mainDrug]]></fieldDescription>
+	</field>
+	<field name="moDate" class="java.util.Date">
+		<fieldDescription><![CDATA[moDate]]></fieldDescription>
+	</field>
+	<field name="moNote1" class="java.lang.String">
+		<fieldDescription><![CDATA[moNote1]]></fieldDescription>
+	</field>
+	<field name="moNote2" class="java.lang.String">
+		<fieldDescription><![CDATA[moNote2]]></fieldDescription>
+	</field>
+	<field name="moOrder" class="java.lang.String">
+		<fieldDescription><![CDATA[moOrder]]></fieldDescription>
+	</field>
+	<field name="needConfirm" class="java.lang.Integer">
+		<fieldDescription><![CDATA[needConfirm]]></fieldDescription>
+	</field>
+	<field name="nurseCellCode" class="java.lang.String">
+		<fieldDescription><![CDATA[nurseCellCode]]></fieldDescription>
+	</field>
+	<field name="nurseCellName" class="java.lang.String">
+		<fieldDescription><![CDATA[nurseCellName]]></fieldDescription>
+	</field>
+	<field name="patient" class="cn.honry.base.bean.model.InpatientInfoNow">
+		<fieldDescription><![CDATA[patient]]></fieldDescription>
+	</field>
+	<field name="prnExelist" class="java.lang.Integer">
+		<fieldDescription><![CDATA[prnExelist]]></fieldDescription>
+	</field>
+	<field name="patientNo" class="java.lang.String">
+		<fieldDescription><![CDATA[patientNo]]></fieldDescription>
+	</field>
+	<field name="prnMorlist" class="java.lang.Integer">
+		<fieldDescription><![CDATA[prnMorlist]]></fieldDescription>
+	</field>
+	<field name="qtyTot" class="java.lang.Integer">
+		<fieldDescription><![CDATA[qtyTot]]></fieldDescription>
+	</field>
+	<field name="recipeNo" class="java.lang.String">
+		<fieldDescription><![CDATA[recipeNo]]></fieldDescription>
+	</field>
+	<field name="setItmattr" class="java.lang.Integer">
+		<fieldDescription><![CDATA[setItmattr]]></fieldDescription>
+	</field>
+	<field name="sequenceNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[sequenceNo]]></fieldDescription>
+	</field>
+	<field name="setSubtbl" class="java.lang.Integer">
+		<fieldDescription><![CDATA[setSubtbl]]></fieldDescription>
+	</field>
+	<field name="stockUnit" class="java.lang.String">
+		<fieldDescription><![CDATA[stockUnit]]></fieldDescription>
+	</field>
+	<field name="stop_flg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[stop_flg]]></fieldDescription>
+	</field>
+	<field name="subtblFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[subtblFlag]]></fieldDescription>
+	</field>
+	<field name="typeCode" class="java.lang.String">
+		<fieldDescription><![CDATA[typeCode]]></fieldDescription>
+	</field>
+	<field name="undrugCode" class="java.lang.String">
+		<fieldDescription><![CDATA[undrugCode]]></fieldDescription>
+	</field>
+	<field name="undrugName" class="java.lang.String">
+		<fieldDescription><![CDATA[undrugName]]></fieldDescription>
+	</field>
+	<field name="unitPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[unitPrice]]></fieldDescription>
+	</field>
+	<field name="updateTime" class="java.util.Date">
+		<fieldDescription><![CDATA[updateTime]]></fieldDescription>
+	</field>
+	<field name="updateUser" class="java.lang.String">
+		<fieldDescription><![CDATA[updateUser]]></fieldDescription>
+	</field>
+	<field name="useTime" class="java.util.Date">
+		<fieldDescription><![CDATA[useTime]]></fieldDescription>
+	</field>
+	<field name="validDate" class="java.util.Date">
+		<fieldDescription><![CDATA[validDate]]></fieldDescription>
+	</field>
+	<field name="validFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[validFlag]]></fieldDescription>
+	</field>
+	<field name="validUsercd" class="java.lang.String">
+		<fieldDescription><![CDATA[validUsercd]]></fieldDescription>
+	</field>
+	<field name="validUsercdName" class="java.lang.String">
+		<fieldDescription><![CDATA[validUsercdName]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField>
+				<reportElement uuid="ce51229a-c17e-49d0-accd-36c59c51c4fb" x="437" y="0" width="74" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{execDeptcdName}?"":$F{execDeptcdName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7d73b107-97f2-4e47-8a2d-4dc622521e06" x="356" y="0" width="81" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{execDate}?"":$F{execDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f5001a2b-002c-4667-b873-615ce20b5df5" x="1" y="0" width="138" height="14" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{undrugName}?"":$F{undrugName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="24e27b3f-092c-4e6d-86e2-0b29193ea07b" x="294" y="0" width="62" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{dfqCexp}?"":$F{dfqCexp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="856b9429-3805-4d10-9638-5b45723897d3" x="176" y="0" width="54" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{qtyTot}?"":$F{qtyTot}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="856b9429-3805-4d10-9638-5b45723897d3" x="230" y="0" width="64" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{unitPrice}?"":$F{unitPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="33f52d83-b0bf-45b7-8b9d-95024ac5a151" x="139" y="0" width="37" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null==$F{combNo}?"":$F{combNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MZGH" pageWidth="1008" pageHeight="595" orientation="Landscape" columnWidth="968" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f1ca1d27-6938-4a12-babc-6aaab0421960">
+	<property name="ireport.zoom" value="0.9075000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="deptAdress" class="java.lang.String" isForPrompting="false">
+		<property name="deptAdress" value="${deptAdress}"/>
+	</parameter>
+	<parameter name="deptName" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="seeno" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="orderNo" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="schemaNo" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="regDate" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="doctName" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="patientName" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="chckFee" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="regFee" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="createhos" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="noonCodeNmae" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="midicalrecordId" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="clinicCode" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="120" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="154ebb62-6e2e-466a-9191-8101e52bf8f9" x="92" y="0" width="200" height="50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[诊查票据存根B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e08a636d-cd59-40b2-a811-bd0446442bda" x="448" y="0" width="424" height="50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[河南省非营利性医疗机构诊查票据]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5db132ce-4735-46df-bd51-7fd09e83f72f" x="683" y="50" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[票据代码：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a5aa6f5d-562d-4a71-9e11-3a69b6d2adcc" x="683" y="85" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[票据批次：]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="b3fa9f2c-4b79-4c03-8226-2bc4bebaa936" x="403" y="0" width="1" height="120"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="001f74ed-9604-4d11-bbeb-e639d8698ed4" x="20" y="0" width="27" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="05a04bc2-f01d-45a9-a11e-4629e295fe1c" x="430" y="0" width="27" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="aa74ad9b-c51b-4771-aa7f-54437fcb4a39" x="403" y="0" width="1" height="30"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e98f88f3-b368-4459-96d9-2b0b8b397779" x="419" y="-58" width="231" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{createhos}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d6bd4cb9-699c-45ac-8505-215c3aefeae0" x="29" y="-51" width="309" height="30"/>
+				<textElement>
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{createhos}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="395" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="462fd86a-65c4-48d8-8aba-6e8edd87e3a5" x="531" y="308" width="141" height="34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" isBold="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{deptAdress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="27c3e0d4-45b0-41aa-812d-660e42c24031" x="0" y="202" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[筹款No：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="abef916b-53d8-459e-8b97-56d5aa5b0c55" x="0" y="167" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[就诊No：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="65e965d7-02b0-4543-ac0e-0c65b1ccf539" x="0" y="237" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[流水号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="953da75e-66bc-4a80-b476-c460744c4f48" x="430" y="167" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[收款No：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="524a44c9-6234-45f5-b221-61e1087ef65e" x="430" y="202" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[流水号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="185f56fc-4318-42d0-af14-4d1f7fe8b57e" x="430" y="237" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[就诊No：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="efdc230a-27ab-4514-9bd9-c8b36bb57cc4" x="430" y="272" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[就诊科室：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1ce9ee18-3705-4184-a711-9f3e5417acf0" x="430" y="307" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[就诊地点：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e5341b94-f8f4-444b-8850-9383f4a85f08" x="610" y="354" width="140" height="41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[当  日  有  效]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e85241de-129c-4919-a641-892d087b4266" x="0" y="272" width="100" height="30"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[病历号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d09b0dfb-406f-4360-94bd-100ffa4c8231" x="0" y="302" width="100" height="30"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[姓名：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="26db6455-24e9-4eb3-b51d-020c4c889521" x="0" y="0" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="20" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[挂号费：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="94ea2847-346b-44ad-91bd-f67f53b9462b" x="0" y="35" width="100" height="30"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[诊查费：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fbd88e90-4dd8-450b-8501-b8a9be03a242" x="0" y="65" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[医生姓名：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2d0dda09-8b12-470d-9f35-31523da73117" x="338" y="18" width="25" height="82"/>
+				<textElement textAlignment="Center">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[存根联]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="96923b81-b797-448b-aad4-ad4b9b666562" x="430" y="0" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="20" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[挂号费：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6f78b892-ff72-417a-aceb-8e99dd49b474" x="430" y="36" width="100" height="30"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[诊查费：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4fa20ad2-8758-4226-80ea-08815a6bd571" x="430" y="66" width="100" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[医生姓名：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f08eebd4-4f13-4801-b848-9f5f8905b158" x="690" y="35" width="93" height="30"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[病历号：]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="2d66fb75-546a-4c74-a1c3-2ac8533d8470" x="403" y="0" width="1" height="395"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="d09b0dfb-406f-4360-94bd-100ffa4c8231" x="690" y="65" width="93" height="30"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[姓名：]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c3a8245b-f896-4851-aecb-83c429a48031" x="101" y="35" width="140" height="30" isRemoveLineWhenBlank="true"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{chckFee}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="fb1a19fd-e1e1-4174-849b-0432966409e2" x="100" y="66" width="141" height="31"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{doctName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="487fd77d-e24a-482a-9ef4-3f4c5b6b79aa" x="100" y="273" width="141" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{midicalrecordId}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="af183bff-862b-4fbc-942e-d22b2aa9ea91" x="101" y="303" width="141" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{patientName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="26077592-89b7-423f-add4-e626af09d324" x="783" y="35" width="141" height="30"/>
+				<textElement>
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{midicalrecordId}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c21cffef-aecc-4eee-ad80-56d698c9db57" x="783" y="65" width="141" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{patientName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e2ee1687-a1f9-4baf-a40b-43e3ec819a0f" x="530" y="36" width="140" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{chckFee}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5ab2b30f-075e-44eb-9c9d-4c05dc68ac21" x="530" y="68" width="141" height="33"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{doctName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="462fd86a-65c4-48d8-8aba-6e8edd87e3a5" x="530" y="273" width="141" height="34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{deptName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1655d660-9581-456a-8067-abe51beb48a9" x="276" y="237" width="100" height="34"/>
+				<textElement>
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noonCodeNmae}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="bbbb2139-deb3-401a-8425-ab422c49a6c6" x="98" y="116" width="266" height="34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{regDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e1210bcc-bc47-4797-96d3-8273b868e192" x="670" y="121" width="266" height="34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{regDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="55e917fc-ca53-4972-886c-239d4f0cc2c5" x="100" y="5" width="140" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{regFee}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1d801824-d0ad-44fd-8ae6-8379399ecd20" x="531" y="3" width="140" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{regFee}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="04eca139-c6ca-434d-880a-2cf7c16529a6" x="102" y="239" width="141" height="34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{orderNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d2b822d1-7d17-47c1-9e9a-c486dcab95ae" x="101" y="205" width="302" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{schemaNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5c171833-207a-4db5-838c-307e0d243335" x="530" y="204" width="141" height="34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{orderNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5cf75121-e9a1-4036-9d18-96731022c701" x="530" y="168" width="342" height="34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{schemaNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1655d660-9581-456a-8067-abe51beb48a9" x="732" y="238" width="181" height="34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noonCodeNmae}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2d0dda09-8b12-470d-9f35-31523da73117" x="936" y="21" width="25" height="82"/>
+				<textElement textAlignment="Center">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[收据联]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="fe784dfc-c126-42e5-9aa2-00865b859b5e" x="530" y="238" width="141" height="34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" isStrikeThrough="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{clinicCode}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="fe784dfc-c126-42e5-9aa2-00865b859b5e" x="102" y="168" width="141" height="34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" isStrikeThrough="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{clinicCode}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

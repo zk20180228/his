@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ZYFYFZLTJ_subreport" language="groovy" pageWidth="802" pageHeight="555" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="42dae5a4-21ed-449a-a557-0e18d98116e9">
+	<property name="ireport.zoom" value="2.1435888100000025"/>
+	<property name="ireport.x" value="271"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="applyDate" class="java.lang.String">
+		<fieldDescription><![CDATA[applyDate]]></fieldDescription>
+	</field>
+	<field name="applyNum" class="java.lang.Double">
+		<fieldDescription><![CDATA[applyNum]]></fieldDescription>
+	</field>
+	<field name="applyOpercode" class="java.lang.String">
+		<fieldDescription><![CDATA[applyOpercode]]></fieldDescription>
+	</field>
+	<field name="applyoutId" class="java.lang.String">
+		<fieldDescription><![CDATA[applyoutId]]></fieldDescription>
+	</field>
+	<field name="approveDate" class="java.util.Date">
+		<fieldDescription><![CDATA[approveDate]]></fieldDescription>
+	</field>
+	<field name="approveOpercode" class="java.lang.String">
+		<fieldDescription><![CDATA[approveOpercode]]></fieldDescription>
+	</field>
+	<field name="approveOpername" class="java.lang.String">
+		<fieldDescription><![CDATA[approveOpername]]></fieldDescription>
+	</field>
+	<field name="arkBillCode" class="java.lang.String">
+		<fieldDescription><![CDATA[arkBillCode]]></fieldDescription>
+	</field>
+	<field name="arkFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[arkFlag]]></fieldDescription>
+	</field>
+	<field name="batchNo" class="java.lang.String">
+		<fieldDescription><![CDATA[batchNo]]></fieldDescription>
+	</field>
+	<field name="bedName" class="java.lang.String">
+		<fieldDescription><![CDATA[bedName]]></fieldDescription>
+	</field>
+	<field name="beforeOutSum" class="java.lang.Double">
+		<fieldDescription><![CDATA[beforeOutSum]]></fieldDescription>
+	</field>
+	<field name="billclassCode" class="java.lang.String">
+		<fieldDescription><![CDATA[billclassCode]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="companyCode" class="java.lang.String">
+		<fieldDescription><![CDATA[companyCode]]></fieldDescription>
+	</field>
+	<field name="companyName" class="java.lang.String">
+		<fieldDescription><![CDATA[companyName]]></fieldDescription>
+	</field>
+	<field name="createDept" class="java.lang.String">
+		<fieldDescription><![CDATA[createDept]]></fieldDescription>
+	</field>
+	<field name="createTime" class="java.util.Date">
+		<fieldDescription><![CDATA[createTime]]></fieldDescription>
+	</field>
+	<field name="createUser" class="java.lang.String">
+		<fieldDescription><![CDATA[createUser]]></fieldDescription>
+	</field>
+	<field name="del_flg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[del_flg]]></fieldDescription>
+	</field>
+	<field name="deleteTime" class="java.util.Date">
+		<fieldDescription><![CDATA[deleteTime]]></fieldDescription>
+	</field>
+	<field name="deleteUser" class="java.lang.String">
+		<fieldDescription><![CDATA[deleteUser]]></fieldDescription>
+	</field>
+	<field name="dfqFreq" class="java.lang.String">
+		<fieldDescription><![CDATA[dfqFreq]]></fieldDescription>
+	</field>
+	<field name="differentId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[differentId]]></fieldDescription>
+	</field>
+	<field name="doseOnce" class="java.lang.String">
+		<fieldDescription><![CDATA[doseOnce]]></fieldDescription>
+	</field>
+	<field name="doseUnit" class="java.lang.String">
+		<fieldDescription><![CDATA[doseUnit]]></fieldDescription>
+	</field>
+	<field name="drugCnameinputcode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCnameinputcode]]></fieldDescription>
+	</field>
+	<field name="drugCnamepinyin" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCnamepinyin]]></fieldDescription>
+	</field>
+	<field name="drugCnamewb" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCnamewb]]></fieldDescription>
+	</field>
+	<field name="drugCode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCode]]></fieldDescription>
+	</field>
+	<field name="drugCommonname" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCommonname]]></fieldDescription>
+	</field>
+	<field name="drugDeptCode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugDeptCode]]></fieldDescription>
+	</field>
+	<field name="drugDeptName" class="java.lang.String">
+		<fieldDescription><![CDATA[drugDeptName]]></fieldDescription>
+	</field>
+	<field name="drugDosageform" class="java.lang.String">
+		<fieldDescription><![CDATA[drugDosageform]]></fieldDescription>
+	</field>
+	<field name="drugMinimumunit" class="java.lang.String">
+		<fieldDescription><![CDATA[drugMinimumunit]]></fieldDescription>
+	</field>
+	<field name="drugName" class="java.lang.String">
+		<fieldDescription><![CDATA[drugName]]></fieldDescription>
+	</field>
+	<field name="drugNameinputcode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugNameinputcode]]></fieldDescription>
+	</field>
+	<field name="drugNamepinyin" class="java.lang.String">
+		<fieldDescription><![CDATA[drugNamepinyin]]></fieldDescription>
+	</field>
+	<field name="drugNamewb" class="java.lang.String">
+		<fieldDescription><![CDATA[drugNamewb]]></fieldDescription>
+	</field>
+	<field name="drugOutstoreList" class="java.util.List">
+		<fieldDescription><![CDATA[drugOutstoreList]]></fieldDescription>
+	</field>
+	<field name="drugPackagingnum" class="java.lang.Integer">
+		<fieldDescription><![CDATA[drugPackagingnum]]></fieldDescription>
+	</field>
+	<field name="drugPackagingunit" class="java.lang.String">
+		<fieldDescription><![CDATA[drugPackagingunit]]></fieldDescription>
+	</field>
+	<field name="drugPurchaseprice" class="java.lang.Double">
+		<fieldDescription><![CDATA[drugPurchaseprice]]></fieldDescription>
+	</field>
+	<field name="drugQuality" class="java.lang.String">
+		<fieldDescription><![CDATA[drugQuality]]></fieldDescription>
+	</field>
+	<field name="drugRetailprice" class="java.lang.Double">
+		<fieldDescription><![CDATA[drugRetailprice]]></fieldDescription>
+	</field>
+	<field name="drugSpec" class="java.lang.String">
+		<fieldDescription><![CDATA[drugSpec]]></fieldDescription>
+	</field>
+	<field name="drugStorageCode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugStorageCode]]></fieldDescription>
+	</field>
+	<field name="drugStorageName" class="java.lang.String">
+		<fieldDescription><![CDATA[drugStorageName]]></fieldDescription>
+	</field>
+	<field name="drugType" class="java.lang.String">
+		<fieldDescription><![CDATA[drugType]]></fieldDescription>
+	</field>
+	<field name="drugWholesaleprice" class="java.lang.Double">
+		<fieldDescription><![CDATA[drugWholesaleprice]]></fieldDescription>
+	</field>
+	<field name="drugedBill" class="java.lang.String">
+		<fieldDescription><![CDATA[drugedBill]]></fieldDescription>
+	</field>
+	<field name="drugedName" class="java.lang.String">
+		<fieldDescription><![CDATA[drugedName]]></fieldDescription>
+	</field>
+	<field name="examDate" class="java.util.Date">
+		<fieldDescription><![CDATA[examDate]]></fieldDescription>
+	</field>
+	<field name="examNum" class="java.lang.Double">
+		<fieldDescription><![CDATA[examNum]]></fieldDescription>
+	</field>
+	<field name="examOpercode" class="java.lang.String">
+		<fieldDescription><![CDATA[examOpercode]]></fieldDescription>
+	</field>
+	<field name="examOpername" class="java.lang.String">
+		<fieldDescription><![CDATA[examOpername]]></fieldDescription>
+	</field>
+	<field name="flagId" class="java.lang.String">
+		<fieldDescription><![CDATA[flagId]]></fieldDescription>
+	</field>
+	<field name="getPerson" class="java.lang.String">
+		<fieldDescription><![CDATA[getPerson]]></fieldDescription>
+	</field>
+	<field name="getPersonName" class="java.lang.String">
+		<fieldDescription><![CDATA[getPersonName]]></fieldDescription>
+	</field>
+	<field name="groupCode" class="java.lang.String">
+		<fieldDescription><![CDATA[groupCode]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="inBillCode" class="java.lang.String">
+		<fieldDescription><![CDATA[inBillCode]]></fieldDescription>
+	</field>
+	<field name="inListCode" class="java.lang.String">
+		<fieldDescription><![CDATA[inListCode]]></fieldDescription>
+	</field>
+	<field name="manufacturerName" class="java.lang.String">
+		<fieldDescription><![CDATA[manufacturerName]]></fieldDescription>
+	</field>
+	<field name="medId" class="java.lang.String">
+		<fieldDescription><![CDATA[medId]]></fieldDescription>
+	</field>
+	<field name="minUnit" class="java.lang.String">
+		<fieldDescription><![CDATA[minUnit]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="namePinyin" class="java.lang.String">
+		<fieldDescription><![CDATA[namePinyin]]></fieldDescription>
+	</field>
+	<field name="nameWb" class="java.lang.String">
+		<fieldDescription><![CDATA[nameWb]]></fieldDescription>
+	</field>
+	<field name="notPrintDate" class="java.lang.String">
+		<fieldDescription><![CDATA[notPrintDate]]></fieldDescription>
+	</field>
+	<field name="num" class="java.lang.Double">
+		<fieldDescription><![CDATA[num]]></fieldDescription>
+	</field>
+	<field name="oldRetailPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[oldRetailPrice]]></fieldDescription>
+	</field>
+	<field name="opType" class="java.lang.String">
+		<fieldDescription><![CDATA[opType]]></fieldDescription>
+	</field>
+	<field name="outBillCode" class="java.lang.String">
+		<fieldDescription><![CDATA[outBillCode]]></fieldDescription>
+	</field>
+	<field name="outDate" class="java.util.Date">
+		<fieldDescription><![CDATA[outDate]]></fieldDescription>
+	</field>
+	<field name="outListCode" class="java.lang.String">
+		<fieldDescription><![CDATA[outListCode]]></fieldDescription>
+	</field>
+	<field name="outNum" class="java.lang.Double">
+		<fieldDescription><![CDATA[outNum]]></fieldDescription>
+	</field>
+	<field name="outSerialCode" class="java.lang.String">
+		<fieldDescription><![CDATA[outSerialCode]]></fieldDescription>
+	</field>
+	<field name="outState" class="java.lang.Integer">
+		<fieldDescription><![CDATA[outState]]></fieldDescription>
+	</field>
+	<field name="outType" class="java.lang.String">
+		<fieldDescription><![CDATA[outType]]></fieldDescription>
+	</field>
+	<field name="outlCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[outlCost]]></fieldDescription>
+	</field>
+	<field name="packQty" class="java.lang.Double">
+		<fieldDescription><![CDATA[packQty]]></fieldDescription>
+	</field>
+	<field name="packUnit" class="java.lang.String">
+		<fieldDescription><![CDATA[packUnit]]></fieldDescription>
+	</field>
+	<field name="placeCode" class="java.lang.Double">
+		<fieldDescription><![CDATA[placeCode]]></fieldDescription>
+	</field>
+	<field name="printDate" class="java.lang.String">
+		<fieldDescription><![CDATA[printDate]]></fieldDescription>
+	</field>
+	<field name="printEmpl" class="java.lang.String">
+		<fieldDescription><![CDATA[printEmpl]]></fieldDescription>
+	</field>
+	<field name="producerCode" class="java.lang.String">
+		<fieldDescription><![CDATA[producerCode]]></fieldDescription>
+	</field>
+	<field name="producerName" class="java.lang.String">
+		<fieldDescription><![CDATA[producerName]]></fieldDescription>
+	</field>
+	<field name="purchaseCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[purchaseCost]]></fieldDescription>
+	</field>
+	<field name="purchasePrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[purchasePrice]]></fieldDescription>
+	</field>
+	<field name="recipeNo" class="java.lang.String">
+		<fieldDescription><![CDATA[recipeNo]]></fieldDescription>
+	</field>
+	<field name="remark" class="java.lang.String">
+		<fieldDescription><![CDATA[remark]]></fieldDescription>
+	</field>
+	<field name="retailCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[retailCost]]></fieldDescription>
+	</field>
+	<field name="retailPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[retailPrice]]></fieldDescription>
+	</field>
+	<field name="returnNum" class="java.lang.Double">
+		<fieldDescription><![CDATA[returnNum]]></fieldDescription>
+	</field>
+	<field name="returnOutCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[returnOutCost]]></fieldDescription>
+	</field>
+	<field name="sendType" class="java.lang.String">
+		<fieldDescription><![CDATA[sendType]]></fieldDescription>
+	</field>
+	<field name="sequenceNo" class="java.lang.String">
+		<fieldDescription><![CDATA[sequenceNo]]></fieldDescription>
+	</field>
+	<field name="serialCode" class="java.lang.String">
+		<fieldDescription><![CDATA[serialCode]]></fieldDescription>
+	</field>
+	<field name="showFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[showFlag]]></fieldDescription>
+	</field>
+	<field name="showUnit" class="java.lang.String">
+		<fieldDescription><![CDATA[showUnit]]></fieldDescription>
+	</field>
+	<field name="signPerson" class="java.lang.String">
+		<fieldDescription><![CDATA[signPerson]]></fieldDescription>
+	</field>
+	<field name="signPersonName" class="java.lang.String">
+		<fieldDescription><![CDATA[signPersonName]]></fieldDescription>
+	</field>
+	<field name="specialFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[specialFlag]]></fieldDescription>
+	</field>
+	<field name="specs" class="java.lang.String">
+		<fieldDescription><![CDATA[specs]]></fieldDescription>
+	</field>
+	<field name="stop_flg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[stop_flg]]></fieldDescription>
+	</field>
+	<field name="storeCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[storeCost]]></fieldDescription>
+	</field>
+	<field name="storeNum" class="java.lang.Double">
+		<fieldDescription><![CDATA[storeNum]]></fieldDescription>
+	</field>
+	<field name="storeSum" class="java.lang.Double">
+		<fieldDescription><![CDATA[storeSum]]></fieldDescription>
+	</field>
+	<field name="strikeFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[strikeFlag]]></fieldDescription>
+	</field>
+	<field name="tradeName" class="java.lang.String">
+		<fieldDescription><![CDATA[tradeName]]></fieldDescription>
+	</field>
+	<field name="updateTime" class="java.util.Date">
+		<fieldDescription><![CDATA[updateTime]]></fieldDescription>
+	</field>
+	<field name="updateUser" class="java.lang.String">
+		<fieldDescription><![CDATA[updateUser]]></fieldDescription>
+	</field>
+	<field name="useName" class="java.lang.String">
+		<fieldDescription><![CDATA[useName]]></fieldDescription>
+	</field>
+	<field name="validDate" class="java.util.Date">
+		<fieldDescription><![CDATA[validDate]]></fieldDescription>
+	</field>
+	<field name="validState" class="java.lang.String">
+		<fieldDescription><![CDATA[validState]]></fieldDescription>
+	</field>
+	<field name="wholesaleCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[wholesaleCost]]></fieldDescription>
+	</field>
+	<field name="wholesalePrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[wholesalePrice]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement uuid="f77460db-1d60-4303-a2d2-cdffbbe2ce84" x="0" y="0" width="40" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bedName}==null?"":$F{bedName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="050ab1da-8e16-49e3-beb0-22dccd35931e" x="40" y="0" width="40" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}==null?"":$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4f435870-8d6a-41b5-a893-41a69fb6df45" x="80" y="0" width="60" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tradeName}==null?"":$F{tradeName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c25ef9a3-de90-40f4-a00a-4ad4e30494ba" x="178" y="0" width="30" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{useName}==null?"":$F{useName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="37307c06-4957-4e2f-b778-b563b430362d" x="208" y="0" width="30" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num}==null?"":$F{num}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="64d89f8f-ee3c-4fc4-ab7e-0fd9e2b420aa" x="238" y="0" width="40" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{minUnit}==null?"":$F{minUnit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4add3e86-3fe1-4ac1-8c72-b52682ca0f3a" x="278" y="0" width="50" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugDeptCode}==null?"":$F{drugDeptCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f0540d4f-7592-4427-95f7-84f2cc14b1b8" x="328" y="0" width="40" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sendType}==null?"":$F{sendType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6f46d31e-2169-4eab-addb-a00f3fac41c2" x="368" y="0" width="50" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{billclassCode}==null?"":$F{billclassCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="030a0401-ff9c-425d-8d9d-b43f44dbe93c" x="140" y="0" width="38" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dfqFreq}==null?"":$F{dfqFreq}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="44f6fccd-421f-45f5-bbfa-0a4df714a5c4" x="418" y="0" width="50" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{applyOpercode}==null?"":$F{applyOpercode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1b22d815-f6d2-4580-beb2-677dff017529" x="468" y="0" width="75" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{applyDate}==null?"":$F{applyDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="18c1f62b-5abd-48b1-ae62-d5dfa9ca57cd" x="543" y="0" width="50" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{printEmpl}==null?"":$F{printEmpl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="afeda3a6-02be-4872-8d4b-b84fbc2c36a0" x="593" y="0" width="75" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{applyDate}==null?"":$F{applyDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a299e04f-ddfa-4077-adc5-33259ae29d2d" x="668" y="0" width="40" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{validState}==null?"":$F{validState}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="86677089-7819-4208-b044-ca6aa7f99cb0" x="708" y="0" width="41" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{printDate}==null?"":$F{printDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

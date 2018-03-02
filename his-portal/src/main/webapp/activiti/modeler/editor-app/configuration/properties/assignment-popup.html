@@ -1,0 +1,84 @@
+<div class="modal" ng-controller="KisBpmAssignmentPopupCtrl">
+    <div class="modal-dialog">
+    	<div ng-class="userStyle" class="ifBox" style="position: absolute;top: 0;left:0;width: 100%;height: 100%;background-color: #fff;min-height: 470px;">
+			<iframe id = "userMoIf" src="/his-portal/oa/formInfo/userModlueActiviti.action" style="border: none;box-shadow: none;width: 100%; height: calc(100% - 40px);"></iframe>
+			<div class="footerContent" style="width: 100%;height: 40px;text-align: center;">
+				<div class="navBtnBox">
+					<button type="submit" ng-click="userSave($event)" class="btn btn-theme">保存</button>
+					<button type="button" ng-click="userCloseWin($event)" class="btn btn-default">关闭</button>
+				</div>
+			</div>
+		</div>
+    	<div ng-class="deptStyle" class="ifBox" style="position: absolute;top: 0;left:0;width: 100%;height: 100%;background-color: #fff;min-height: 470px;">
+			<iframe id = "deptMoIf" src="/his-portal/oa/formInfo/deptModlueAccredit.action" style="border: none;box-shadow: none;width: 100%; height: calc(100% - 40px);"></iframe>
+			<div class="footerContent" style="width: 100%;height: 40px;text-align: center;">
+				<div class="navBtnBox">
+					<button type="submit" ng-click="deptSave($event)" class="btn btn-theme">保存</button>
+					<button type="button" ng-click="deptCloseWin($event)" class="btn btn-default">关闭</button>
+				</div>
+			</div>
+		</div>
+		
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="close()">&times;</button>
+                <h2 translate>PROPERTY.ASSIGNMENT.TITLE</h2>
+            </div>
+            <div class="modal-body">
+            	<div class="row row-no-gutter" style="display: none;">
+            		<div class="form-group">
+            			<label for="assigneeField">{{'PROPERTY.ASSIGNMENT.ASSIGNEE' | translate}}</label>
+            			<input type="text" id="assigneeField" class="form-control" ng-model="assignment.assignee" placeholder="{{'PROPERTY.ASSIGNMENT.ASSIGNEE_PLACEHOLDER' | translate}}" />
+            		</div>
+            	</div>
+            	
+            	<div class="row row-no-gutter" >
+            		<div class="form-group">
+            			<label for="assigneeFieldType">指派类型</label>
+            			<select ng-model="assigneeTypeData" id="assigneeFieldType" class="form-control" ng-change="typeChang()" >
+            				<option value="0">候选人</option>
+            				<option value="1">候选组</option>
+            			</select>
+            		</div>
+            	</div>
+            	
+            	
+                <div class="row row-no-gutter">
+                    <div ng-class="userStyleBox" class="form-group">
+                    	<label for="userField">{{'PROPERTY.ASSIGNMENT.CANDIDATE_USERS' | translate}}</label>
+                    	<div ng-repeat="candidateUserShow in assignment.candidateUserShow">
+            	            <!--<input type="text" class="form-control"  id="userFieldShow" ng-model="candidateUserShow.value" ng-click = "userFieldShowClick($event)" />-->
+            	            <p style="line-height: 30px;font-size: 16px;" ng-bind-html="candidateUserShow.value"></p>
+            	        </div>   
+            	        <button ng-click="userFieldShowClick($event)" style="float: right;" class="btn btn-primary" >编辑</button>
+	                	<button ng-class="clearAllStyle2" style="float: right;" ng-click="clearAll()" class="btn btn-primary" >清空</button>
+                        <div ng-repeat="candidateUser in assignment.candidateUsers">
+            	            <input id="userField" class="form-control mouldHide" type="text" ng-model="candidateUser.value" />
+<!--             	            <i class="glyphicon glyphicon-minus clickable-property" ng-click="removeCandidateUserValue($index)"></i> -->
+<!--             	            <i ng-if="$index == (assignment.candidateUsers.length - 1)" class="glyphicon glyphicon-plus clickable-property" ng-click="addCandidateUserValue($index)"></i> -->
+                        </div>
+                   	</div>
+                    <div ng-class="deptStyleBox" class="form-group">
+                    	<label for="groupField">{{'PROPERTY.ASSIGNMENT.CANDIDATE_GROUPS' | translate}}</label>
+            	        <div ng-repeat="candidateGroupShow in assignment.candidateGroupShow">
+            	          	<!--<input id="groupFieldUp" class="form-control" type="text" ng-model="candidateGroupShow.value" ng-click = "groupFieldClick()"  />-->
+            	          	<p style="line-height: 30px;font-size: 16px;" ng-bind-html="candidateGroupShow.value"></p>
+            	        </div>
+	                	<button ng-click="groupFieldClick()" style="float: right;" class="btn btn-primary" >编辑</button>
+	                	<button ng-class="clearAllStyle1" style="float: right;" ng-click="clearAll()" class="btn btn-primary" >清空</button>
+                        <div ng-repeat="candidateGroup in assignment.candidateGroups">
+            	          	<input id="groupField" class="form-control mouldHide" type="text" ng-model="candidateGroup.value" />
+<!--             	          	<i class="glyphicon glyphicon-minus clickable-property" ng-click="removeCandidateGroupValue($index)"></i> -->
+<!--             	          	<i ng-if="$index == (assignment.candidateGroups.length - 1)" class="glyphicon glyphicon-plus clickable-property" ng-click="addCandidateGroupValue($index)"></i> -->
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="modal-footer">
+                <button ng-click="close()" class="btn btn-primary" translate>ACTION.CANCEL</button>
+                <button ng-click="save()" class="btn btn-primary" translate>ACTION.SAVE</button>
+            </div>
+        </div>
+    </div>
+</div>

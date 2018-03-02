@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="OaGroup" table="T_OA_GROUP" >
+        <comment>物资文件附件附属表</comment>
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="50" />
+            <generator class="uuid" />
+        </id>
+        <property name="empCode" type="java.lang.String">
+            <column name="EMP_CODE">
+               
+            </column>
+        </property>
+        <property name="groupCode" type="java.lang.String">
+            <column name="GROUP_CODE">
+            </column>
+        </property>
+        <property name="backUp" type="java.lang.String">
+            <column name="BACK_UP">
+                
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

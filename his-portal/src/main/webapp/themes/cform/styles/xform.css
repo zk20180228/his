@@ -1,0 +1,239 @@
+
+#xf-pallete {
+	float:left;
+	width: 20%;
+}
+
+#xf-form {
+	float:left;
+	width: 100%;
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -khtml-user-select: none;  
+    -ms-user-select: none;    
+    /* 以下两个属性目前并未支持，写在这里为了减少风险 */
+    -o-user-select: none;
+    user-select: none;  
+}
+
+.xf-button {
+	width: 80%;
+	border: 1px dotted gray;
+	margin: 2px;
+	text-align: center;
+	cursor: pointer;
+	-moz-user-select: none;
+}
+
+.xf-pallete {
+	width: 80%;
+	border: 1px dotted gray;
+	margin: 2px;
+	text-align: center;
+	cursor: move;
+	-moz-user-select: none;
+}
+
+table.xf-table {
+}
+
+td.xf-cell {
+	-moz-user-select: none;
+}
+
+td.xf-cell div {
+}
+
+td.xf-cell-top {
+	border-top: #CCCCCC 1px solid;
+}
+
+td.xf-cell-bottom {
+	border-bottom: #CCCCCC 1px solid;
+}
+
+td.xf-cell-left {
+	border-left: #CCCCCC 1px solid;
+}
+
+td.xf-cell-right {
+	border-right: #CCCCCC 1px solid;
+}
+
+td.xf-cell.active {
+	background-color: #EEEEEE;
+}
+
+td.xf-cell-top.active {
+	border-top: #CCCCCC 1px dotted;
+}
+
+td.xf-cell-bottom.active {
+	border-bottom: #CCCCCC 1px dotted;
+}
+
+td.xf-cell-left.active {
+	border-left: #CCCCCC 1px dotted;
+}
+
+td.xf-cell-right.active {
+	border-right: #CCCCCC 1px dotted;
+}
+
+.xf-handler {
+	cursor: move;
+	height: auto;
+	padding: 5px;
+	width: 100%;
+}
+.xf-handler select{
+	width: 100% !important;
+}
+.xf-handler .radio,
+.xf-handler .checkbox {
+	margin: 0 40px 0 20px !important;
+}
+.rili {
+    background:url(../images/rili.png) no-repeat right 10px center;
+    background-size: 26px 26px
+}
+.userImg {
+    background:url(../images/userImg.png) no-repeat right 10px center;
+    background-size: 26px 26px
+}
+.DepartmentImg {
+    background:url(../images/DepartmentImg.png) no-repeat right 10px center;
+    background-size: 26px 26px
+}
+
+
+.radio label{
+	margin: 0 20px 0 20px !important;
+}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"]{
+	margin-left: 0 ;
+}
+
+.input-group .form-control {
+	z-index: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.userExamine {
+	width: 100%;
+	height: 100%;
+	margin-top:30px;
+	display: none;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	max-width: 600px;
+}
+.targetZhangBox {
+	height: 100%;
+}
+.userPicker textarea {
+	width: 100%;
+	height: 100%;
+}
+.xf-handler textarea{
+	resize: none;
+}
+.zhangBox {
+	height: 100%;
+	width: 100%;
+	float: right;
+	position: relative;
+	cursor: text;
+}
+
+.zhangBox .imgZhangspan {
+	position: absolute;
+    right: 220px;
+    bottom: 50%;    
+}
+.zhangBox .imgnamespan {
+	position: absolute;
+    right: 460px;
+    bottom: 50%;    
+}
+.imgZhangImg {
+	position: absolute;
+	right: 0;
+	width: auto;
+	padding: 0 20px 0 0;
+    height: 120%;
+    z-index: 10;
+    bottom: -10%;
+}
+
+.imgnameImg {
+	position: absolute;
+	padding: 5px 20px 5px 0;
+	height: 100%;
+	width: auto;
+	right: 300px;
+}
+
+.xf-handler .imgZhangSelect {
+	position: absolute;
+	right: 30px;
+	top: -30px;
+	width: 40% !important; 
+	height: 25px;
+	display: block;
+}
+.form-control{
+	font-size: 14px;
+}
+
+h1{
+    line-height: 60px;
+}
+.form-control[readonly]{
+    background-color: transparent !important;
+}
+.form-control[disabled], fieldset[disabled] .form-control {
+    cursor: not-allowed;
+    background-color: #f9f9f9 !important;
+    opacity: 1;
+}
+.form-control[readonly].requi{
+    background-color: #fff3f3 !important;
+}
+label{
+	margin: 0 10px;
+}
+.addtableTrBtn {
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+}
+.deltableTrBtn {
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+}
+.chilentTableItem {
+	border-collapse:collapse;
+	width: 100%;
+	
+}
+.chilentTableItem td{
+	border: 1px solid #CCCCCC;
+	height: 30px;
+	text-align: center;
+}
+.chilentTableBox {
+	position: relative;
+	padding: 5px 25px;
+}
+.titleLine {
+	border-bottom: 2px solid #000000;
+}
+.table-bordered {
+	border-width: 0;
+}

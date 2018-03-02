@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SFJSQDZB" pageWidth="595" pageHeight="842" whenNoDataType="BlankPage" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="943ce3b5-5a30-4904-8aff-4f65aec32fc0">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="mid" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\conglin\\Desktop\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="balaceDate" class="java.lang.String">
+		<fieldDescription><![CDATA[balaceDate]]></fieldDescription>
+	</field>
+	<field name="balanceNo" class="java.lang.String">
+		<fieldDescription><![CDATA[balanceNo]]></fieldDescription>
+	</field>
+	<field name="checkNo" class="java.lang.String">
+		<fieldDescription><![CDATA[checkNo]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="deptCode" class="java.lang.String">
+		<fieldDescription><![CDATA[deptCode]]></fieldDescription>
+	</field>
+	<field name="inDate" class="java.lang.String">
+		<fieldDescription><![CDATA[inDate]]></fieldDescription>
+	</field>
+	<field name="invoiceList1" class="java.util.List">
+		<fieldDescription><![CDATA[invoiceList1]]></fieldDescription>
+	</field>
+	<field name="invoiceList2" class="java.util.List">
+		<fieldDescription><![CDATA[invoiceList2]]></fieldDescription>
+	</field>
+	<field name="invoiceList3" class="java.util.List">
+		<fieldDescription><![CDATA[invoiceList3]]></fieldDescription>
+	</field>
+	<field name="invoiceList4" class="java.util.List">
+		<fieldDescription><![CDATA[invoiceList4]]></fieldDescription>
+	</field>
+	<field name="invoiceNo" class="java.lang.String">
+		<fieldDescription><![CDATA[invoiceNo]]></fieldDescription>
+	</field>
+	<field name="medicalRecordId" class="java.lang.String">
+		<fieldDescription><![CDATA[medicalRecordId]]></fieldDescription>
+	</field>
+	<field name="operCode" class="java.lang.String">
+		<fieldDescription><![CDATA[operCode]]></fieldDescription>
+	</field>
+	<field name="pName" class="java.lang.String">
+		<fieldDescription><![CDATA[pName]]></fieldDescription>
+	</field>
+	<field name="prepayCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[prepayCost]]></fieldDescription>
+	</field>
+	<field name="returnCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[returnCost]]></fieldDescription>
+	</field>
+	<field name="statName" class="java.lang.String">
+		<fieldDescription><![CDATA[statName]]></fieldDescription>
+	</field>
+	<field name="sumMoney" class="java.lang.String">
+		<fieldDescription><![CDATA[sumMoney]]></fieldDescription>
+	</field>
+	<field name="sumPay" class="java.lang.Double">
+		<fieldDescription><![CDATA[sumPay]]></fieldDescription>
+	</field>
+	<field name="supplyCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[supplyCost]]></fieldDescription>
+	</field>
+	<field name="totCode" class="java.lang.String">
+		<fieldDescription><![CDATA[totCode]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="0ad774f7-9d86-4af4-a5c2-8018d8691874" x="0" y="0" width="73" height="20"/>
+				<box>
+					<pen lineStyle="Solid"/>
+					<topPen lineStyle="Solid"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid"/>
+					<bottomPen lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{statName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="87cf966e-3ef3-483b-8c5a-aedadce55af1" x="73" y="0" width="59" height="20"/>
+				<box>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{totCode}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

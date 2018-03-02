@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+     http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+     http://www.springframework.org/schema/rabbit
+     http://www.springframework.org/schema/rabbit/spring-rabbit-1.6.xsd">
+     
+     
+<!--     配置connection-factory，指定连接rabbit server参数 -->
+<!--     <rabbit:connection-factory id="connectionFactory" virtual-host="${rabbit.virtual-host}"  -->
+<!--         username="${rabbit.username}" password="${rabbit.password}" addresses="${rabbit.addresses}"  /> -->
+
+<!--     通过指定下面的admin信息，当前producer中的exchange和queue会在rabbitmq服务器上自动生成 -->
+<!--     <rabbit:admin id="connectAdmin"   connection-factory="connectionFactory" /> -->
+    
+    
+<!--     定义queue -->
+<!--     <rabbit:queue id="editUser" name="editUser" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="addUser" name="addUser" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="delUser" name="delUser" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义修改用户密码queue -->
+<!--     <rabbit:queue id="editUserPwd" name="editUserPwd" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="editUser" key="editUserKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="addUser" key="addUserKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="delUser" key="delUserKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="editUserPwd" key="editUserPwdKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange> -->
+
+
+<!--     员工 -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="addEmployee" name="addEmployee" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="addEmployee" key="addEmployeeKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange> -->
+<!--     <rabbit:queue id="editEmployee" name="editEmployee" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="editEmployee" key="editEmployeeKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange> -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="delEmployee" name="delEmployee" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="delEmployee" key="delEmployeeKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange> -->
+    
+<!--     医院 -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="addHospital" name="addHospital" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="addHospital" key="addHospitalKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange> -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="editHospital" name="editHospital" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="editHospital" key="editHospitalKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange> -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="delHospital" name="delHospital" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="delHospital" key="delHospitalKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange> -->
+    
+<!--     部门 -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="addDept" name="addDept" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="addDept" key="addDeptKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange>  -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="editDept" name="editDept" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="editDept" key="editDeptKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange>  -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="delDept" name="delDept" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="delDept" key="delDeptKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange>  -->
+    
+<!--     虚拟科室 -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="addFictitiousDept" name="addFictitiousDept" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="addFictitiousDept" key="addFictitiousDeptKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange>  -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="editFictitiousDept" name="editFictitiousDept" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="editFictitiousDept" key="editFictitiousDeptKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange>  -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="delFictitiousDept" name="delFictitiousDept" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="delFictitiousDept" key="delFictitiousDeptKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange>  -->
+    
+<!--     虚拟科室关系 -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="addFictitiousDeptConn" name="addFictitiousDeptConn" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="addFictitiousDeptConn" key="addFictitiousDeptconnKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange>  -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="editFictitiousDeptConn" name="editFictitiousDeptConn" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="editFictitiousDeptConn" key="editFictitiousDeptconnKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange>  -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="delFictitiousDeptConn" name="delFictitiousDeptConn" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="delFictitiousDeptConn" key="delFictitiousDeptconnKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange>  -->
+    
+    
+<!--     数据字典表 -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="addBusdict" name="addBusdict" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="addBusdict" key="addBusdictKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange>  -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="editBusdict" name="editBusdict" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="editBusdict" key="editBusdictKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange>  -->
+<!--     定义queue -->
+<!--     <rabbit:queue id="delBusdict" name="delBusdict" durable="true" auto-delete="false" -->
+<!--         exclusive="false" declared-by="connectAdmin" /> -->
+<!--     定义direct exchange，绑定queueTest -->
+<!--     <rabbit:direct-exchange name="exchangeEditUser" id="exchangeEditUser" -->
+<!--         durable="true" auto-delete="false" declared-by="connectAdmin"> -->
+<!--         <rabbit:bindings> -->
+<!--             <rabbit:binding queue="delBusdict" key="delBusdictKey"></rabbit:binding> -->
+<!--         </rabbit:bindings> -->
+<!--     </rabbit:direct-exchange>  -->
+        
+        
+<!--     定义rabbit template用于数据的接收和发送 -->
+<!--     <rabbit:template id="amqpTemplate"  connection-factory="connectionFactory" -->
+<!--         exchange="exchangeEditUser" /> -->
+        
+        
+        
+     <!--配置connection-factory，指定连接rabbit server参数 -->
+    <rabbit:connection-factory id="connectionFactory2" virtual-host="${rabbit.virtual-host2}" 
+        username="${rabbit.username}" password="${rabbit.password}" addresses="${rabbit.addresses}"  />
+
+    <!--通过指定下面的admin信息，当前producer中的exchange和queue会在rabbitmq服务器上自动生成 -->
+    <rabbit:admin id="menuAdmin"   connection-factory="connectionFactory2" />
+    <!--定义queue -->
+    <rabbit:queue id="openfireQueue" name="openfireQueue" durable="true" auto-delete="false"
+        exclusive="false" declared-by="menuAdmin" />
+    <!-- 定义路由key -->
+    <!-- 定义direct exchange，绑定queueTest -->
+    <rabbit:direct-exchange name="exchangeMenuInfo" id="exchangeMenuInfo"
+        durable="true" auto-delete="false" declared-by="menuAdmin">
+        <rabbit:bindings>
+            <rabbit:binding queue="openfireQueue" key="sendMenuInfoKey"/>
+        </rabbit:bindings>
+    </rabbit:direct-exchange>
+    <!--定义rabbit template用于数据的接收和发送 -->
+    <rabbit:template id="menuTemplate"  connection-factory="connectionFactory2"
+        exchange="exchangeMenuInfo" />
+        
+    <bean id="messageSend" class="cn.honry.mq.MessageSend"/>
+
+    <!--同步elasticsearch-->
+<!--     <rabbit:connection-factory id="connectionFactory3" virtual-host="${rabbit.virtual-host3}"
+                               username="${rabbit.username}" password="${rabbit.password}"
+                               addresses="${rabbit.addresses}"/>
+    <rabbit:admin id="ESAdimin" connection-factory="connectionFactory3" />
+    同步住院收费
+    <rabbit:queue name="inpatientFeeQueue" declared-by="ESAdimin" />
+    同步门诊收费
+    <rabbit:queue name="outpatientFeeQueue" declared-by="ESAdimin" />
+    同步门诊挂号
+    <rabbit:queue name="registerMainQueue" declared-by="ESAdimin" />
+    同步就诊卡
+    <rabbit:queue name="patientIdCardQueue" declared-by="ESAdimin" />
+    <rabbit:topic-exchange name="ES-EXCHANAGE" auto-declare="true">
+        <rabbit:bindings>
+            <rabbit:binding pattern="inpatientFee" queue="inpatientFeeQueue"/>
+            <rabbit:binding pattern="outpatientFee" queue="outpatientFeeQueue"/>
+            <rabbit:binding pattern="registerMain" queue="registerMainQueue"/>
+            <rabbit:binding pattern="patientIdCard" queue="patientIdCardQueue"/>
+        </rabbit:bindings>
+    </rabbit:topic-exchange>
+    <rabbit:template id="ESTemplate" connection-factory="connectionFactory3"
+                     exchange="ES-EXCHANAGE"/> -->
+</beans>

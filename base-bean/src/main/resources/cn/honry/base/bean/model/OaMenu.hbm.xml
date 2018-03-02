@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="OaMenu" table="T_OA_MENU" >
+        <id name="id" type="java.lang.String">
+            <column name="ID" />
+            <generator class="uuid" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="MENU_NAME" >
+                <comment>栏目名称</comment>
+            </column>
+        </property>
+        <property name="code" type="java.lang.String">
+            <column name="MENU_CODE">
+                <comment>栏目code</comment>
+            </column>
+        </property>
+        <property name="parentcode" type="java.lang.String">
+            <column name="MENU_PARENTCODE" >
+                <comment>栏目父级code</comment>
+            </column>
+        </property>
+        <property name="path" type="java.lang.String">
+            <column name="MENU_PATH" >
+                <comment>栏目路径</comment>
+            </column>
+        </property>
+        <property name="parentpath" type="java.lang.String">
+            <column name="MENU_PARENTPATH" >
+                <comment>全部父级节点</comment>
+            </column>
+        </property>
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLAG" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="morder" type="java.lang.Integer">
+            <column name="MENU_ORDER" >
+                <comment>排序</comment>
+            </column>
+        </property>
+        <property name="stop_flag" type="java.lang.Integer">
+            <column name="STOP_FLAG" >
+                <comment>是否停止</comment>
+            </column>
+        </property>
+        <property name="publishdirt" type="java.lang.Integer">
+            <column name="MENU_PUBLISHDIRT">
+                <comment>直接发布0:可以1:不可以</comment>
+            </column>
+        </property>
+        <property name="dept" type="java.lang.String">
+            <column name="MENU_DEPT" >
+                <comment>栏目所属部门</comment>
+            </column>
+        </property>
+        <property name="mcomment" type="java.lang.Integer">
+            <column name="MENU_COMMENT">
+                <comment>是否评论0:关闭评论1:开启评论</comment>
+            </column>
+        </property>
+        <property name="explain" type="java.lang.String">
+            <column name="MENU_EXPLAIN">
+                <comment>描述</comment>
+            </column>
+        </property>
+        <property name="deleteTime" type="java.util.Date">
+            <column name="DELETETIME">
+                <comment>删除时间</comment>
+            </column>
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER">
+                <comment>删除人员</comment>
+            </column>
+        </property>
+        <property name="updateTime" type="java.util.Date">
+            <column name="UPDATETIME">
+                <comment>删除时间</comment>
+            </column>
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER">
+                <comment>更新人员</comment>
+            </column>
+        </property>
+        <property name="createTime" type="java.util.Date">
+            <column name="CREATETIME">
+                <comment>创建时间</comment>
+            </column>
+        </property>
+        <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER">
+                <comment>删除人员</comment>
+            </column>
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT">
+                <comment>删除人员</comment>
+            </column>
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="TYPE">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

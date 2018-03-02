@@ -1,0 +1,321 @@
+@charset "utf-8";
+.roledept-main {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.roledept-main .logoDiv {
+    padding-top: 50px;
+    width: 100%;
+    clear: both;
+}
+.roledept-main .logo {
+    margin: 0 auto;
+    width: 800px;
+    height: 110px;
+    background: url('images/platform_logo.png') no-repeat;
+}
+.roledept-main .roledeptselect {
+    margin: 0 auto;
+    width: 1000px;
+    height: 414px;
+    padding: 0;
+    clear: both;
+}
+.roledept-main .roledeptselect .label-role {
+    float: left;
+    width: 215px;
+    height: 120px;
+    background: url('../../easyui/default/images/label_role.png') no-repeat;
+}
+.roledept-main .roledeptselect .left-arrow-r {
+    float: left;
+    margin-left: 20px;
+    width: 22px;
+    height: 128px;
+    background: url('../../easyui/default/images/left_arrow.png') no-repeat;
+}
+
+.roledept-main .roledeptselect .left-arrow-d{
+	float:left;
+	margin-left:20px;
+	width:22px;
+	height:128px;
+	background: url('../../easyui/default/images/left_arrow.png') no-repeat;
+}
+
+.roledept-main .roledeptselect .role-D{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/role_doctor.png') no-repeat center;
+}
+
+.roledept-main .roledeptselect .role-P{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/role_yaoshi.png') no-repeat center;
+}
+
+.roledept-main .roledeptselect .role-N{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/role_nurse.png') no-repeat center;
+}
+
+.roledept-main .roledeptselect .role-R{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/role_register.png') no-repeat center;
+}
+
+.roledept-main .roledeptselect .role-F{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/role_shoufei.png') no-repeat center;
+}
+
+.roledept-main .roledeptselect .role-T{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/role_jishi.png') no-repeat center;
+}
+
+.roledept-main .roledeptselect .role-S{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/role_keyan.png') no-repeat center;
+}
+
+.roledept-main .roledeptselect .role-O{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/role_other.png') no-repeat center;
+}
+
+.roledept-main .roledeptselect .role-M{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/role_manager.png') no-repeat center;
+}
+
+.roledept-main .roledeptselect .right-arrow-r{
+	float:left;
+	margin-left:20px;
+	width:22px;
+	height:128px;
+	background: url('../../easyui/default/images/right_arrow.png') no-repeat;
+}
+
+.roledept-main .roledeptselect .right-arrow-d{
+	float:left;
+	margin-left:20px;
+	width:22px;
+	height:128px;
+	background: url('../../easyui/default/images/right_arrow.png') no-repeat;
+}
+
+.roledept-main .roledeptselect .role-name{
+	width:120px;
+	height:40px;
+	line-height:40px;
+	margin-top:100px;
+	color:#fff;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+}
+
+.roledept-main .roledeptselect .label-dept{
+	float:left;
+	width:215px;
+	height:128px;
+	background: url('../../easyui/default/images/label_dept.png') no-repeat;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-C{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/dept_outpatient.png') no-repeat center;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-I{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/dept_inpatient.png') no-repeat center;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-F{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/dept_finance.png') no-repeat center;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-PI{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/dept_druglib.png') no-repeat center;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-P{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/dept_drug.png') no-repeat center;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-D{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/dept_xz.png') no-repeat center;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-T{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/dept_t.png') no-repeat center;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-L{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/dept_hq.png') no-repeat center;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-N{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/dept_nurse.png') no-repeat center;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-S{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/dept_ky.png') no-repeat center;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-U{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/dept_xz.png') no-repeat center;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-OP{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/dept_op.png') no-repeat center;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-O{
+	float:left;
+	margin-left:20px;
+	width:120px;
+	height:128px;
+	background: url('../../easyui/default/images/dept_other.png') no-repeat center;
+	margin-top:20px;
+}
+
+.roledept-main .roledeptselect .dept-name {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 100px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.roledept-main .roledeptselect .submitDiv{
+	width:100%;
+	height:34px;
+	padding-top:50px;
+	clear:both;
+}
+
+.roledept-main .roledeptselect .submitDiv .submit-btn{
+	margin:0 auto;
+	width:155px;
+	height:34px;
+	cursor:pointer;
+	background: url('../../easyui/default/images/roledept_btn.png') no-repeat;
+}
+.submitDiv table{
+	width: 162px;
+    margin: 0 auto;
+}
+.roledept-main .dropOut_btn{
+	position:absolute;
+	height:32px;
+	cursor:pointer;
+	/*background: url('images/exit.png') no-repeat;*/
+	right:4%;
+	top:4%;
+	line-height:32px;
+}
+.roledept-main .dropOut_btn a{
+	color: #fff;
+    font-size: 26px;
+    line-height: 32px;
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+}
+.roledept-main .dropOut_btn img{
+	float: right;
+    margin-left: 6px;
+}

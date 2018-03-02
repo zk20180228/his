@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="WBYCFD" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="cdb7fc16-dd32-4e2b-9834-fcb79e83ad2b">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="hospitalName" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="inpatientNo" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="billclassName" class="java.lang.String">
+		<fieldDescription><![CDATA[billclassName]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="deptDrugName" class="java.lang.String">
+		<fieldDescription><![CDATA[deptDrugName]]></fieldDescription>
+	</field>
+	<field name="deptName" class="java.lang.String">
+		<fieldDescription><![CDATA[deptName]]></fieldDescription>
+	</field>
+	<field name="drugCommonname" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCommonname]]></fieldDescription>
+	</field>
+	<field name="drugDispensSumList" class="java.util.List">
+		<fieldDescription><![CDATA[drugDispensSumList]]></fieldDescription>
+	</field>
+	<field name="drugDosageform" class="java.lang.String">
+		<fieldDescription><![CDATA[drugDosageform]]></fieldDescription>
+	</field>
+	<field name="drugId" class="java.lang.String">
+		<fieldDescription><![CDATA[drugId]]></fieldDescription>
+	</field>
+	<field name="drugNameinputcode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugNameinputcode]]></fieldDescription>
+	</field>
+	<field name="drugNamepinyin" class="java.lang.String">
+		<fieldDescription><![CDATA[drugNamepinyin]]></fieldDescription>
+	</field>
+	<field name="drugNamewb" class="java.lang.String">
+		<fieldDescription><![CDATA[drugNamewb]]></fieldDescription>
+	</field>
+	<field name="drugRetailprice" class="java.lang.Double">
+		<fieldDescription><![CDATA[drugRetailprice]]></fieldDescription>
+	</field>
+	<field name="qtys" class="java.lang.Integer">
+		<fieldDescription><![CDATA[qtys]]></fieldDescription>
+	</field>
+	<field name="spec" class="java.lang.String">
+		<fieldDescription><![CDATA[spec]]></fieldDescription>
+	</field>
+	<field name="totCosts" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCosts]]></fieldDescription>
+	</field>
+	<field name="unit" class="java.lang.String">
+		<fieldDescription><![CDATA[unit]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="ceb73c61-dc73-4e64-b756-ccb55deb3954" key="textField-1" x="1" y="2" width="534" height="34"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hospitalName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1792f5ca-7dd7-4e0c-b2d2-12dcbb730f41" key="staticText-1" x="0" y="41" width="535" height="28"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="18" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[未摆药处方单]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f275ef8d-223f-412a-bddc-2722d6749ea8" key="staticText-3" x="79" y="69" width="35" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[规格]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="608dd6f8-fb97-48c8-834f-c8fe89c58597" key="staticText-4" x="114" y="69" width="40" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[单位]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="09fcc515-efd1-4886-92bc-d45c0d790b50" key="staticText-5" x="154" y="69" width="30" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[剂型]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31620177-7267-4fb5-883c-d7497e7728da" key="staticText-6" x="184" y="69" width="30" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[数量]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a39de9f-89ff-49a3-a152-feee0a342df0" key="staticText-7" x="214" y="69" width="30" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[单价]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2dfde160-1fb4-48d8-9cf9-85c4db2089ed" key="staticText-8" x="244" y="69" width="35" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[金额]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7bd9e975-06ae-4aeb-82f6-aa53ab33316f" key="staticText-9" mode="Opaque" x="279" y="69" width="60" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[摆药单]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="892fd671-39ae-46ec-a7fb-23bfd1447fad" key="staticText-10" mode="Opaque" x="339" y="69" width="59" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[取药药房]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2989d18-6df7-4630-8338-e4dc866f3a5d" key="staticText-11" mode="Opaque" x="398" y="69" width="70" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[药品编号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b0871aa8-0a2c-4e83-8ab6-463778a70863" key="staticText-12" mode="Opaque" x="468" y="69" width="65" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[申请科室]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2702014b-d1fa-4045-adb8-db990fba51e5" key="staticText-2" x="1" y="69" width="81" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[药品名称]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<subreport isUsingCache="true">
+				<reportElement uuid="2e0df070-730a-4bd9-a3a3-a81ca689e393" key="subreport-1" x="-2" y="-3" width="535" height="36"/>
+				<subreportParameter name="inpatientNo">
+					<subreportParameterExpression><![CDATA[$P{inpatientNo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{drugDispensSumList})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR}+"WBYCFD_SUB.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

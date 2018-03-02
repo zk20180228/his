@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.honry.base.bean.model.FinanceInvoiceStorage" table="T_FINANCE_INSTORAGE" optimistic-lock="version">
+	        <id name="Id" type="java.lang.String">
+	            <column name="id" />
+	            <generator class="uuid" />
+	        </id>
+	        <!--version标签用于指定表示版本号的字段信息-->  
+	        <version name="version" column="version" type="java.lang.Integer"></version>
+	        <property name="invoiceType" type="java.lang.String">
+	            <column name="INVOICE_TYPE" >
+	                <comment>发票类型</comment>
+	            </column>
+	        </property>
+	        <property name="invoiceCode" type="java.lang.String">
+	        <column name="INVOICE_CODE" >
+	                <comment>发票类型</comment>
+	            </column>
+	        </property>
+	        <property name="invoiceStartno" type="java.lang.String">
+	            <column name="INVOICE_STARTNO" >
+	                <comment>发票开始号</comment>
+	            </column>
+	        </property>
+	        <property name="invoiceEndno" type="java.lang.String">
+	            <column name="INVOICE_ENDNO" >
+	                <comment>发票终止号</comment>
+	            </column>
+	        </property>
+	        <property name="invoiceUsedno" type="java.lang.String">
+	            <column name="INVOICE_USEDNO" >
+	                <comment>发票已用号</comment>
+	            </column>
+	        </property>
+	        <property name="invoiceUseState" type="java.lang.Integer">
+	            <column name="INVOICE_USESTATE" >
+	                <comment>1：停用，0：在用</comment>
+	            </column>
+	        </property>
+	        <property name="invoicePinyin" type="java.lang.String">
+	        	<column name="INVOICE_PINYIN" >
+	                <comment>拼音码 </comment>
+	            </column>
+	        </property>
+	        <property name="invoiceWb" type="java.lang.String">
+	        	<column name="INVOICE_WB" >
+	                <comment>五笔码</comment>
+	            </column>
+	        </property>
+	        <property name="invoiceInputcode" type="java.lang.String">
+	        	<column name="INVOICE_INPUTCODE" >
+	                <comment>自定义码</comment>
+	            </column>
+	        </property>
+	        <property name="invoiceOrder" type="java.lang.Integer">
+	        	<column name="INVOICE_ORDER" >
+	                <comment>排序</comment>
+	            </column>
+	        </property>
+	        <property name="invoiceRemark" type="java.lang.String">
+	        	<column name="INVOICE_REMARK" >
+	                <comment>备注</comment>
+	            </column>
+	        </property>
+	        <property name="createUser" type="java.lang.String">
+	        	<column name="CREATEUSER" >
+	                <comment>建立人员</comment>
+	            </column>
+	        </property>
+	        <property name="createDept" type="java.lang.String">
+	            <column name="CREATEDEPT"  />
+	        </property>
+	        <property name="createTime" type="java.util.Date">
+	            <column name="CREATETIME" />
+	        </property>
+	        <property name="updateUser" type="java.lang.String">
+	            <column name="UPDATEUSER" />
+	        </property>
+	        <property name="updateTime" type="java.util.Date">
+	            <column name="UPDATETIME" />
+	        </property>
+	        <property name="deleteUser" type="java.lang.String">
+	            <column name="DELETEUSER" />
+	        </property>
+	        <property name="deleteTime" type="java.util.Date">
+	            <column name="DELETETIME" length="7" />
+	        </property>
+	        <property name="stop_flg" type="java.lang.Integer">
+	            <column name="STOP_FLG" precision="1" scale="0">
+	                <comment>0：正常 1：停用</comment>
+	            </column>
+	        </property>
+	        <property name="del_flg" type="java.lang.Integer">
+	            <column name="DEL_FLG" precision="1" scale="0">
+	                <comment>0：正常；1：删除</comment>
+	            </column>
+	        </property>
+    </class>
+</hibernate-mapping>
+	        

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="PatientBlackList" table="T_PATIENT_BLACKLIST" >
+        <id name="id" type="java.lang.String" >
+            <column name="BLACKLIST_ID"  />
+            <generator class="uuid" />
+        </id>
+        <many-to-one name="patient" class="Patient" fetch="select">
+            <column name="PATINENT_ID" />
+        </many-to-one>
+        <property name="medicalrecordId" type="java.lang.String">
+            <column name="MEDICALRECORD_ID"  />
+        </property>
+        <property name="blacklistType" type="java.lang.String">
+            <column name="BLACKLIST_TYPE" />
+        </property>
+        <property name="blacklistIntoreason" type="java.lang.String">
+            <column name="BLACKLIST_INTOREASON" />
+        </property>
+        <property name="blacklistOutreason" type="java.lang.String">
+            <column name="BLACKLIST_OUTREASON" />
+        </property>
+        <property name="blacklistStarttime" type="java.sql.Timestamp">
+            <column name="BLACKLIST_STARTTIME" length="19" />
+        </property>
+        <property name="blacklistEndtime" type="java.sql.Timestamp">
+            <column name="BLACKLIST_ENDTIME" length="19" />
+        </property>
+       <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER"  />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" />
+        </property>
+    </class>
+</hibernate-mapping>

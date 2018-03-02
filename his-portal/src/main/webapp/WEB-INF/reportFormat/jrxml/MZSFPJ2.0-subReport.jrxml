@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MZSFPJ2.0-subReport" columnCount="2" printOrder="Horizontal" pageWidth="453" pageHeight="842" columnWidth="226" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c71a8348-8c87-46aa-8224-e1309fc72a0d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="mzNumber" class="java.lang.String">
+		<property name="mzNumber" value=""/>
+	</parameter>
+	<queryString>
+		<![CDATA[select
+       (a.item_name||a.specs) as xmgg, --项目/规格
+       a.unit_price, --药品单价
+       (a.qty|| NVL2(a.price_unit,
+            (select vdun.code_name
+               from v_drug_undrug vdun
+              where a.price_unit = vdun.code_id),
+            null)) as sldw, --渲染处方单位，v_drug_undrug视图 --药品数量
+        (a.unit_price*a.qty) as je
+  from (select t.*
+          from t_outpatient_feedetail t
+          where t.clinic_code = $P{mzNumber}
+   and t.PAY_FLAG = '1') a, --原表信息（指定病历号）
+       t_charge_minfeetostat b --统计大类表
+ where a.fee_code = b.minfee_code --最小费用代码等价]]>
+	</queryString>
+	<field name="XMGG" class="java.lang.String"/>
+	<field name="UNIT_PRICE" class="java.math.BigDecimal"/>
+	<field name="SLDW" class="java.lang.String"/>
+	<field name="JE" class="java.math.BigDecimal"/>
+	<detail>
+		<band height="12" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="90" height="12" uuid="b219ec61-cc1f-465e-a161-d095e3988f6f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{XMGG}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="90" y="0" width="40" height="12" uuid="d1e7772a-d27b-4c0b-bee6-9c1b325e247f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{UNIT_PRICE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="0" width="40" height="12" uuid="60d222ee-d80f-4da1-81d7-be0a4c33fd45"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SLDW}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="33" height="12" uuid="829a47f9-a73a-47a2-9589-a360ea355ff4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="203" y="0" width="23" height="12" uuid="696edc97-2a20-4c08-b61b-5dad5f94c753"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SLDW}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

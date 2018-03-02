@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ROIW" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ac1093e0-b203-41d5-a2f7-0db5b924515c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\Mrs_Zhang\\his\\his-statistics\\target\\classes\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tableTitle" class="java.lang.String"/>
+	<parameter name="bTime" class="java.lang.String"/>
+	<parameter name="eTime" class="java.lang.String"/>
+	<parameter name="deptName" class="java.lang.String"/>
+	<parameter name="userName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="bTime" class="java.lang.String">
+		<fieldDescription><![CDATA[bTime]]></fieldDescription>
+	</field>
+	<field name="countPerson" class="java.lang.String">
+		<fieldDescription><![CDATA[countPerson]]></fieldDescription>
+	</field>
+	<field name="dept" class="java.lang.String">
+		<fieldDescription><![CDATA[dept]]></fieldDescription>
+	</field>
+	<field name="deptPerson" class="java.lang.String">
+		<fieldDescription><![CDATA[deptPerson]]></fieldDescription>
+	</field>
+	<field name="eTime" class="java.lang.String">
+		<fieldDescription><![CDATA[eTime]]></fieldDescription>
+	</field>
+	<field name="itemList" class="java.util.List">
+		<fieldDescription><![CDATA[itemList]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="41" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="143e5deb-28e5-420f-9d4e-98e8b310867c" x="0" y="0" width="555" height="41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tableTitle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d67a5620-d37f-46b5-a3f4-4ed03dc2b23a" x="0" y="0" width="155" height="27"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[项目]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="90110ba6-066f-4661-a4fe-db937088b03d" x="355" y="0" width="100" height="27"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[增减数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3e672280-2b5e-4346-8f89-d905c0948592" x="455" y="0" width="100" height="27"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[增减%]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="89739614-442c-4c0a-898f-e1b5eeec2860" x="155" y="0" width="100" height="27"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bTime}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5bfe8e31-afca-4754-8648-5ec69a5c17d1" x="255" y="0" width="100" height="27"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{eTime}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="57" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="9f9ecad1-43dc-4b94-a248-4c9a43ee0426" x="0" y="0" width="555" height="57"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{itemList})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "ROIW_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="0c8a832a-355f-4e2c-801a-7c0ba8c57be1" x="38" y="5" width="73" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[科室负责人：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="80fcccad-893f-4794-845c-18a14288136d" x="355" y="5" width="59" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[统计人：]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e1db439d-c8e6-4bde-947f-061e94ae0e1c" x="414" y="27" width="100" height="20"/>
+				<textElement>
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{deptName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4364b220-147a-4b3a-95e0-e8005c9cc390" x="414" y="5" width="100" height="20"/>
+				<textElement>
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{userName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

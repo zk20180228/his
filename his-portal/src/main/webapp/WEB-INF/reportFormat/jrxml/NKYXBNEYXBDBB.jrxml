@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NKYXBNEYXBDBB" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bc8a4642-b0cf-49dd-ba61-8d6a63a86ee7">
+	<property name="ireport.zoom" value="1.4641000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tital" class="java.lang.String"/>
+	<parameter name="dateOne" class="java.lang.String"/>
+	<parameter name="dateTwo" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\iReportDate\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="bingqu" class="java.lang.String">
+		<fieldDescription><![CDATA[bingqu]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="classType" class="java.lang.String">
+		<fieldDescription><![CDATA[classType]]></fieldDescription>
+	</field>
+	<field name="dept" class="java.lang.String">
+		<fieldDescription><![CDATA[dept]]></fieldDescription>
+	</field>
+	<field name="deptCode" class="java.lang.String">
+		<fieldDescription><![CDATA[deptCode]]></fieldDescription>
+	</field>
+	<field name="feeDate" class="java.lang.String">
+		<fieldDescription><![CDATA[feeDate]]></fieldDescription>
+	</field>
+	<field name="increaseMZ" class="java.lang.Double">
+		<fieldDescription><![CDATA[increaseMZ]]></fieldDescription>
+	</field>
+	<field name="increaseTol" class="java.lang.Double">
+		<fieldDescription><![CDATA[increaseTol]]></fieldDescription>
+	</field>
+	<field name="increaseZY" class="java.lang.Double">
+		<fieldDescription><![CDATA[increaseZY]]></fieldDescription>
+	</field>
+	<field name="list" class="java.util.List">
+		<fieldDescription><![CDATA[list]]></fieldDescription>
+	</field>
+	<field name="rateMZ" class="java.lang.Double">
+		<fieldDescription><![CDATA[rateMZ]]></fieldDescription>
+	</field>
+	<field name="rateTol" class="java.lang.Double">
+		<fieldDescription><![CDATA[rateTol]]></fieldDescription>
+	</field>
+	<field name="rateZY" class="java.lang.Double">
+		<fieldDescription><![CDATA[rateZY]]></fieldDescription>
+	</field>
+	<field name="totalMZ" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[totalMZ]]></fieldDescription>
+	</field>
+	<field name="totalZY" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[totalZY]]></fieldDescription>
+	</field>
+	<field name="yearMZ" class="java.lang.Double">
+		<fieldDescription><![CDATA[yearMZ]]></fieldDescription>
+	</field>
+	<field name="yearTol" class="java.lang.Double">
+		<fieldDescription><![CDATA[yearTol]]></fieldDescription>
+	</field>
+	<field name="yearZY" class="java.lang.Double">
+		<fieldDescription><![CDATA[yearZY]]></fieldDescription>
+	</field>
+	<field name="yearedMZ" class="java.lang.Double">
+		<fieldDescription><![CDATA[yearedMZ]]></fieldDescription>
+	</field>
+	<field name="yearedTol" class="java.lang.Double">
+		<fieldDescription><![CDATA[yearedTol]]></fieldDescription>
+	</field>
+	<field name="yearedZY" class="java.lang.Double">
+		<fieldDescription><![CDATA[yearedZY]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="76" splitType="Stretch">
+			<textField>
+				<reportElement uuid="25edeb0d-7257-42f6-bdbc-bf12e1a1c772" x="48" y="34" width="635" height="42"/>
+				<textElement textAlignment="Center">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tital}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="fcc38d25-7870-4f6b-a78f-bcee30cf0b80" x="0" y="6" width="100" height="39"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[部门名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6e87bcc-32c2-4e83-a73b-eada599d2f1d" x="99" y="6" width="31" height="39"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[病区
+负责人]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7d0e0309-451c-4482-836a-389593bdc824" x="129" y="6" width="210" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[总收入（万元）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8ffc7003-e29d-42fb-aef9-1977b6c7beed" x="339" y="6" width="210" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[门诊收入（万元）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0d319c7a-fe17-4a89-95ff-e86afe5f0445" x="548" y="6" width="210" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[住院收入（万元）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b66333ab-f753-4c1a-9c23-6bf3359fb8f2" x="285" y="25" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[增长率]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f5c7683f-a8f3-4e67-adda-16c29036bf5e" x="234" y="25" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[增长数]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="cb7603d4-033f-4a65-a214-3fb251f6bf31" x="130" y="25" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateOne}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3711a533-be2f-475b-be90-61170aab6e16" x="182" y="25" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateTwo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f39dbd25-6fbb-4d4d-99cd-9917a318bec8" x="440" y="25" width="54" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[增长数]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4be1c1e8-4f90-4364-b263-09cd704e9b31" x="339" y="25" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateOne}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0da828a9-369e-4f50-b0ea-2d976208eb0d" x="391" y="25" width="49" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateTwo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="57853f64-8d33-4a62-bfc2-827d89141d04" x="494" y="25" width="54" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[增长率]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6e1c7ec1-0a11-4f8a-9f3b-6803c966bb70" x="649" y="25" width="54" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[增长数]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2b79a47e-4a88-4116-b63b-21503035214f" x="548" y="25" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateOne}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="505362b1-45c6-4466-ace6-bdef2ac5f63e" x="600" y="25" width="49" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateTwo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f641ca06-4fc9-49c7-bef8-08972dd1a095" x="703" y="25" width="54" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[增长率]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="102" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="55a5f1b1-615a-4b1d-b617-b8959e59713b" x="0" y="0" width="757" height="100"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "NKYXBNEYXBDBB_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

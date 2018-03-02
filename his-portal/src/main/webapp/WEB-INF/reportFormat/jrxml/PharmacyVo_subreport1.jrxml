@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PharmacyVo_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="53f690c0-8ed8-4350-87eb-d75f21874b50">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="drugCode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCode]]></fieldDescription>
+	</field>
+	<field name="drugDeptCode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugDeptCode]]></fieldDescription>
+	</field>
+	<field name="drugName" class="java.lang.String">
+		<fieldDescription><![CDATA[drugName]]></fieldDescription>
+	</field>
+	<field name="drugPackagingunit" class="java.lang.String">
+		<fieldDescription><![CDATA[drugPackagingunit]]></fieldDescription>
+	</field>
+	<field name="drugRetailprice" class="java.lang.Double">
+		<fieldDescription><![CDATA[drugRetailprice]]></fieldDescription>
+	</field>
+	<field name="drugType" class="java.lang.String">
+		<fieldDescription><![CDATA[drugType]]></fieldDescription>
+	</field>
+	<field name="outNum" class="java.lang.Double">
+		<fieldDescription><![CDATA[outNum]]></fieldDescription>
+	</field>
+	<field name="outState" class="java.lang.String">
+		<fieldDescription><![CDATA[outState]]></fieldDescription>
+	</field>
+	<field name="outType" class="java.lang.String">
+		<fieldDescription><![CDATA[outType]]></fieldDescription>
+	</field>
+	<field name="outlCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[outlCost]]></fieldDescription>
+	</field>
+	<field name="spec" class="java.lang.String">
+		<fieldDescription><![CDATA[spec]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="4" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement uuid="3226ccc4-84d0-4747-8555-9221b7b02f85" x="101" y="3" width="100" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugName}==null?"":$F{drugName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0bcd449f-97b7-4393-8e92-7c1d3ca8e0af" x="201" y="3" width="48" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{outState}==null?"":$F{outState}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2a5e8ec2-6c05-4528-bca9-ab05d37865f9" x="249" y="3" width="52" height="20"/>
+				<textElement textAlignment="Center">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{outType}==null?"":$F{outType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="41b1f547-db4f-4948-a621-b4022ff7165b" x="301" y="3" width="52" height="20"/>
+				<textElement textAlignment="Center">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{spec}==null?"":$F{spec}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c6e7cff0-f544-480f-9de0-43c962c771d1" x="352" y="3" width="38" height="20"/>
+				<textElement textAlignment="Center">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{outNum}==null?"":$F{outNum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0deefc21-3ff9-40c9-bf55-0c72f1cb0584" x="390" y="3" width="41" height="20"/>
+				<textElement textAlignment="Center">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugPackagingunit}==null?"":$F{drugPackagingunit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d454370f-ee0f-43c0-a768-bab32f2def49" x="431" y="3" width="48" height="20"/>
+				<textElement textAlignment="Center">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugRetailprice}==null?"":$F{drugRetailprice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="20a3fe99-2158-4fbd-bb6a-3c97c4e6a2ab" x="479" y="3" width="50" height="20"/>
+				<textElement textAlignment="Center">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{outlCost}==null?"":$F{outlCost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3c25662f-d75f-4196-be1e-4e645e936872" x="0" y="3" width="100" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugDeptCode}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

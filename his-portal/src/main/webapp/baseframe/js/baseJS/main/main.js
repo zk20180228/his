@@ -1,0 +1,1 @@
+var hisBasePath=$("base").attr("href");

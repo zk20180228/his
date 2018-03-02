@@ -1,0 +1,38 @@
+﻿/*calendar*/
+.e-datepicker-today .e-table-cell-inner 
+{	
+	/*border: solid 1px #8db2e3;
+	background-image:url(../images/datepicker/glass-bg.gif);	*/	
+	background:#FFE7A2;
+}
+.e-calendar .e-table-viewport .e-table-cell-inner 
+{
+	background-image:url(calendar/calendar-item-bg.gif);
+	background-repeat:repeat-x;
+}
+
+.e-calendar .e-table-cell-inner
+{
+	text-align:right;padding-right:4px;
+}
+.e-calendar .e-calendar-itemct
+{
+	position:absolute;overflow:auto;overflow-x:hidden;
+}
+
+.e-calendar-item, .e-calendar-item-left, .e-calendar-item-right
+{
+	height:18px;line-height:17px;position:absolute;overflow:hidden;top:0px;text-align:center;color:black;cursor:pointer;
+	background:url(calendar/calendaritem.gif) repeat-x;
+	width:4px;
+}
+.e-calendar-item-left
+{	
+	left:0px;
+	background:url(calendar/calendaritem-left.gif) no-repeat white;
+}
+.e-calendar-item-right
+{
+	right:0px;
+	background:url(calendar/calendaritem-right.gif) no-repeat right 0px white;
+}

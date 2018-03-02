@@ -1,0 +1,327 @@
+html,p,h2,h3,h4,h5,ul,li,dl,dt,dd,select{
+	padding: 0;
+	margin:0;
+	
+}
+ul,li{
+	list-style-type: none;
+}
+select{
+	outline: none;
+}
+*{
+margin:0;
+padding:0;
+}
+.main{
+	width: 100%;
+	overflow: hidden;
+	height: inherit;
+}
+.table2top{
+	overflow: hidden;
+	width: 90%;
+	margin:15px auto 0;
+	font-size: 15px;
+}
+.table2top .topleft{
+	width: 68%;
+	float: left;
+	overflow: hidden;
+}
+
+.table2top .topright{
+	width: 30%;
+	float: right;
+	overflow: hidden;
+}
+.table2top .table table{
+	width: 100%;
+	border-collapse:collapse;
+}
+.table2top .table table tr{
+	height: 30px;
+	
+}
+.table2top .table td{
+	border:1px solid #B0ADAD;
+	height: 30px;
+	overflow: hidden;
+	line-height: 30px;
+}
+.table2top .td1{
+	background-color: #F6ECE5;
+}
+.table2top .td2{
+	text-indent: 5px;
+}
+.table2top .tr1{
+	background-color: #ebf0f2;
+	height: 26px;
+}
+.topleft h2,.topright h2,.table2bottom h2{
+	font-size: 16px;
+	font-family: "黑体";
+	background-color: #daecf9;
+	line-height: 26px;
+	border-radius: 8px 8px 0 0;
+	text-indent: 16px;
+	padding-bottom: 2px;
+	height: 26px;
+	overflow: hidden;
+}
+.reportname select{
+	width:72px;  
+    height:30px;  
+    appearance:none;  
+    -moz-appearance:none;  
+    -webkit-appearance:none;  
+    background: url("../images/xia.png") no-repeat right 12px;  
+    background-size: 13%;
+    font-family:Microsoft YaHei;  
+    border:none; 
+    color: #0d0d99;
+}
+.reportname span{
+	display:inline-block;
+	width: 16px;
+	height: 16px;
+}
+.xia{
+	display:inline-block;
+	width: 16px;
+	height: 16px;
+	background: url("../images/xia.png") no-repeat center 8px;
+	background-size: 50%;
+}
+.table2top .jian{
+	display:inline-block;
+	width: 16px;
+	height: 16px;
+	background: url("../images/jian.png") no-repeat center 4px;
+	background-size: 80%;
+}
+.table2top .jia{
+	display:inline-block;
+	width: 16px;
+	height: 16px;
+	background: url("../images/jia.png") no-repeat center 4px;
+	background-size: 80%;
+}
+.reportname .loudou{
+	background: url("../images/loudou.png") no-repeat left 3px;
+}
+.table{
+	overflow: hidden;
+}
+.table i{
+	display: inline-block;
+	width: 3px;
+}
+.blue{
+	color: #0d0d99;
+}
+.table .uline{
+	text-decoration: underline;
+}
+.top_se{
+	overflow: hidden;
+	margin-bottom: 3px;
+	margin-top:2px;
+}
+.top_se .time{
+	width: 70px;
+	height: 24px;
+}
+.top_se .danw{
+	width:42px;  
+    height:26px;  
+    line-height: 26px;
+    appearance:none;  
+    -moz-appearance:none;  
+    -webkit-appearance:none;  
+    background: url("../images/xia.png") no-repeat left 10px;  
+    background-size: 21%;
+    font-family:Microsoft YaHei;  
+    border:none; 
+    text-indent: 5px;
+}
+.topright .table2{
+	width: 240px;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.topright i{
+	display: inline-block;
+	width: 2px;
+}
+.topright .td1 i,.topright .tr1 i{
+	width: 6px;
+}
+.topright .table2 td{
+	height: 30px;
+}
+.table2bottom{
+	width: 1200px;
+	margin:15px auto 0;
+	overflow: hidden;
+}
+.table2bottom .tbleft{
+	overflow: hidden;
+	float: left;
+	width: 390px;
+}
+.table2bottom .tbleft select,.table2bottom .tbmid select{
+	width:72px;  
+    height:26px;  
+    line-height: 26px;
+    appearance:none;  
+    -moz-appearance:none;  
+    -webkit-appearance:none;  
+    background: url("../images/xia.png") no-repeat right 12px;  
+    background-size: 13%;
+    font-family:Microsoft YaHei;  
+    border:none; 
+}
+.table2bottom .tbleft select option,.table2bottom .tbmid select option,.reportname select option{
+	background-color: #fff;
+}
+.tblc{
+    font-family: '宋体';
+    font-size: 15px;
+    line-height: 27px;
+    text-indent: 4px;
+}
+.table2bottom .tbmid{
+	overflow: hidden;
+	float: left;
+	width: 490px;
+	margin-left: 10px;
+}
+.table2bottom .tbright{
+	overflow: hidden;
+	float: right;
+	width: 300px;
+}
+.tbright_chart{
+	overflow: hidden;
+	height: 210px;
+	margin-top: 20px;
+	position: relative;
+}
+.tbright_chart #tbright_chart1,.tbright_chart #tbright_chart2{
+	width: 220px;
+	height: 280px;
+	float: left;
+}
+.tbright_chart #tbright_chart2{
+	position: absolute;
+	left: 150px;
+	top: 0;
+}
+.tbright .dlz{
+	overflow: hidden;
+}
+.tbright .dlz div{
+	width: 150px;
+	float: left;
+	overflow: hidden;
+}
+.tbright .dlz i{
+	display: block;
+	float: left;
+	width: 15px;
+	height: 15px;
+	background: #78dd92;
+	border-radius: 8px;
+	margin: 15px 8px 0 25px;
+}
+.tbright .dlz span{
+	float: left;
+	overflow: hidden;
+}
+.tbmid_c{
+	overflow: hidden;
+	position: relative;
+}
+.tbmid_c p{
+	width: 180px;
+	position: absolute;
+	writing-mode:lr-tb;
+	word-wrap:break-word;
+	text-align: right;
+	top: 105px;
+	left: -54px;
+	letter-spacing: 2px;
+	color: #0d0d99;
+	font-size: 14px;
+	font-family: "宋体";
+	-webkit-transform: rotate(-90deg);    /* for Chrome || Safari */
+ -moz-transform: rotate(-90deg);       /* for Firefox */
+-ms-transform: rotate(-90deg);        /* for IE */
+ -o-transform: rotate(-90deg);         /* for Opera */
+}
+/* 趋势图*/
+#qs1,#qs2,#qs3,#qs4,#qs5,#qs6,#qs7,#qs8,#qs9{
+	width: 180px;
+	height: 44px;
+	margin-left: -12px;
+}
+.qs{
+	width: 180px;
+	height: 30px;
+	overflow: hidden;
+}
+#zx1,#zx2,#zx3,#zx4,#zx5,#zx6,#zx7,#zx8,#zx9{
+	width: 110px;
+	height: 40px;
+	margin-left: -12px;
+}
+.zx{
+	width: 110px;
+	height: 30px;
+	overflow: hidden;
+}
+.dlzchart{
+	float: right;
+	margin-right: 3px;
+	margin-left: 3px;
+	width: 122px;
+	height: 30px;
+	background: url("../images/bg1.bmp") no-repeat center;
+	background-size: 105%;
+}
+.dlzchart .gray{
+	width: 100%;
+	background: #575D7E;
+	height: 8px;
+	margin-top: 11px;
+	float: left;
+}
+.trchart{
+	position: relative;
+}
+.trchart .tcsq{
+	position: absolute;
+	width: 100%;
+	height: 18px;
+	background: #c6daf0;
+	top: 6px;
+}
+.trchart span{
+	position: absolute;
+	right:3px;
+	top: 6px;
+}
+.hblue{
+	background-color: #b1dafb;
+}
+/*谷歌兼容*/
+@media screen and (-webkit-min-device-pixel-ratio:0){ 
+	.top_se .danw{
+		text-indent: 12px;
+	} 
+	.reportname select{
+		text-indent: 4px;
+	}
+}

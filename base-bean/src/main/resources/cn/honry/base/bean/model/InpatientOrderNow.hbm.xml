@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="cn.honry.base.bean.model">
+<class name="InpatientOrderNow" table="T_INPATIENT_ORDER_NOW">
+	<id name="id" type="java.lang.String" >
+		<column name="EXEC_ID" />
+		<generator class="uuid" />
+	</id>
+	<property name="inpatientNo" type="java.lang.String">
+        <column name="INPATIENT_NO" />
+    </property>
+    <property name="patientNo" type="java.lang.String">
+        <column name="PATIENT_NO"  />
+    </property>
+    <property name="deptCode" type="java.lang.String">
+        <column name="DEPT_CODE" />
+    </property>
+    <property name="nurseCellCode" type="java.lang.String">
+        <column name="NURSE_CELL_CODE" />
+    </property>
+    <property name="listDpcd" type="java.lang.String">
+        <column name="LIST_DPCD"  />
+    </property>
+    <property name="moOrder" type="java.lang.String">
+        <column name="MO_ORDER"  />
+    </property>
+	<property name="docCode" type="java.lang.String">
+        <column name="DOC_CODE" />
+    </property>
+    <property name="docName" type="java.lang.String">
+        <column name="DOC_NAME" />
+    </property>
+    <property name="moDate" type="java.util.Date">
+        <column name="MO_DATE" length="19" />
+    </property>
+    <property name="babyFlag" type="java.lang.Integer">
+        <column name="BABY_FLAG" length="1" />
+    </property>
+    <property name="happenNo" type="java.lang.Integer">
+        <column name="HAPPEN_NO" length="5" />
+    </property>
+	<property name="setItmattr" type="java.lang.Integer">
+        <column name="SET_ITMATTR" length="1" />
+    </property>
+    <property name="setSubtbl" type="java.lang.Integer">
+        <column name="SET_SUBTBL" length="1" />
+    </property>
+    <property name="typeCode" type="java.lang.String">
+        <column name="TYPE_CODE" />
+    </property>
+    <property name="typeName" type="java.lang.String">
+        <column name="TYPE_NAME" />
+    </property>
+    <property name="decmpsState" type="java.lang.Integer">
+        <column name="DECMPS_STATE" length="1" />
+    </property>
+    <property name="chargeState" type="java.lang.Integer">
+        <column name="CHARGE_STATE" length="1" />
+    </property>
+    <property name="needDrug" type="java.lang.Integer">
+        <column name="NEED_DRUG" length="1" />
+    </property>
+    <property name="prnExelist" type="java.lang.Integer">
+        <column name="PRN_EXELIST" length="1" />
+    </property>
+    <property name="prmMorlist" type="java.lang.Integer">
+        <column name="PRM_MORLIST" length="1" default="0"/>
+    </property>
+    <property name="needConfirm" type="java.lang.Integer">
+        <column name="NEED_CONFIRM" length="1"/>
+    </property>
+	<property name="itemType" type="java.lang.String">
+        <column name="ITEM_TYPE" />
+    </property>
+    <property name="itemCode" type="java.lang.String">
+        <column name="ITEM_CODE" />
+    </property>
+    <property name="itemName" type="java.lang.String">
+        <column name="ITEM_NAME"  />
+    </property>
+    <property name="classCode" type="java.lang.String">
+        <column name="CLASS_CODE" />
+    </property>
+    <property name="className" type="java.lang.String">
+        <column name="CLASS_NAME" length="100"/>
+    </property>
+	<property name="pharmacyCode" type="java.lang.String">
+        <column name="PHARMACY_CODE"  />
+    </property>
+    <property name="execDpcd" type="java.lang.String">
+        <column name="EXEC_DPCD" />
+    </property>
+    <property name="execDpnm" type="java.lang.String">
+        <column name="EXEC_DPNM" />
+    </property>
+    <property name="baseDose" type="java.lang.Double">
+        <column name="BASE_DOSE" length="18" />
+    </property>
+    <property name="doseUnit" type="java.lang.String">
+        <column name="DOSE_UNIT" />
+    </property>
+	<property name="minUnit" type="java.lang.String">
+        <column name="MIN_UNIT" />
+    </property>
+    <property name="priceUnit" type="java.lang.String">
+        <column name="PRICE_UNIT" />
+    </property>
+    <property name="packQty" type="java.lang.Integer">
+        <column name="PACK_QTY" length="4" />
+    </property>
+    <property name="specs" type="java.lang.String">
+        <column name="SPECS" />
+    </property>
+    <property name="doseModelCode" type="java.lang.String">
+        <column name="DOSE_MODEL_CODE" />
+    </property>
+	<property name="drugType" type="java.lang.String">
+        <column name="DRUG_TYPE" />
+    </property>
+    <property name="drugQuality" type="java.lang.String">
+        <column name="DRUG_QUALITY" />
+    </property>
+    <property name="itemPrice" type="java.lang.Double">
+        <column name="ITEM_PRICE" length="18" default="0" />
+    </property>
+    <property name="combNo" type="java.lang.String">
+        <column name="COMB_NO"  />
+    </property>
+    <property name="mainDrug" type="java.lang.Integer">
+        <column name="MAIN_DRUG" length="1"/>
+    </property>
+	<property name="moStat" type="java.lang.Integer">
+        <column name="MO_STAT" length="1" />
+    </property>
+    <property name="usageCode" type="java.lang.String">
+        <column name="USAGE_CODE"  />
+    </property>
+    <property name="useName" type="java.lang.String">
+        <column name="USE_NAME" length="100"/>
+    </property>
+    <property name="englishAb" type="java.lang.String">
+        <column name="ENGLISH_AB" />
+    </property>
+    <property name="frequencyCode" type="java.lang.String">
+        <column name="FREQUENCY_CODE" />
+    </property>
+	<property name="frequencyName" type="java.lang.String">
+        <column name="FREQUENCY_NAME" length="100" />
+    </property>
+    <property name="doseOnce" type="java.lang.Double">
+        <column name="DOSE_ONCE" length="10" />
+    </property>
+    <property name="stocKin" type="java.lang.Integer">
+        <column name="STOCK_MIN" length="1"/>
+    </property>
+    <property name="qtyTot" type="java.lang.Double">
+        <column name="QTY_TOT" length="12" />
+    </property>
+    <property name="useDays" type="java.lang.Integer">
+        <column name="USE_DAYS" length="10"/>
+    </property>
+	<property name="dateBgn" type="java.util.Date">
+        <column name="DATE_BGN" length="19" />
+    </property>
+    <property name="dateEnd" type="java.util.Date">
+        <column name="DATE_END" length="19"/>
+    </property>
+    <property name="recUsercd" type="java.lang.String">
+        <column name="REC_USERCD"  />
+    </property>
+    <property name="recUsernm" type="java.lang.String">
+        <column name="REC_USERNM" />
+    </property>
+	<property name="confirmFlag" type="java.lang.Integer">
+        <column name="CONFIRM_FLAG" length="1" default="0"/>
+    </property>
+	<property name="confirmDate" type="java.util.Date">
+        <column name="CONFIRM_DATE" length="19" />
+    </property>
+    <property name="confirmUsercd" type="java.lang.String">
+        <column name="CONFIRM_USERCD" />
+    </property>
+    <property name="dcFlag" type="java.lang.Integer">
+        <column name="DC_FLAG" length="1" />
+    </property>
+    <property name="dcDate" type="java.util.Date">
+        <column name="DC_DATE" length="19"/>
+    </property>
+	<property name="dcCode" type="java.lang.String">
+        <column name="DC_CODE" />
+    </property>
+    <property name="dcName" type="java.lang.String">
+        <column name="DC_NAME" />
+    </property>
+    <property name="dcDoccd" type="java.lang.String">
+        <column name="DC_DOCCD" />
+    </property>
+    <property name="dcDocnm" type="java.lang.String">
+        <column name="DC_DOCNM" />
+    </property>
+    <property name="dcUsercd" type="java.lang.String">
+        <column name="DC_USERCD" />
+    </property>
+	<property name="dcUsernm" type="java.lang.String">
+        <column name="DC_USERNM" />
+    </property>
+	<property name="executeFlag" type="java.lang.Integer">
+        <column name="EXECUTE_FLAG" length="1" />
+    </property>
+    <property name="executeDate" type="java.util.Date">
+        <column name="EXECUTE_DATE" length="19"/>
+    </property>
+    <property name="executeUsercd" type="java.lang.String">
+        <column name="EXECUTE_USERCD" />
+    </property>
+    <property name="decoFlag" type="java.lang.Integer">
+        <column name="DECO_FLAG" length="1"/>
+    </property>
+	<property name="dateCurmodc" type="java.util.Date">
+        <column name="DATE_CURMODC" length="19"/>
+    </property>
+	<property name="dateNxtmodc" type="java.util.Date">
+        <column name="DATE_NXTMODC" length="19" />
+    </property>
+    <property name="moNote1" type="java.lang.String">
+        <column name="MO_NOTE1" />
+    </property>
+    <property name="moNote2" type="java.lang.String">
+        <column name="MO_NOTE2" />
+    </property>
+    <property name="hypotest" type="java.lang.Integer">
+        <column name="HYPOTEST" length="1"/>
+    </property>
+	<property name="itemNote" type="java.lang.String">
+        <column name="ITEM_NOTE" />
+    </property>
+    <property name="applyNo" type="java.lang.String">
+        <column name="APPLY_NO" />
+    </property>
+    <property name="emcFlag" type="java.lang.Integer">
+        <column name="EMC_FLAG" length="1"/>
+    </property>
+    <property name="getFlag" type="java.lang.Integer">
+        <column name="GET_FLAG" length="1" default="1" />
+    </property>
+    <property name="subtblFlag" type="java.lang.Integer">
+        <column name="SUBTBL_FLAG" length="1"/>
+    </property>
+	<property name="sortId" type="java.lang.Integer">
+        <column name="SORT_ID" length="5"/>
+    </property>
+   <property name="dcConfirmDate" type="java.util.Date">
+        <column name="DC_CONFIRM_DATE" length="19" />
+    </property>
+    <property name="dcConfirmOper" type="java.lang.String">
+        <column name="DC_CONFIRM_OPER" />
+    </property>
+    <property name="dcConfirmFlag" type="java.lang.Integer">
+        <column name="DC_CONFIRM_FLAG" length="1" default="0" />
+    </property>
+    <property name="labCode" type="java.lang.String">
+        <column name="LAB_CODE" />
+    </property>
+	<property name="permission" type="java.lang.Integer">
+        <column name="PERMISSION" length="1"/>
+    </property> 
+    <property name="packageCode" type="java.lang.String">
+        <column name="PACKAGE_CODE"  />
+    </property>
+    <property name="packageName" type="java.lang.String">
+        <column name="PACKAGE_NAME" />
+    </property>
+    <property name="mark1" type="java.lang.String">
+        <column name="MARK1" />
+    </property>
+    <property name="mark2" type="java.lang.String">
+        <column name="MARK2" />
+    </property>
+	<property name="mark3" type="java.lang.String">
+        <column name="MARK3" />
+    </property> 
+     <property name="execTimes" type="java.lang.String">
+        <column name="EXEC_TIMES" />
+    </property>
+	<property name="execDose" type="java.lang.String">
+        <column name="EXEC_DOSE" />
+    </property> 
+    
+    <property name="deptName" type="java.lang.String">
+        <column name="DEPT_NAME"  />
+    </property>
+    <property name="nurseCellName" type="java.lang.String">
+        <column name="NURSE_CELL_NAME"  />
+    </property>
+    <property name="listDpcdName" type="java.lang.String">
+        <column name="LIST_DPCD_NAME"  />
+    </property>
+    
+	<property name="createUser" type="java.lang.String">
+        <column name="CREATEUSER" />
+    </property>
+    <property name="createDept" type="java.lang.String">
+        <column name="CREATEDEPT" />
+    </property>        
+    <property name="createTime" type="java.sql.Timestamp">
+        <column name="CREATETIME" length="19" />
+    </property>
+    <property name="updateUser" type="java.lang.String">
+        <column name="UPDATEUSER" />
+    </property>      
+    <property name="updateTime" type="java.sql.Timestamp">
+        <column name="UPDATETIME" length="19" />
+    </property>
+    <property name="deleteUser" type="java.lang.String">
+        <column name="DELETEUSER" />
+    </property>      
+    <property name="deleteTime" type="java.sql.Timestamp">
+        <column name="DELETETIME" length="19" />
+    </property>        
+    <property name="del_flg" type="java.lang.Integer">
+        <column name="DEL_FLG" precision="1" scale="0">
+        	<comment>0：正常 1：删除</comment>
+        </column>
+    </property>
+    <property name="stop_flg" type="java.lang.Integer">
+        <column name="STOP_FLG" precision="1" scale="0">
+       		<comment>0:正常 1：停用</comment>
+        </column>
+    </property>
+    <property name="drugpackagingUnit" type="java.lang.String">
+        <column name="DRUGPACKAGING_UNIT" />
+    </property>
+    <property name="patientName" type="java.lang.String">
+        <column name="PATIENT_NAME" />
+    </property>
+    <property name="hospitalId" type="java.lang.Integer">
+	       <column name="HOSPITAL_ID"/>
+   </property>
+   <property name="areaCode" type="java.lang.String">
+        <column name="AREA_CODE" length="20" />
+   </property> 
+   <property name="minUnitName" type="java.lang.String">
+   		<column name="MIN_UNIT_NAME" length="50"></column>
+   </property>
+   <property name="priceUnitName" type="java.lang.String">
+   		<column name="PRICE_UNIT_NAME" length="50"></column>
+   </property>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN" 
+        "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+<urlrewrite>
+	<!-- 配置映射规则 rule是url重写规则,from是显示出来的地址, 
+	     to是映射的实际地址,$1是重写参数,可以为多个,()里是匹配的正则表达式. -->
+	<rule >
+		<from>^/(.*!\w*)$</from>
+		<to>$1.action</to>
+	</rule>
+
+</urlrewrite> 

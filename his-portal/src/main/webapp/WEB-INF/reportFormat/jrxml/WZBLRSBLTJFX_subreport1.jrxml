@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="WZBLRSBLTJFX_subreport1" language="groovy" pageWidth="802" pageHeight="555" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="0d99d6fd-e6b3-4b2f-b36c-1dd76ea1ab0d">
+	<property name="ireport.zoom" value="1.948717100000003"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="allIll" class="java.lang.String">
+		<fieldDescription><![CDATA[allIll]]></fieldDescription>
+	</field>
+	<field name="averFeeCost" class="java.lang.String">
+		<fieldDescription><![CDATA[averFeeCost]]></fieldDescription>
+	</field>
+	<field name="averInhost" class="java.lang.String">
+		<fieldDescription><![CDATA[averInhost]]></fieldDescription>
+	</field>
+	<field name="better" class="java.lang.String">
+		<fieldDescription><![CDATA[better]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="compliInterface" class="java.lang.String">
+		<fieldDescription><![CDATA[compliInterface]]></fieldDescription>
+	</field>
+	<field name="cureRate" class="java.lang.String">
+		<fieldDescription><![CDATA[cureRate]]></fieldDescription>
+	</field>
+	<field name="cured" class="java.lang.String">
+		<fieldDescription><![CDATA[cured]]></fieldDescription>
+	</field>
+	<field name="death" class="java.lang.String">
+		<fieldDescription><![CDATA[death]]></fieldDescription>
+	</field>
+	<field name="deathRate" class="java.lang.String">
+		<fieldDescription><![CDATA[deathRate]]></fieldDescription>
+	</field>
+	<field name="deptCode" class="java.lang.String">
+		<fieldDescription><![CDATA[deptCode]]></fieldDescription>
+	</field>
+	<field name="deptName" class="java.lang.String">
+		<fieldDescription><![CDATA[deptName]]></fieldDescription>
+	</field>
+	<field name="list" class="java.util.List">
+		<fieldDescription><![CDATA[list]]></fieldDescription>
+	</field>
+	<field name="noCured" class="java.lang.String">
+		<fieldDescription><![CDATA[noCured]]></fieldDescription>
+	</field>
+	<field name="num" class="java.lang.String">
+		<fieldDescription><![CDATA[num]]></fieldDescription>
+	</field>
+	<field name="other" class="java.lang.String">
+		<fieldDescription><![CDATA[other]]></fieldDescription>
+	</field>
+	<field name="thanFloor" class="java.lang.String">
+		<fieldDescription><![CDATA[thanFloor]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement uuid="5376cb5e-d0e5-477a-87e9-5bad8341d793" x="0" y="0" width="48" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deptName}==null?"":$F{deptName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bfc53266-30fa-48c3-b5ef-738402ba93e8" x="48" y="0" width="33" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num}==null?"0":$F{num}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0a911b1f-34f2-4c72-9139-368693a77fef" x="129" y="0" width="31" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{better}==null?"0":$F{better}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0ac34d92-752b-466f-a438-e6c91ac996a5" x="160" y="0" width="33" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{noCured}==null?"0":$F{noCured}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5c410fb8-dce0-40d8-9ce0-c632dd4f4257" x="193" y="0" width="33" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{death}==null?"0":$F{death}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d2700860-6019-4969-be51-4e4d517f47d0" x="226" y="0" width="30" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{other}==null?"0":$F{other}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="17dc6cbe-bd1c-4555-8870-a9571dd53184" x="256" y="0" width="45" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cureRate}==null?"0":$F{cureRate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a3083511-bcf1-4692-933d-941bd8b77dd2" x="301" y="0" width="45" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deathRate}==null?"0":$F{deathRate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="af582c94-e895-4682-8307-4d2143db1263" x="346" y="0" width="45" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{averInhost}==null?"0":$F{averInhost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d52b1fcf-6cdc-4c4d-9f70-7b8ed8ba0ecd" x="391" y="0" width="46" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{averFeeCost}==null?"0":$F{averFeeCost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="afe70247-48c3-46d9-a3e3-2b37b56d2909" x="437" y="0" width="45" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{compliInterface}==null?"0":$F{compliInterface}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ab19fd53-93e6-45c1-8d4d-d5c2a217f142" x="482" y="0" width="45" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{allIll}==null?"0":$F{allIll}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c6bacc61-0496-4187-8b14-242dd9edbc9c" x="527" y="0" width="28" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{thanFloor}==null?"0":$F{thanFloor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="acf0ef8b-63b1-4360-b67e-7e2195640da9" x="81" y="0" width="48" height="25"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cured}==null?"0":$F{cured}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

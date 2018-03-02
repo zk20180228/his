@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="cn.honry.base.bean.model">
+	<class name="DepartmentContact" table="T_DEPARTMENT_CONTACT">
+		<id name="id" type="java.lang.String" >
+			<column name="ID" />
+			<generator class="uuid" />
+		</id>
+		<property name="pardeptId" type="java.lang.String">
+			<column name="PARDEPT_ID" />
+		</property>
+		<property name="deptId" type="java.lang.String">
+			<column name="DEPT_ID" />
+		</property>
+		<property name="deptCode" type="java.lang.String">
+			<column name="DEPT_CODE" />
+		</property>
+		<property name="deptName" type="java.lang.String">
+			<column name="DEPT_NAME" />
+		</property>
+		<property name="deptCalss" type="java.lang.String">
+			<column name="DEPT_CLASS" >
+				<comment>1-部门，2-分类，3-科室，4-终极科室(诊室/病区)</comment>
+			</column>
+		</property>
+		<property name="deptType" type="java.lang.String">
+			<column name="DEPT_TYPE" >
+				<comment>C-门诊, I-住院,F-财务，L-后勤，PI-药库，T-医技，0-其它，D-机关，P-药房，N-护士站</comment>
+			</column>
+		</property>
+		<property name="spellCode" type="java.lang.String">
+			<column name="SPELL_CODE" >
+				<comment>拼音码</comment>
+			</column>
+		</property>
+		<property name="wbCode" type="java.lang.String">
+			<column name="WB_CODE" >
+				<comment>五笔码</comment>
+			</column>
+		</property>
+		<property name="userDefinedCode" type="java.lang.String">
+			<column name="USER_DEFINED_CODE" >
+				<comment>自定义码</comment>
+			</column>
+		</property>
+		<property name="deptEnCode" type="java.lang.String">
+			<column name="DEPT_EN_CODE" >
+				<comment>英文名称</comment>
+			</column>
+		</property>
+		<property name="gradeCode" type="java.lang.Integer">
+			<column name="GRADE_CODE" length="1">
+				<comment>节点的层级</comment>
+			</column>
+		</property>
+		<property name="sortId" type="java.lang.Integer">
+			<column name="SORT_ID">
+				<comment>顺序号</comment>
+			</column>
+		</property>
+		<property name="validState" type="java.lang.Integer">
+			<column name="VALID_STATE">
+				<comment>1-在用，0-停用，2-废弃)</comment>
+			</column>
+		</property>
+		<property name="extFlag" type="java.lang.Integer">
+			<column name="EXT_FLAG" length="1">
+				<comment>扩展标志</comment>
+			</column>
+		</property>
+		<property name="mark" type="java.lang.String">
+			<column name="MARK" >
+				<comment>备注</comment>
+			</column>
+		</property>
+		<property name="referenceType" type="java.lang.String">
+			<column name="REFERENCE_TYPE" >
+				<comment>分类名称</comment>
+			</column>
+		</property>
+		<property name="path" type="java.lang.String">
+			<column name="DEPT_PATH" />
+		</property>
+		<property name="ordertopath" type="java.lang.Integer">
+			<column name="DEPT_ORDERTOPATH"/>
+		</property>
+		<property name="upperpath" type="java.lang.String">
+			<column name="DEPT_UPPERPATH" />
+		</property>
+		<property name="createUser" type="java.lang.String">
+	        <column name="CREATEUSER" />
+	    </property>
+	    <property name="createDept" type="java.lang.String">
+	        <column name="CREATEDEPT" />
+	    </property>        
+	    <property name="createTime" type="java.sql.Timestamp">
+	        <column name="CREATETIME" length="19" />
+	    </property>
+	    <property name="updateUser" type="java.lang.String">
+	        <column name="UPDATEUSER" />
+	    </property>      
+	    <property name="updateTime" type="java.sql.Timestamp">
+	        <column name="UPDATETIME" length="19" />
+	    </property>
+	    <property name="deleteUser" type="java.lang.String">
+	        <column name="DELETEUSER" />
+	    </property>      
+	    <property name="deleteTime" type="java.sql.Timestamp">
+	        <column name="DELETETIME" length="19" />
+	    </property>        
+	    <property name="del_flg" type="java.lang.Integer">
+	        <column name="DEL_FLG" precision="1" scale="0">
+	        	<comment>0：正常 1：删除</comment>
+	        </column>
+	    </property>
+	    <property name="stop_flg" type="java.lang.Integer">
+	        <column name="STOP_FLG" precision="1" scale="0">
+	       		<comment>0:正常 1：停用</comment>
+	        </column>
+	    </property>
+	</class>
+</hibernate-mapping>

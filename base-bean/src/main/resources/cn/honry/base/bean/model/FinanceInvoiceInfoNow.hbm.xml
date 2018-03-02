@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="FinanceInvoiceInfoNow" table="T_FINANCE_INVOICEINFO_NOW" >
+         <id name="id" type="java.lang.String">
+            <column name="INVOICE_ID" />
+            <generator class="uuid" />
+         </id>
+         <property name="invoiceNo" type="java.lang.String">
+             <column name="INVOICE_NO" />
+         </property>
+         <property name="transType" type="java.lang.Integer">
+             <column name="TRANS_TYPE"  />
+         </property>
+         <property name="cardNo" type="java.lang.String">
+             <column name="CARD_NO"  />
+         </property>
+         <property name="regDate" type="java.util.Date">
+             <column name="REG_DATE"  />
+         </property>
+         <property name="name" type="java.lang.String">
+             <column name="NAME" />
+         </property>
+         <property name="paykindCode" type="java.lang.String">
+             <column name="PAYKIND_CODE"  />
+         </property>
+         <property name="pactCode" type="java.lang.String">
+             <column name="PACT_CODE"  />
+         </property>
+         <property name="pactName" type="java.lang.String">
+             <column name="PACT_NAME"  />
+         </property>
+         <property name="mcardNo" type="java.lang.String">
+             <column name="MCARD_NO" />
+         </property>
+         <property name="medicalType" type="java.lang.String">
+             <column name="MEDICAL_TYPE"  />
+         </property>
+         <property name="totCost" type="java.lang.Double">
+             <column name="TOT_COST" precision="8" />
+         </property>
+         <property name="pubCost" type="java.lang.Double">
+             <column name="PUB_COST" precision="8" />
+         </property>
+         <property name="ownCost" type="java.lang.Double">
+             <column name="OWN_COST" precision="8" />
+         </property>
+         <property name="payCost" type="java.lang.Double">
+             <column name="PAY_COST" precision="8" />
+         </property>
+         <property name="back1" type="java.lang.Double">
+             <column name="BACK1" precision="8" />
+         </property>
+         <property name="back2" type="java.lang.Double">
+             <column name="BACK2" precision="8" />
+         </property>
+         <property name="back3" type="java.lang.Double">
+             <column name="BACK3" precision="8" />
+         </property>
+         <property name="realCost" type="java.lang.Double">
+             <column name="REAL_COST" precision="8" />
+         </property>
+         <property name="operCode" type="java.lang.String">
+             <column name="OPER_CODE"  />
+         </property>
+         <property name="operDate" type="java.util.Date">
+             <column name="OPER_DATE"  />
+         </property>
+         <property name="examineFlag" type="java.lang.Integer">
+             <column name="EXAMINE_FLAG"  />
+         </property>
+         <property name="cancelFlag" type="java.lang.Integer">
+             <column name="CANCEL_FLAG"  />
+         </property>
+         <property name="cancelInvoice" type="java.lang.String">
+             <column name="CANCEL_INVOICE"  />
+         </property>
+         <property name="cancelCode" type="java.lang.String">
+             <column name="CANCEL_CODE"  />
+         </property>
+         <property name="cancelDate" type="java.util.Date">
+             <column name="CANCEL_DATE"  />
+         </property>
+         <property name="checkFlag" type="java.lang.Integer">
+             <column name="CHECK_FLAG"  />
+         </property>
+         <property name="checkOpcd" type="java.lang.String">
+             <column name="CHECK_OPCD"  />
+         </property>
+         <property name="checkDate" type="java.util.Date">
+             <column name="CHECK_DATE"  />
+         </property>
+         <property name="balanceFlag" type="java.lang.Integer">
+             <column name="BALANCE_FLAG"  />
+         </property>
+         <property name="balanceNo" type="java.lang.String">
+             <column name="BALANCE_NO"  />
+         </property>
+         <property name="balanceOpcd" type="java.lang.String">
+             <column name="BALANCE_OPCD"  />
+         </property>
+         <property name="balanceDate" type="java.util.Date">
+             <column name="BALANCE_DATE"  />
+         </property>
+         <property name="invoiceSeq" type="java.lang.String">
+             <column name="INVOICE_SEQ" />
+         </property>
+         <property name="extFlag" type="java.lang.Integer">
+             <column name="EXT_FLAG"  />
+         </property>
+         <property name="clinicCode" type="java.lang.String">
+             <column name="CLINIC_CODE"  />
+         </property>
+         <property name="printInvoiceno" type="java.lang.String">
+             <column name="PRINT_INVOICENO"  />
+         </property>
+         <property name="drugWindow" type="java.lang.String">
+             <column name="DRUG_WINDOW"  />
+         </property>
+         <property name="accountFlag" type="java.lang.Integer">
+             <column name="ACCOUNT_FLAG"  />
+         </property>
+         <property name="invoiceComb" type="java.lang.String">
+             <column name="INVOICE_COMB"  />
+         </property>
+        <property name="createUser" type="java.lang.String">
+           <column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" />
+        </property>
+        <property name="paykindName" type="java.lang.String">
+            <column name="PAYKIND_NAME" length="50" />
+        </property> 
+        <property name="operName" type="java.lang.String">
+            <column name="OPER_NAME" length="50" />
+        </property> 
+        <property name="cancleName" type="java.lang.String">
+            <column name="CANCEL_NAME" length="50" />
+        </property> 
+        <property name="checkOpcdName" type="java.lang.String">
+            <column name="CHECK_OPCD_NAME" length="50" />
+        </property> 
+        <property name="balanceOpceName" type="java.lang.String">
+            <column name="BALANCE_OPCD_NAME" length="50" />
+        </property> 
+         <property name="hospitalId" type="java.lang.Integer">
+             <column name="HOSPITAL_ID"  />
+         </property>
+         <property name="areaCode" type="java.lang.String">
+             <column name="AREA_CODE"  />
+         </property>
+    </class>
+</hibernate-mapping>

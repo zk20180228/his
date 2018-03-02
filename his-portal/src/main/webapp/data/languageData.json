@@ -1,0 +1,34 @@
+[
+    {
+        "approvalLanguage": [
+            {
+                "text": "同意",
+                "value": "001"
+            },
+            {
+                "text": "不同意",
+                "value": "002"
+            }
+        ],
+        "businessLeave": [
+            {
+                "text": "参加会议",
+                "value": "001"
+            },
+            {
+                "text": "参加海外会议",
+                "value": "002"
+            }
+        ],
+        "personalLeave": [
+            {
+                "text": "今天发烧了，需休息几天，望领导批准。",
+                "value": "001"
+            },
+            {
+                "text": "今天拉肚子，需休息几天，望领导批准。",
+                "value": "002"
+            }
+        ]
+    }
+]

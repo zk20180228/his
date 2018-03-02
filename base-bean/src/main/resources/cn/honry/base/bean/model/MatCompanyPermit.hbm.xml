@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+       <class name="MatCompanyPermit" table="T_MAT_COMPANY_PERMIT">
+            <id name="id" type="java.lang.String">
+	            <column name="ID" />
+	            <generator class="uuid" />
+	        </id>
+            <property name="companyId" type="java.lang.String">
+                <column name="COMPANY_ID" />
+            </property>
+            <property name="companyCode" type="java.lang.String">
+                <column name="COMPANY_CODE" />
+            </property>
+            <property name="companytype" type="java.lang.Integer">
+                <column name="PERMIT_TYPE" />
+            </property>
+            <property name="permitFilename" type="java.lang.String">
+                <column name="PERMIT_FILENAME" />
+            </property>
+            <property name="permitFilepath" type="java.lang.String">
+                <column name="PERMIT_FILEPATH"  />
+            </property>
+            <property name="registerCode" type="java.lang.String">
+                <column name="REGISTER_CODE" />
+            </property>
+            <property name="registerDate" type="java.util.Date">
+                <column name="REGISTER_DATE" />
+            </property>
+            <property name="overDate" type="java.util.Date">
+                <column name="OVER_DATE" />
+            </property>
+            <property name="validFlag" type="java.lang.Integer">
+                <column name="VALID_FLAG" />
+            </property>
+            <property name="mark" type="java.lang.String">
+                <column name="MARK"  />
+            </property>
+            <property name="operCode" type="java.lang.String">
+                <column name="OPER_CODE" />
+            </property>
+            <property name="operDate" type="java.util.Date">
+                <column name="OPER_DATE" />
+            </property>
+       </class>
+</hibernate-mapping>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ZYSRTJHZ_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fb789390-4ab1-4bca-b5f3-be8868218430">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="deptName" class="java.lang.String">
+		<fieldDescription><![CDATA[deptName]]></fieldDescription>
+	</field>
+	<field name="inhosDeptcode" class="java.lang.String">
+		<fieldDescription><![CDATA[inhosDeptcode]]></fieldDescription>
+	</field>
+	<field name="totCost01" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost01]]></fieldDescription>
+	</field>
+	<field name="totCost02" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost02]]></fieldDescription>
+	</field>
+	<field name="totCost03" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost03]]></fieldDescription>
+	</field>
+	<field name="totCost04" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost04]]></fieldDescription>
+	</field>
+	<field name="totCost05" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost05]]></fieldDescription>
+	</field>
+	<field name="totCost07" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost07]]></fieldDescription>
+	</field>
+	<field name="totCost08" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost08]]></fieldDescription>
+	</field>
+	<field name="totCost09" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost09]]></fieldDescription>
+	</field>
+	<field name="totCost10" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost10]]></fieldDescription>
+	</field>
+	<field name="totCost11" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost11]]></fieldDescription>
+	</field>
+	<field name="totCost12" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost12]]></fieldDescription>
+	</field>
+	<field name="totCost13" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost13]]></fieldDescription>
+	</field>
+	<field name="totCost14" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost14]]></fieldDescription>
+	</field>
+	<field name="totCost15" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost15]]></fieldDescription>
+	</field>
+	<field name="totCost16" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost16]]></fieldDescription>
+	</field>
+	<field name="totCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[totCost]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5e077da3-d114-4d0d-a175-fc3df21c5d9b" stretchType="RelativeToTallestObject" x="0" y="-1" width="35" height="20" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deptName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="ed43aec8-5207-4038-aae8-d3091e955e64" stretchType="RelativeToTallestObject" x="35" y="-1" width="33" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost01}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="7634085b-1ec7-4a24-b09a-7dedd3c54aa7" stretchType="RelativeToTallestObject" x="68" y="-1" width="33" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost02}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="31e7d797-0d47-44b8-90f6-8916860b9f0b" stretchType="RelativeToTallestObject" x="101" y="-1" width="33" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost03}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="d92f32f1-45c4-4f71-a04c-e9009918c3d2" stretchType="RelativeToTallestObject" x="134" y="-1" width="33" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost04}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="f2d57327-64de-4858-81b9-998795781ac4" stretchType="RelativeToTallestObject" x="167" y="-1" width="33" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost05}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="af1a3d92-0b11-420b-a420-3ca6d06a9caf" stretchType="RelativeToTallestObject" x="200" y="-1" width="33" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost07}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="c8e08bdc-4eea-4705-91e4-1f3e7e3b0d77" stretchType="RelativeToTallestObject" x="233" y="-1" width="33" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost08}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="43167373-6c3f-4dca-aaf1-10f253e974ce" stretchType="RelativeToTallestObject" x="266" y="-1" width="33" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost09}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="0a72e6f9-8220-47cb-885f-615d8d402080" stretchType="RelativeToTallestObject" x="299" y="-1" width="33" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost10}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="e8fbed69-af85-4c4a-957b-d419a04632c2" stretchType="RelativeToTallestObject" x="332" y="-1" width="33" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost11}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="bcaac26b-933c-4c34-b922-e6e59d45fe2a" stretchType="RelativeToTallestObject" x="365" y="-1" width="33" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost12}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="de30b44d-bb39-4e44-a0a3-f6330fedc002" stretchType="RelativeToTallestObject" x="398" y="-1" width="30" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost13}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="053af41f-f96d-4cca-b38e-b7f9efb0a0c9" stretchType="RelativeToTallestObject" x="428" y="-1" width="33" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost14}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="b0cccfea-3b6b-41d1-8ab3-cdd355833c2e" stretchType="RelativeToTallestObject" x="461" y="0" width="30" height="19"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost15}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="15aca8c2-b770-4bd3-aa66-26ef4afe6d87" stretchType="RelativeToTallestObject" x="491" y="-1" width="33" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost16}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="34407361-3946-45e2-935d-5c23421563ad" stretchType="RelativeToTallestObject" x="524" y="-1" width="31" height="20"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totCost}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

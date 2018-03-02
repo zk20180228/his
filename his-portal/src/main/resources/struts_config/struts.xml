@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <!-- 引入struts2 文件 -->
+	<include file="struts-plugin.xml" />
+	
+	<include file="struts-default.xml" />
+	 <!-- 指定Web应用的默认编码集,相当于调用HttpServletRequest的setCharacterEncoding方法 -->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <!-- 该属性指定需要Struts 2处理的请求后缀，该属性的默认值是action，即所有匹配*.action的请求都由Struts2处理。
+                      如果用户需要指定多个请求后缀，则多个后缀之间以英文逗号（,）隔开。 -->
+    <constant name="struts.action.extension" value="action"/>
+    <!-- 设置浏览器是否缓存静态内容,默认值为true(生产环境下使用),开发阶段最好关闭 -->
+    <constant name="struts.serve.static.browserCache" value="false"/>
+    <!-- 当struts的配置文件修改后,系统是否自动重新加载该文件,默认值为false(生产环境下使用),开发阶段最好打开 -->
+    <constant name="struts.configuration.xml.reload" value="true"/>
+    <!-- 开发模式下使用,这样可以打印出更详细的错误信息 -->
+    <constant name="struts.devMode" value=" false" />
+     <!-- 默认的视图主题 -->
+    <constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.objectFactory" value="spring" />
+	<!-- 配制国际化资源文件 -->
+	<constant name="struts.custom.i18n.resources" value="messageResource"/> 
+	<!-- 配制请求编码(request) -->
+	<constant name="struts.multipart.maxSize" value="3305242880" />
+	<constant name="struts.multipart.saveDir" value="d:/imagestmp"/> 
+	<constant name="struts.action.extension" value="action"/>
+	
+	 <!-- 设置Convention插件是否从jar包中搜索Action类 [可选] 默认值为true -->
+    <constant name="struts.convention.action.disableJarScanning" value="true" />
+    <!-- 设置Convention插件文件协议类型 -->
+    <constant name="struts.convention.action.fileProtocols" value="jar,wsjar" />
+    <!-- 设置Convention插件需要搜索的jar包 -->
+    <!-- <constant name="struts.convention.action.includeJars" value=".*?/his-tec.*?jar(!/)?,.*?/his-stat.*?jar(!/)?,.*?/his-register.*?jar(!/)?,.*?/his-public.*?jar(!/)?,.*?/his-patient.*?jar(!/)?,.*?/his-outpatient.*?jar(!/)?,.*?/his-operation-anesthesia.*?jar(!/)?,.*?/his-mobile-system.*?jar(!/)?,.*?/his-mat.*?jar(!/)?,.*?/his-inpatient.*?jar(!/)?,.*?/his-finance.*?jar(!/)?,.*?/his-drug.*?jar(!/)?,.*?/his-sys.*?jar(!/)?,.*?/his-access.*?jar(!/)?,.*?/his-business.*?jar(!/)?,.*?/his-code.*?jar(!/)?" /> -->
+    <constant name="struts.convention.action.includeJars" value=".*?/his-*.*?jar(!/)?" />
+    <!-- 该常量指定包作为根包来搜索Action类。
+    Convention插件除了扫描默认的action,actions,struts,struts2，还会扫描该常量指定的一个或多个包，
+    Convention会试图从指定包中发现Action类。 -->
+    <!-- <constant name="struts.convention.action.packages" value="cn.honry.*" /> -->
+	
+	<!-- 动态方法调用 aizhonghua -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+	
+	<package name="global" extends="json-default">
+		<interceptors>
+			<interceptor name="webManageInterceptor" class="cn.honry.interceptor.ManageInterceptor"/>
+			<interceptor-stack name="manageInterceptor">
+				<interceptor-ref name="webManageInterceptor"/>
+				<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<global-results>
+			<result name="login" type="redirect">/login.jsp?v=${v}</result>
+<!-- 			<result name="error">/common/error/error.jsp</result> -->
+<!-- 			<result name="exception">/common/error/exception.jsp</result> -->
+			<result name="noRightException">/common/error/noRight.jsp</result>
+<!-- 			<result name="ajaxException" type="json"> -->
+<!-- 				<param name="root">dataMap</param> -->
+<!-- 			</result> -->
+		</global-results>
+		<global-allowed-methods>regex:.*</global-allowed-methods>
+		<global-exception-mappings>
+<!-- 			<exception-mapping result="exception" exception="java.lang.Exception"></exception-mapping> -->
+			<exception-mapping result="noRightException" exception="org.apache.shiro.authz.UnauthorizedException"></exception-mapping>
+		</global-exception-mappings>
+		<action name="userLoginAction" class="cn.honry.portal.login.action.UserLoginAction"></action>
+	</package>
+
+</struts> 
+
+

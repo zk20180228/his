@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+		<class name="MatCompany" table="T_MAT_COMPANY">
+				<id name="id" type="java.lang.String">
+					<column name="ID"></column>
+					<generator class="uuid"></generator>
+				</id>
+				<property name="companyCode" type="java.lang.String">
+				    <column name="COMPANY_CODE"></column>
+				</property>
+				<property name="companyName" type="java.lang.String">
+				    <column name="COMPANY_NAME"></column>
+				</property>
+				<property name="spellCode" type="java.lang.String">
+				    <column name="SPELL_CODE"></column>
+				</property>
+				<property name="wbCode" type="java.lang.String">
+				    <column name="WB_CODE"></column>
+				</property>
+				<property name="customCode" type="java.lang.String">
+				    <column name="CUSTOM_CODE"></column>
+				</property>
+				<property name="companyType" type="java.lang.Integer">
+				    <column name="COMPANY_TYPE"></column>
+				</property>
+				<property name="coporation" type="java.lang.String">
+				    <column name="COPORATION"></column>
+				</property>
+				<property name="address" type="java.lang.String">
+				    <column name="ADDRESS"></column>
+				</property>
+				<property name="telCode" type="java.lang.String">
+				    <column name="TEL_CODE"></column>
+				</property>
+				<property name="faxCode" type="java.lang.String">
+				    <column name="FAX_CODE"></column>
+				</property>
+				<property name="netAddress" type="java.lang.String">
+				    <column name="NET_ADDRESS"></column>
+				</property>
+				<property name="email" type="java.lang.String">
+				    <column name="E_MAIL"></column>
+				</property>
+				<property name="linkMan" type="java.lang.String">
+				    <column name="LINK_MAN"></column>
+				</property>
+				<property name="linkMail" type="java.lang.String">
+				    <column name="LINK_MAIL"></column>
+				</property>
+				<property name="linkTel" type="java.lang.String">
+				    <column name="LINK_TEL"></column>
+				</property>
+				<property name="isoInfo" type="java.lang.String">
+				    <column name="ISO_INFO"></column>
+				</property>
+				<property name="openBank" type="java.lang.String">
+				    <column name="OPEN_BANK"></column>
+				</property>
+				<property name="openAccounts" type="java.lang.String">
+				    <column name="OPEN_ACCOUNTS"></column>
+				</property>
+				<property name="actualRate" type="java.lang.Double">
+				    <column name="ACTUAL_RATE"></column>
+				</property>
+				<property name="validFlag" type="java.lang.Integer">
+				    <column name="VALID_FLAG"></column>
+				</property>
+				<property name="memo" type="java.lang.String">
+				    <column name="MEMO"></column>
+				</property>
+				<property name="operCode" type="java.lang.String">
+				    <column name="OPER_CODE"></column>
+				</property>
+				<property name="operdate" type="java.util.Date">
+				    <column name="OPER_DATE"></column>
+				</property>
+				<property name="storage" type="java.lang.String">
+				    <column name="STORAGE_CODE"></column>
+				</property>
+				         <property name="createUser" type="java.lang.String">
+            	<column name="CREATEUSER" />
+		        </property>
+		        <property name="createDept" type="java.lang.String">
+		            <column name="CREATEDEPT" />
+		        </property>        
+		        <property name="createTime" type="java.sql.Timestamp">
+		            <column name="CREATETIME" length="19" />
+		        </property>
+		        <property name="updateUser" type="java.lang.String">
+		            <column name="UPDATEUSER" />
+		        </property>      
+		        <property name="updateTime" type="java.sql.Timestamp">
+		            <column name="UPDATETIME" length="19" />
+		        </property>
+		        <property name="deleteUser" type="java.lang.String">
+		            <column name="DELETEUSER" />
+		        </property>      
+		        <property name="deleteTime" type="java.sql.Timestamp">
+		            <column name="DELETETIME" length="19" />
+		        </property>        
+		        <property name="del_flg" type="java.lang.Integer">
+		            <column name="DEL_FLG" />
+		        </property>
+		        <property name="stop_flg" type="java.lang.Integer">
+		            <column name="STOP_FLG" />
+        		</property>
+		</class>
+</hibernate-mapping>

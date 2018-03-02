@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="mazuidengji"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="SUBREPORT_DIR" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["E:\\reportWorkSpace\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="beginTime" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="endTime" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="clinicCode" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="opName1" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="opType" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[SELECT B.CLINIC_CODE, --住院流水号
+       B.NAME, --姓名
+       DECODE(B.SEX, 1, '男', 2, '女', 3, '未知') AS SEX,
+       (select c.code_name from t_business_dictionary c where c.code_encode = B.ANE_WAY and c.code_type='aneWay') as ANE_WAY, --麻醉方式
+       DECODE(T.ANAE_RESULT,
+              1,
+              '好',
+              2,
+              '较好',
+              3,
+              '一般',
+              4,
+              '差',
+              5,
+              '较差',
+              6,
+              '很差') as ANAE_RESULT, --麻醉效果
+       DECODE(T.DEMU_KIND, 1, '局部镇痛', 2, '封闭镇痛', 3, '冷冻镇痛') as DEMU_KIND, --镇痛方式
+       DECODE(T.DEMU_MODEL, 1, '泵型1', 2, '泵型2', 3, '泵型3') as DEMU_MODEL, --泵型
+       T.DEMU_DAYS, --镇痛天数
+       (select f.employee_name
+          from T_EMPLOYEE f
+         where f.employee_id = T.PULLOUT_OPCD) as PULLOUT_OPCD, --拔管人
+       DECODE(T.DEMU_RESULT,
+              1,
+              '好',
+              2,
+              '较好',
+              3,
+              '一般',
+              4,
+              '差',
+              5,
+              '较差',
+              6,
+              '很差') as DEMU_RESULT, --镇痛效果
+       DECODE(T.IS_PACU, 1, '是', 2, '不是') AS IS_PACU, --入PACU
+       DECODE(T.IS_DEMULCENT, 1, '是', 2, '不是') AS IS_DEMULCENT, --手术镇痛
+       (select g.employee_name
+          from T_EMPLOYEE g
+         where g.employee_id = T.ANAE_DOCD) as ANAE_DOCD, --麻醉医师
+       (select h.employee_name
+          from T_EMPLOYEE h
+         where h.employee_id = T.ANAE_HELPER) as ANAE_HELPER --麻醉助手
+  FROM T_MET_OPS_ANAERECORD T
+  LEFT JOIN T_BUSINESS_OPERATIONAPPLY B ON T.OPERATIONNO = B.OP_ID
+ WHERE T.OPERATIONNO in
+       (SELECT op_id
+          FROM T_BUSINESS_OPERATIONAPPLY
+         WHERE del_flg = 0
+           AND stop_flg = 0
+           AND isane = '1'
+           AND PRE_DATE >= "TO_DATE"("DECODE"($P{beginTime},
+                                              '',
+                                              '0001-01-01',
+                                              null,
+                                              '0001-01-01',
+                                              $P{beginTime}),
+                                     'yyyy-MM-dd')
+           AND PRE_DATE <= "TO_DATE"("DECODE"($P{endTime},
+                                              '',
+                                              '9999-01-01',
+                                              null,
+                                              '9999-01-01',
+                                              $P{endTime}),
+                                     'yyyy-MM-dd')
+           AND (CLINIC_CODE like
+               '%' || "DECODE"($P{clinicCode},
+                                '',
+                                CLINIC_CODE,
+                                null,
+                                CLINIC_CODE,
+                                $P{clinicCode}) || '%' or
+               PATIENT_NO like
+               '%' || "DECODE"($P{clinicCode},
+                                '',
+                                PATIENT_NO,
+                                null,
+                                PATIENT_NO,
+                                $P{clinicCode}))
+           AND OP_NAME1 LIKE
+               '%' || "DECODE"($P{opName1},
+                               '',
+                               OP_NAME1,
+                               null,
+                               OP_NAME1,
+                               $P{opName1}) || '%'
+           AND OP_TYPE LIKE
+               "DECODE"($P{opType}, '', OP_TYPE, null, OP_TYPE, $P{opType}))]]></queryString>
+
+	<field name="CLINIC_CODE" class="java.lang.String"/>
+	<field name="NAME" class="java.lang.String"/>
+	<field name="SEX" class="java.lang.String"/>
+	<field name="ANE_WAY" class="java.lang.String"/>
+	<field name="ANAE_RESULT" class="java.lang.String"/>
+	<field name="DEMU_KIND" class="java.lang.String"/>
+	<field name="DEMU_MODEL" class="java.lang.String"/>
+	<field name="DEMU_DAYS" class="java.math.BigDecimal"/>
+	<field name="PULLOUT_OPCD" class="java.lang.String"/>
+	<field name="DEMU_RESULT" class="java.lang.String"/>
+	<field name="IS_PACU" class="java.lang.String"/>
+	<field name="IS_DEMULCENT" class="java.lang.String"/>
+	<field name="ANAE_DOCD" class="java.lang.String"/>
+	<field name="ANAE_HELPER" class="java.lang.String"/>
+
+
+		<group  name="list" >
+			<groupExpression><![CDATA[]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="38"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="0"
+						y="0"
+						width="535"
+						height="28"
+						key="staticText-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="18" isBold="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[麻醉登记]]></text>
+				</staticText>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="30"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="0"
+						y="0"
+						width="46"
+						height="30"
+						key="staticText-2"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[住院号
+/门诊号]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="46"
+						y="0"
+						width="37"
+						height="30"
+						key="staticText-3"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[姓名]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="83"
+						y="0"
+						width="22"
+						height="30"
+						key="staticText-4"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[性别]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="105"
+						y="0"
+						width="45"
+						height="30"
+						key="staticText-5"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[麻醉方式]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="150"
+						y="0"
+						width="41"
+						height="30"
+						key="staticText-6"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[麻醉效果]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="191"
+						y="0"
+						width="45"
+						height="30"
+						key="staticText-7"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[镇痛方式]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="236"
+						y="0"
+						width="23"
+						height="30"
+						key="staticText-8"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[镇痛天数]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="259"
+						y="0"
+						width="43"
+						height="30"
+						key="staticText-9"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[镇痛效果]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="344"
+						y="0"
+						width="26"
+						height="30"
+						key="staticText-10"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[泵型]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="444"
+						y="0"
+						width="45"
+						height="30"
+						key="staticText-11"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[麻醉医师]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="489"
+						y="0"
+						width="46"
+						height="30"
+						key="staticText-12"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[麻醉助手]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="370"
+						y="0"
+						width="42"
+						height="30"
+						key="staticText-13"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[入PACU]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="302"
+						y="0"
+						width="42"
+						height="30"
+						key="staticText-14"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[手术镇痛]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="412"
+						y="0"
+						width="32"
+						height="30"
+						key="staticText-15"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[拔管人]]></text>
+				</staticText>
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="30"  isSplitAllowed="true" >
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="0"
+						width="535"
+						height="30"
+						key="subreport-1"/>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="beginTime">
+						<subreportParameterExpression><![CDATA[$P{beginTime}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="endTime">
+						<subreportParameterExpression><![CDATA[$P{endTime}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="clinicCode">
+						<subreportParameterExpression><![CDATA[$P{clinicCode}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="opName1">
+						<subreportParameterExpression><![CDATA[$P{opName1}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="opType">
+						<subreportParameterExpression><![CDATA[$P{opType}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "mazuidengji_subreport01.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

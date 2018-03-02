@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+	<class name="InpatientConsultationModel" table="T_INPATIENT_CONSULTATIONMOD">
+		<id name="id" type="java.lang.String">
+		            <column name="CNSLMOD_ID"  />
+		            <generator class="uuid" />
+		</id>
+		<property name="cnslmodName" type="java.lang.String">
+	                <column name="CNSLMOD_NAME"  />
+	    </property>
+		<property name="cnslmodType" type="java.lang.String">
+	                <column name="CNSLMOD_TYPE" />
+	    </property>
+		<property name="deptCode" type="java.lang.String">
+	                <column name="DEPT_CODE"  />
+	    </property>
+		<property name="nurseCellCode" type="java.lang.String">
+	                <column name="NURSE_CELL_CODE"  />
+	    </property>
+		<property name="docCode" type="java.lang.String">
+	                <column name="DOC_CODE" />
+	    </property>
+		<property name="docName" type="java.lang.String">
+	                <column name="DOC_NAME"  />
+	    </property>
+		<property name="cnslKind" type="java.lang.String">
+	                <column name="CNSL_KIND" />
+	    </property>
+		<property name="urgentFlag" type="java.lang.String">
+	                <column name="URGENT_FLAG" />
+	    </property>
+		<property name="cnslDeptcd" type="java.lang.String">
+	                <column name="CNSL_DEPTCD"  />
+	    </property>
+		<property name="cnslDoccd" type="java.lang.String">
+	                <column name="CNSL_DOCCD" />
+	    </property>
+		<property name="cnslNote" type="java.lang.String">
+	                <column name="CNSL_NOTE" />
+	    </property>
+		<property name="confirmDoccd" type="java.lang.String">
+	                <column name="CONFIRM_DOCCD" />
+	    </property>
+		<property name="hosName" type="java.lang.String">
+	                <column name="HOS_NAME" />
+	    </property>
+		<property name="urgentMemo" type="java.lang.String">
+	                <column name="URGENT_MEMO" />
+	    </property>
+		<property name="cnslNote1" type="java.lang.String">
+	                <column name="CNSL_NOTE1"  />
+	    </property>
+		<property name="cnslNote2" type="java.lang.String">
+	                <column name="CNSL_NOTE2" />
+	    </property>
+		<property name="cnslNote3" type="java.lang.String">
+	                <column name="CNSL_NOTE3"  />
+	    </property>
+		<property name="location" type="java.lang.String">
+	                <column name="LOCATION" />
+	    </property>
+		<property name="cnslRecord" type="java.lang.String">
+	                <column name="CNSL_RECORD" />
+	    </property>
+		<property name="cnslSuggestion" type="java.lang.String">
+	                <column name="CNSL_SUGGESTION" />
+	    </property>
+		<property name="createOrderFlag" type="java.lang.String">
+	                <column name="CREATE_ORDER_FLAG" />
+	    </property>
+		<property name="zd1" type="java.lang.String">
+	                <column name="ZD1" />
+	    </property>
+		<property name="zl1" type="java.lang.String">
+	                <column name="ZL1" />
+	    </property>
+		<property name="hzmd1" type="java.lang.String">
+	                <column name="HZMD1" />
+	    </property>
+		<property name="zd2" type="java.lang.String">
+	                <column name="ZD2" />
+	    </property>
+		<property name="cl2" type="java.lang.String">
+	                <column name="CL2" />
+	    </property>
+	    <property name="createUser" type="java.lang.String">
+           <column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" />
+        </property>      
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>
+        <property name="updateTime" type="java.sql.Timestamp">
+        	<column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+        	<column name="DELETEUSER" />
+        </property>
+    	<property name="deleteTime" type="java.sql.Timestamp">
+    		<column name="DELETETIME" length="19" />
+    	</property>
+    	<property name="del_flg" type="java.lang.Integer">
+    		<column name="DEL_FLG" length="1" />
+    	</property>
+    	<property name="stop_flg" type="java.lang.Integer">
+    		<column name="STOP_FLG" length="1" />
+    	</property>
+	  </class>
+</hibernate-mapping>

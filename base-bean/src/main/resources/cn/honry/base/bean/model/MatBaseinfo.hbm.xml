@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="MatBaseinfo" table="T_MAT_BASEINFO">
+        <comment>物资字典表</comment>
+         <id name="id" type="java.lang.String" >
+            <column name="ID"/>
+            <generator class="uuid" />
+        </id>
+        <property name="itemCode" type="java.lang.String">
+            <column name="ITEM_CODE" length="50" not-null="true">
+                <comment>物品编码</comment>
+            </column>
+        </property>
+        <property name="kindCode" type="java.lang.String">
+            <column name="KIND_CODE" length="50">
+                <comment>物品科目编码</comment>
+            </column>
+        </property>
+        <property name="storageCode" type="java.lang.String">
+            <column name="STORAGE_CODE" length="50">
+                <comment>仓库代码</comment>
+            </column>
+        </property>
+        <property name="itemName" type="java.lang.String">
+            <column name="ITEM_NAME" length="100" not-null="true">
+                <comment>物品名称</comment>
+            </column>
+        </property>
+        <property name="spellCode" type="java.lang.String">
+            <column name="SPELL_CODE" length="100">
+                <comment>拼音编码</comment>
+            </column>
+        </property>
+        <property name="wbCode" type="java.lang.String">
+            <column name="WB_CODE" length="100">
+                <comment>五笔码</comment>
+            </column>
+        </property>
+        <property name="customCode" type="java.lang.String">
+            <column name="CUSTOM_CODE" length="100">
+                <comment>自定义码</comment>
+            </column>
+        </property>
+        <property name="gbCode" type="java.lang.String">
+            <column name="GB_CODE" length="30">
+                <comment>国家编码</comment>
+            </column>
+        </property>
+        <property name="otherName" type="java.lang.String">
+            <column name="OTHER_NAME" length="100">
+                <comment>别名</comment>
+            </column>
+        </property>
+        <property name="otherSpell" type="java.lang.String">
+            <column name="OTHER_SPELL" length="100">
+                <comment>别名拼音码</comment>
+            </column>
+        </property>
+        <property name="otherWb" type="java.lang.String">
+            <column name="OTHER_WB" length="100">
+                <comment>别名五笔码</comment>
+            </column>
+        </property>
+        <property name="otherCustom" type="java.lang.String">
+            <column name="OTHER_CUSTOM" length="100">
+                <comment>别名自定义码</comment>
+            </column>
+        </property>
+        <property name="effectArea" type="java.lang.Integer">
+            <column name="EFFECT_AREA" precision="1" scale="0">
+                <comment>有效范围(0-本科室,1-本科室及下级科室,2-全院,3-指定科室)</comment>
+            </column>
+        </property>
+        <property name="effectDept" type="java.lang.String">
+            <column name="EFFECT_DEPT" length="50">
+                <comment>有效科室(EFFECT_AREA=3时有效)</comment>
+            </column>
+        </property>
+        <property name="specs" type="java.lang.String">
+            <column name="SPECS" length="100">
+                <comment>规格</comment>
+            </column>
+        </property>
+        <property name="minUnit" type="java.lang.String">
+            <column name="MIN_UNIT" length="50">
+                <comment>最小单位</comment>
+            </column>
+        </property>
+        <property name="inPrice" type="java.lang.Double">
+            <column name="IN_PRICE" precision="14" scale="4">
+                <comment>最新入库单价(包装单位)</comment>
+            </column>
+        </property>
+        <property name="salePrice" type="java.lang.Double">
+            <column name="SALE_PRICE" precision="14" scale="4">
+                <comment>零售价格</comment>
+            </column>
+        </property>
+        <property name="packUnit" type="java.lang.String">
+            <column name="PACK_UNIT" length="50">
+                <comment>大包装单位</comment>
+            </column>
+        </property>
+        <property name="packQty" type="java.lang.Long">
+            <column name="PACK_QTY" precision="14" scale="0">
+                <comment>大包装数量</comment>
+            </column>
+        </property>
+        <property name="packPrice" type="java.lang.Double">
+            <column name="PACK_PRICE" precision="14">
+                <comment>大包装价格</comment>
+            </column>
+        </property>
+        <property name="addRate" type="java.lang.String">
+            <column name="ADD_RATE" length="50">
+                <comment>加价规则、用于入库自动加价</comment>
+            </column>
+        </property>
+        <property name="feeCode" type="java.lang.String">
+            <column name="FEE_CODE" length="50">
+                <comment>最小费用代码</comment>
+            </column>
+        </property>
+        <property name="financeFlag" type="java.lang.Integer">
+            <column name="FINANCE_FLAG" precision="1" scale="0">
+                <comment>财务收费标志(0－否,1－是)</comment>
+            </column>
+        </property>
+        <property name="validFlag" type="java.lang.Integer">
+            <column name="VALID_FLAG" precision="1" scale="0">
+                <comment>停用标记(0－停用,1－使用)</comment>
+            </column>
+        </property>
+        <property name="specialFlag" type="java.lang.Integer">
+            <column name="SPECIAL_FLAG" precision="1" scale="0">
+                <comment>特殊材料标志</comment>
+            </column>
+        </property>
+        <property name="highvalueFlag" type="java.lang.Integer">
+            <column name="HIGHVALUE_FLAG" precision="1" scale="0">
+                <comment>高值耗材标志</comment>
+            </column>
+        </property>
+        <property name="factoryCode" type="java.lang.String">
+            <column name="FACTORY_CODE" length="100">
+                <comment>生产厂家</comment>
+            </column>
+        </property>
+        <property name="companyCode" type="java.lang.String">
+            <column name="COMPANY_CODE" length="100">
+                <comment>供货公司</comment>
+            </column>
+        </property>
+        <property name="inSource" type="java.lang.String">
+            <column name="IN_SOURCE" length="50">
+                <comment>来源</comment>
+            </column>
+        </property>
+        <property name="usage" type="java.lang.String">
+            <column name="USAGE" length="100">
+                <comment>用途</comment>
+            </column>
+        </property>
+        <property name="approveInfo" type="java.lang.String">
+            <column name="APPROVE_INFO" length="50">
+                <comment>批文信息</comment>
+            </column>
+        </property>
+        <property name="mader" type="java.lang.String">
+            <column name="MADER" length="50">
+                <comment>生产者</comment>
+            </column>
+        </property>
+        <property name="registerCode" type="java.lang.String">
+            <column name="REGISTER_CODE" length="100">
+                <comment>注册号</comment>
+            </column>
+        </property>
+        <property name="specialType" type="java.lang.String">
+            <column name="SPECIAL_TYPE" length="50">
+                <comment>特殊类别</comment>
+            </column>
+        </property>
+        <property name="registerDate" type="java.util.Date">
+            <column name="REGISTER_DATE" length="7">
+                <comment>注册时间</comment>
+            </column>
+        </property>
+        <property name="overDate" type="java.util.Date">
+            <column name="OVER_DATE" length="7">
+                <comment>到期时间</comment>
+            </column>
+        </property>
+        <property name="packFlag" type="java.lang.Integer">
+            <column name="PACK_FLAG" precision="1" scale="0">
+                <comment>是否打包-供应室用(1是0否)</comment>
+            </column>
+        </property>
+        <property name="examineFlag" type="java.lang.Integer">
+            <column name="EXAMINE_FLAG" precision="1" scale="0">
+                <comment>财务审核标记</comment>
+            </column>
+        </property>
+        <property name="norecycleFlag" type="java.lang.Integer">
+            <column name="NORECYCLE_FLAG" precision="1" scale="0">
+                <comment>是否一次性耗材-供应室用(1是0否)</comment>
+            </column>
+        </property>
+        <property name="memo" type="java.lang.String">
+            <column name="MEMO" length="100">
+                <comment>备注</comment>
+            </column>
+        </property>
+        <property name="operCode" type="java.lang.String">
+            <column name="OPER_CODE" length="50">
+                <comment>操作员</comment>
+            </column>
+        </property>
+        <property name="operDate" type="java.util.Date">
+            <column name="OPER_DATE" length="7">
+                <comment>操作日期</comment>
+            </column>
+        </property>
+        <property name="batchFlag" type="java.lang.Integer">
+            <column name="BATCH_FLAG" precision="1" scale="0">
+                <comment>是否按批次管理 0否 1是</comment>
+            </column>
+        </property>
+        <property name="plan" type="java.lang.String">
+            <column name="PLAN" length="50">
+                <comment>按周计划入库还是月计划入库</comment>
+            </column>
+        </property>
+        <property name="prestockFlag" type="java.lang.Integer">
+            <column name="PRESTOCK_FLAG" precision="1" scale="0">
+                <comment>是否允许收费预扣 0否 1是</comment>
+            </column>
+        </property>
+        <property name="topNum" type="java.lang.Double">
+            <column name="TOP_NUM" precision="14" scale="4">
+                <comment>上限数量</comment>
+            </column>
+        </property>
+        <property name="lowNum" type="java.lang.Double">
+            <column name="LOW_NUM" precision="14" scale="4">
+                <comment>下限数量</comment>
+            </column>
+        </property>
+         <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-11-14 18:48:21 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="cn.honry.base.bean.model.CpVariation" table="T_CP_Variation">
+		<comment>变异信息记录</comment>
+		<id name="Id" type="java.lang.String">
+			<column name="ID" />
+			<generator class="uuid" />
+		</id>
+		<property name="inpatientNo" type="java.lang.String">
+			<column name="INPATIENT_NO">
+				<comment>住院流水号</comment>
+			</column>
+		</property>
+		<property name="medicalrecordId" type="string">
+			<column name="MEDICALRECORD_ID">
+				<comment>病历号</comment>
+			</column>
+		</property>
+		<property name="stageId" type="string">
+			<column name="STAGE_ID">
+				<comment>阶段ID</comment>
+			</column>
+		</property>
+		<property name="variationDate" type="java.util.Date">
+			<column name="VARIATION_DATE">
+				<comment>变异时间</comment>
+			</column>
+		</property>
+		<property name="variationCode" type="string">
+			<column name="VARIATION_CODE">
+				<comment>变异代码</comment>
+			</column>
+		</property>
+		<property name="variationReason" type="string">
+			<column name="VARIATION_REASON">
+				<comment>变异原因</comment>
+			</column>
+		</property>
+		<property name="variationFactorCode" type="string">
+			<column name="VARIATION_FACTOR_CODE">
+				<comment>变异因素代码</comment>
+			</column>
+		</property>
+		<property name="variationDirection" type="string">
+			<column name="VARIATION_DIRECTION">
+				<comment>变异方向</comment>
+			</column>
+		</property>
+		<property name="ececuteDate" type="java.util.Date">
+			<column name="EXECUTE_DATE">
+				<comment>执行时间</comment>
+			</column>
+		</property>
+		<property name="createUser" type="java.lang.String">
+			<column name="CREATEUSER">
+				<comment>创建人</comment>
+			</column>
+		</property>
+		<property name="createTime" type="java.util.Date">
+			<column name="CREATETIME">
+				<comment>创建时间</comment>
+			</column>
+		</property>
+		<property name="updateUser" type="java.lang.String">
+			<column name="UPDATEUSER">
+			</column>
+		</property>
+		<property name="updateTime" type="java.util.Date">
+			<column name="UPDATETIME">
+			</column>
+		</property>
+		<property name="hospitalId" type="java.lang.String">
+			<column name="HOSPITAL_ID">
+				<comment>所属医院</comment>
+			</column>
+		</property>
+		<property name="areaCode" type="java.lang.String">
+			<column name="AREA_CODE">
+				<comment>所属院区</comment>
+			</column>
+		</property>
+		<property name="del_flg" type="java.lang.Integer">
+			<column name="DEL_FLG" />
+		</property>
+		<property name="stop_flg" type="java.lang.Integer">
+			<column name="STOP_FLG" />
+		</property>
+	</class>
+</hibernate-mapping>

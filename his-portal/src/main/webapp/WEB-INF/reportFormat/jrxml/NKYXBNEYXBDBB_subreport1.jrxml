@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NKYXBNEYXBDBB_subreport1" language="groovy" pageWidth="802" pageHeight="555" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7bced88e-ec71-4572-940b-ba9ce58658ac">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="81"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="bingqu" class="java.lang.String">
+		<fieldDescription><![CDATA[bingqu]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="classType" class="java.lang.String">
+		<fieldDescription><![CDATA[classType]]></fieldDescription>
+	</field>
+	<field name="dept" class="java.lang.String">
+		<fieldDescription><![CDATA[dept]]></fieldDescription>
+	</field>
+	<field name="deptCode" class="java.lang.String">
+		<fieldDescription><![CDATA[deptCode]]></fieldDescription>
+	</field>
+	<field name="feeDate" class="java.lang.String">
+		<fieldDescription><![CDATA[feeDate]]></fieldDescription>
+	</field>
+	<field name="increaseMZ" class="java.lang.Double">
+		<fieldDescription><![CDATA[increaseMZ]]></fieldDescription>
+	</field>
+	<field name="increaseTol" class="java.lang.Double">
+		<fieldDescription><![CDATA[increaseTol]]></fieldDescription>
+	</field>
+	<field name="increaseZY" class="java.lang.Double">
+		<fieldDescription><![CDATA[increaseZY]]></fieldDescription>
+	</field>
+	<field name="list" class="java.util.List">
+		<fieldDescription><![CDATA[list]]></fieldDescription>
+	</field>
+	<field name="rateMZ" class="java.lang.Double">
+		<fieldDescription><![CDATA[rateMZ]]></fieldDescription>
+	</field>
+	<field name="rateTol" class="java.lang.Double">
+		<fieldDescription><![CDATA[rateTol]]></fieldDescription>
+	</field>
+	<field name="rateZY" class="java.lang.Double">
+		<fieldDescription><![CDATA[rateZY]]></fieldDescription>
+	</field>
+	<field name="totalMZ" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[totalMZ]]></fieldDescription>
+	</field>
+	<field name="totalZY" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[totalZY]]></fieldDescription>
+	</field>
+	<field name="yearMZ" class="java.lang.Double">
+		<fieldDescription><![CDATA[yearMZ]]></fieldDescription>
+	</field>
+	<field name="yearTol" class="java.lang.Double">
+		<fieldDescription><![CDATA[yearTol]]></fieldDescription>
+	</field>
+	<field name="yearZY" class="java.lang.Double">
+		<fieldDescription><![CDATA[yearZY]]></fieldDescription>
+	</field>
+	<field name="yearedMZ" class="java.lang.Double">
+		<fieldDescription><![CDATA[yearedMZ]]></fieldDescription>
+	</field>
+	<field name="yearedTol" class="java.lang.Double">
+		<fieldDescription><![CDATA[yearedTol]]></fieldDescription>
+	</field>
+	<field name="yearedZY" class="java.lang.Double">
+		<fieldDescription><![CDATA[yearedZY]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="2681874c-ae0e-40e0-8023-0e9064da407c" x="0" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deptCode}==null?"":$F{deptCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="affe2613-23fe-4cf6-adc6-6b20db57210a" x="100" y="0" width="31" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bingqu}==null?"":$F{bingqu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8b1e9278-82ee-4ec3-822d-24471becb3ce" x="131" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{yearedTol}==null?"":$F{yearedTol}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="437b937d-2ea0-4483-8ba1-e7c58e2aaadd" x="183" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{yearTol}==null?"":$F{yearTol}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="16fdb9d4-e1f0-466e-a693-9fd71933a751" x="235" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{increaseTol}==null?"":$F{increaseTol}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="195a92cb-120b-4462-a6d1-c430eebac6cc" x="287" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rateTol}==null?"":$F{increaseTol}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="18be360d-9926-4479-9ab3-6b927ccf104b" x="339" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{yearedMZ}==null?"":$F{yearedMZ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3cd05b96-c750-41c3-97d7-83f5568fa75a" x="391" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{yearMZ}==null?"":$F{yearMZ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="525f867c-f1d0-41ba-861a-b874da96c672" x="443" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{increaseMZ}==null?"":$F{increaseMZ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="85e9163e-e1ad-4c58-b62d-f42abe915cfb" x="495" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rateMZ}==null?"":$F{rateMZ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7c95e04e-e761-4a96-b2fe-7a2dad183d4c" x="547" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{yearedZY}==null?"":$F{yearedZY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="062a2574-e50a-48c1-a453-6a9b6b9f6164" x="599" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{yearZY}==null?"":$F{yearZY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cc458360-83f4-4d5a-a127-b29e11b25c71" x="651" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{increaseZY}==null?"":$F{increaseZY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5e46f0c4-36b3-4448-8b32-409eb8f90cf5" x="702" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rateZY}==null?"":$F{rateZY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

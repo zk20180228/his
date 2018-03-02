@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MZSFPJ2.0" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a4db4cb4-0d5b-44f5-a053-239e9f7a1c90">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["D:\\eclipseWorkSpace\\hisNew20160310\\his\\his-web\\src\\main\\webapp\\WEB-INF\\reportFormat\\jasper\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="mzNumber" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select
+  (select c.patient_name
+  from t_patient c
+ where c.medicalrecord_id = b.medicalrecord_id) as patientName,--姓名
+ (select DECODE(c.PATIENT_SEX, 1, '男', 2, '女', 3, '未知')
+  from t_patient c
+ where c.medicalrecord_id = b.medicalrecord_id) as tSex，--性别
+  (SELECT d.unit_name from t_business_contractunit d where d.unit_id=b.register_contractunit) as yblx, --医保类型
+(select
+       sum(a.unit_price*a.qty)
+  from (select t.*
+          from t_outpatient_feedetail t
+          where t.clinic_code = $P{mzNumber}
+   and t.PAY_FLAG = '1') a, --原表信息（指定病历号）
+       t_charge_minfeetostat b --统计大类表
+ where a.fee_code = b.minfee_code) as zje, --总金额
+ (select
+       Money2CHINESE(sum(a.unit_price*a.qty))
+  from (select t.*
+          from t_outpatient_feedetail t
+          where t.clinic_code = '20160317002229'
+   and t.PAY_FLAG = '1') a, --原表信息（指定病历号）
+       t_charge_minfeetostat b --统计大类表
+ where a.fee_code = b.minfee_code) as zjedx --总金额大写
+  from t_register_info b
+ where b.register_no = $P{mzNumber} --根据预约号（门诊号 20160317002229）查询信息]]>
+	</queryString>
+	<field name="PATIENTNAME" class="java.lang.String"/>
+	<field name="TSEX" class="java.lang.String"/>
+	<field name="YBLX" class="java.lang.String"/>
+	<field name="ZJE" class="java.math.BigDecimal"/>
+	<field name="ZJEDX" class="java.lang.String"/>
+	<detail>
+		<band height="355" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="92" y="76" width="57" height="16" uuid="5ad4d4cb-3579-4a2c-86da-10efec63f633"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="7" isItalic="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PATIENTNAME}]]></textFieldExpression>
+			</textField>
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement x="71" y="109" width="453" height="12" uuid="fb9a49c6-ef1a-44cc-9633-2023d7b5b601"/>
+				<subreportParameter name="mzNumber">
+					<subreportParameterExpression><![CDATA[$P{mzNumber}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "MZSFPJ2.0-subReport.jasper"]]></subreportExpression>
+			</subreport>
+			<textField isBlankWhenNull="true">
+				<reportElement x="203" y="76" width="19" height="16" uuid="6be62b77-f8cf-4cc2-8342-df3fc47509b0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="7" isUnderline="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TSEX}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="254" y="76" width="57" height="16" uuid="fc83633a-9818-4cbf-a711-543689be71ce"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="7" isItalic="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{YBLX}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="430" y="314" width="57" height="16" uuid="5dacc4d6-d4b7-4f3f-b943-5a48ff058df9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="7" isItalic="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ZJE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="124" y="311" width="111" height="16" uuid="a03d5d70-f562-430d-a183-aa699cd0780a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="7" isItalic="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ZJEDX}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

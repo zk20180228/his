@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="newOutpatientStatAdviceList_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="8fb3fce6-c184-4ccf-8fd3-7e60c3c19f80">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="dosageNum" class="java.lang.Integer">
+		<fieldDescription><![CDATA[dosageNum]]></fieldDescription>
+	</field>
+	<field name="frequency" class="java.lang.String">
+		<fieldDescription><![CDATA[frequency]]></fieldDescription>
+	</field>
+	<field name="gross" class="java.lang.String">
+		<fieldDescription><![CDATA[gross]]></fieldDescription>
+	</field>
+	<field name="goodsName" class="java.lang.String">
+		<fieldDescription><![CDATA[goodsName]]></fieldDescription>
+	</field>
+	<field name="money" class="java.lang.Double">
+		<fieldDescription><![CDATA[money]]></fieldDescription>
+	</field>
+	<field name="oneDosage" class="java.lang.String">
+		<fieldDescription><![CDATA[oneDosage]]></fieldDescription>
+	</field>
+	<field name="retailPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[retailPrice]]></fieldDescription>
+	</field>
+	<field name="usage" class="java.lang.String">
+		<fieldDescription><![CDATA[usage]]></fieldDescription>
+	</field>
+	<field name="validity" class="java.lang.String">
+		<fieldDescription><![CDATA[validity]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="fc08936a-26a0-4cfd-9c72-651ec1c6da1e" x="0" y="0" width="126" height="23"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{goodsName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8cd91e45-03f9-4ae2-8026-2fe18b7196fe" x="126" y="0" width="55" height="23"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oneDosage}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="48bb2650-59ff-4f76-8ce9-8d11e6f7f79c" x="181" y="0" width="56" height="23"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{usage}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="7ca93ab8-a252-4643-b4c1-a0aeabaddc6c" x="236" y="0" width="61" height="23"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{frequency}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8bcc22f1-2a49-4e1e-8d96-6c22c1008eef" x="296" y="0" width="43" height="23"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gross}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="8019fe40-202e-4168-b8e4-6de4f05128c7" x="338" y="0" width="41" height="23"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{retailPrice}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement uuid="537654bc-a192-4004-bf79-012e7805d525" x="378" y="0" width="50" height="23"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{money}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="77f9cf70-4380-44ef-9686-7fb6332f02c8" x="427" y="0" width="27" height="23"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dosageNum}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e75e3657-feb1-41d6-84fa-b6dac07254ee" x="453" y="0" width="50" height="23"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{validity}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

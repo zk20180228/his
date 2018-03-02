@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="oneone_subreport1" language="groovy" pageWidth="802" pageHeight="555" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="86315b35-3607-47b0-ae01-d9260ffd4ecb">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="deptName" class="java.lang.String">
+		<fieldDescription><![CDATA[deptName]]></fieldDescription>
+	</field>
+	<field name="disLeader" class="java.lang.String">
+		<fieldDescription><![CDATA[disLeader]]></fieldDescription>
+	</field>
+	<field name="registerCountPrev" class="java.lang.Integer">
+		<fieldDescription><![CDATA[registerCountPrev]]></fieldDescription>
+	</field>
+	<field name="registerCount" class="java.lang.Integer">
+		<fieldDescription><![CDATA[registerCount]]></fieldDescription>
+	</field>
+	<field name="registerRise" class="java.lang.Integer">
+		<fieldDescription><![CDATA[registerRise]]></fieldDescription>
+	</field>
+	<field name="registerRisePercent" class="java.lang.Double">
+		<fieldDescription><![CDATA[registerRisePercent]]></fieldDescription>
+	</field>
+	<field name="inHospitalRise" class="java.lang.Integer">
+		<fieldDescription><![CDATA[inHospitalRise]]></fieldDescription>
+	</field>
+	<field name="inHospitalPercent" class="java.lang.Double">
+		<fieldDescription><![CDATA[inHospitalPercent]]></fieldDescription>
+	</field>
+	<field name="outHospitalRise" class="java.lang.Integer">
+		<fieldDescription><![CDATA[outHospitalRise]]></fieldDescription>
+	</field>
+	<field name="outHospitalPercent" class="java.lang.Double">
+		<fieldDescription><![CDATA[outHospitalPercent]]></fieldDescription>
+	</field>
+	<field name="avgInpatientCountPrev" class="java.lang.Double">
+		<fieldDescription><![CDATA[avgInpatientCountPrev]]></fieldDescription>
+	</field>
+	<field name="avgInpatientCount" class="java.lang.Double">
+		<fieldDescription><![CDATA[avgInpatientCount]]></fieldDescription>
+	</field>
+	<field name="avgInpatientRise" class="java.lang.Double">
+		<fieldDescription><![CDATA[avgInpatientRise]]></fieldDescription>
+	</field>
+	<field name="avgInpatientPercent" class="java.lang.Double">
+		<fieldDescription><![CDATA[avgInpatientPercent]]></fieldDescription>
+	</field>
+	<field name="bedTurnoverCountPrev" class="java.lang.Double">
+		<fieldDescription><![CDATA[bedTurnoverCountPrev]]></fieldDescription>
+	</field>
+	<field name="bedTurnoverCount" class="java.lang.Double">
+		<fieldDescription><![CDATA[bedTurnoverCount]]></fieldDescription>
+	</field>
+	<field name="bedTurnoverRise" class="java.lang.Double">
+		<fieldDescription><![CDATA[bedTurnoverRise]]></fieldDescription>
+	</field>
+	<field name="bedTurnoverPercent" class="java.lang.Double">
+		<fieldDescription><![CDATA[bedTurnoverPercent]]></fieldDescription>
+	</field>
+	<field name="bedUseRatePrev" class="java.lang.Double">
+		<fieldDescription><![CDATA[bedUseRatePrev]]></fieldDescription>
+	</field>
+	<field name="bedUseRate" class="java.lang.Double">
+		<fieldDescription><![CDATA[bedUseRate]]></fieldDescription>
+	</field>
+	<field name="bedUseRateRise" class="java.lang.Double">
+		<fieldDescription><![CDATA[bedUseRateRise]]></fieldDescription>
+	</field>
+	<field name="bedUseRatePercent" class="java.lang.Double">
+		<fieldDescription><![CDATA[bedUseRatePercent]]></fieldDescription>
+	</field>
+	<field name="rescueSuccessRatePrev" class="java.lang.Double">
+		<fieldDescription><![CDATA[rescueSuccessRatePrev]]></fieldDescription>
+	</field>
+	<field name="rescueSuccessRate" class="java.lang.Double">
+		<fieldDescription><![CDATA[rescueSuccessRate]]></fieldDescription>
+	</field>
+	<field name="rescueSuccessRateRise" class="java.lang.Double">
+		<fieldDescription><![CDATA[rescueSuccessRateRise]]></fieldDescription>
+	</field>
+	<field name="rescueSuccessRatePercent" class="java.lang.Double">
+		<fieldDescription><![CDATA[rescueSuccessRatePercent]]></fieldDescription>
+	</field>
+	<field name="inHospitalCountPrev" class="java.lang.Integer">
+		<fieldDescription><![CDATA[inHospitalCountPrev]]></fieldDescription>
+	</field>
+	<field name="inHospitalCount" class="java.lang.Integer">
+		<fieldDescription><![CDATA[inHospitalCount]]></fieldDescription>
+	</field>
+	<field name="outHospitalCountPrev" class="java.lang.Integer">
+		<fieldDescription><![CDATA[outHospitalCountPrev]]></fieldDescription>
+	</field>
+	<field name="outHospitalCount" class="java.lang.Integer">
+		<fieldDescription><![CDATA[outHospitalCount]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c00e2981-51a1-4708-ad57-72cfb27ec7c0" x="0" y="0" width="70" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deptName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="2e769773-20f1-4884-a354-7efa5bfa4d2c" x="70" y="0" width="30" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{disLeader}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e72342bc-e209-4f50-b1f4-8957b575b38c" x="100" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{registerCountPrev}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="ba93f5e6-f447-4436-99b7-1821b3fcda4c" x="125" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{registerCount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="14a4af91-ee5e-44e5-998a-5d0e54eaceb6" x="175" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{registerRisePercent}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="9a115ccf-67df-42db-a49c-966bba35c999" x="150" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{registerRise}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="9a7a8921-a6d4-4772-8c22-3995f96450b3" x="225" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inHospitalCount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="9ff28624-93aa-4a06-a027-681993e7f37c" x="250" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inHospitalRise}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="99ab6ec5-46ef-43e9-b679-6f11713db917" x="200" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inHospitalCountPrev}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d14cab57-c720-4be4-84be-29cc73da0951" x="275" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{registerRisePercent}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="bbb73cdb-4f83-411d-8193-a682b68d6e43" x="325" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{outHospitalCount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="a3af9400-14aa-4fcf-abc9-933ecd2619b5" x="350" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{outHospitalRise}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="bef0a5ec-b8c4-4ef2-a6ac-43277ff6c4e3" x="300" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{outHospitalCountPrev}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="fa04a9b3-f39d-4bbc-8e4e-69e42cdb0469" x="375" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{outHospitalPercent}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="3c39133e-9485-48b1-90e6-53b4c7b48149" x="425" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{avgInpatientCount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8eef3e35-72ea-4f2e-abb1-5aa624d9e42c" x="450" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{avgInpatientRise}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c68078c3-3789-42b4-868e-01372872c681" x="400" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{avgInpatientCountPrev}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e10deda6-0833-4a4d-8140-d7069fa668b8" x="475" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{avgInpatientPercent}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="17e37f5c-c0e9-40f9-9dd4-a10e436760b8" x="525" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bedTurnoverCount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e8e6b9f3-1d63-4a3c-b1d2-e2bed565c643" x="550" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bedTurnoverRise}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="61eb164f-4299-40c7-b0d5-d87f5a4bfa8b" x="500" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bedTurnoverCountPrev}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="85e04487-5ccd-40e9-a39b-5b8378cd0aa4" x="575" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bedTurnoverPercent}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c2f03dd4-ab66-4426-bb9c-48e6a4eb31ec" x="625" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bedUseRate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="678060f2-d39b-44cb-a40e-2843544ca367" x="650" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bedUseRateRise}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e3f6d20e-eb60-43e7-a4d8-3302480e59a1" x="600" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bedUseRatePrev}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f8c46f36-0c64-4db7-9899-71a98adf6cd7" x="675" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bedUseRatePercent}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5018973c-6c79-4a93-aec4-79be582dbbc5" x="725" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rescueSuccessRate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="48a54be5-f245-4642-a88f-8f90303e8601" x="750" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rescueSuccessRateRise}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f9704851-9190-4235-a37e-ef8faf06642d" x="700" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rescueSuccessRatePrev}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="633c699e-d62f-41f6-8b2f-d64819b077b0" x="775" y="0" width="25" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rescueSuccessRatePercent}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

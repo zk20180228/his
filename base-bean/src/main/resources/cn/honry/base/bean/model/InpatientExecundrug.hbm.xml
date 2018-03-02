@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="cn.honry.base.bean.model">
+<class name="InpatientExecundrug" table="T_INPATIENT_EXECUNDRUG">
+	<id name="id" type="java.lang.String" >
+		<column name="ID" />
+		<generator class="uuid" />
+	</id>
+	<property name="execId" type="java.lang.String">
+		<column name="EXEC_ID" />
+	</property>
+	<property name="deptCode" type="java.lang.String">
+		<column name="DEPT_CODE" />
+	</property>
+	<property name="nurseCellCode" type="java.lang.String">
+		<column name="NURSE_CELL_CODE" />
+	</property>
+	<property name="listDpcd" type="java.lang.String">
+		<column name="LIST_DPCD" />
+	</property>
+	<property name="inpatientNo" type="java.lang.String">
+		<column name="INPATIENT_NO" />
+	</property>
+	<property name="patientNo" type="java.lang.String">
+		<column name="PATIENT_NO" />
+	</property>
+	<property name="moOrder" type="java.lang.String">
+		<column name="MO_ORDER" />
+	</property>
+	<property name="docCode" type="java.lang.String">
+		<column name="DOC_CODE" />
+	</property>
+	<property name="docName" type="java.lang.String">
+		<column name="DOC_NAME" />
+	</property>
+	<property name="moDate" type="java.util.Date">
+		<column name="MO_DATE" length="19"/>
+	</property>
+	<property name="babyFlag" type="java.lang.Integer">
+		<column name="BABY_FLAG" length="1"/>
+	</property>
+	<property name="happenNo" type="java.lang.Integer">
+		<column name="HAPPEN_NO" length="5"/>
+	</property>
+	<property name="setItmattr" type="java.lang.Integer">
+		<column name="SET_ITMATTR" />
+	</property>
+	<property name="setSubtbl" type="java.lang.Integer">
+		<column name="SET_SUBTBL" length="1"/>
+	</property>
+	<property name="typeCode" type="java.lang.String">
+		<column name="TYPE_CODE" />
+	</property>
+	<property name="decmpsState" type="java.lang.Integer">
+		<column name="DECMPS_STATE" length="1"/>
+	</property>
+	<property name="chargeState" type="java.lang.Integer">
+		<column name="CHARGE_STATE" length="1"/>
+	</property>
+	<property name="prnExelist" type="java.lang.Integer">
+		<column name="PRN_EXELIST" length="1"/>
+	</property>
+	<property name="prnMorlist" type="java.lang.Integer">
+		<column name="PRN_MORLIST" length="1"/>
+	</property>
+	<property name="needConfirm" type="java.lang.Integer">
+		<column name="NEED_CONFIRM" length="1"/>
+	</property>
+	<property name="undrugCode" type="java.lang.String">
+		<column name="UNDRUG_CODE" />
+	</property>
+	<property name="undrugName" type="java.lang.String">
+		<column name="UNDRUG_NAME" />
+	</property>
+	<property name="classCode" type="java.lang.String">
+		<column name="CLASS_CODE" />
+	</property>
+	<property name="className" type="java.lang.String">
+		<column name="CLASS_NAME" />
+	</property>
+	<property name="execDpcd" type="java.lang.String">
+		<column name="EXEC_DPCD" />
+	</property>
+	<property name="execDpnm" type="java.lang.String">
+		<column name="EXEC_DPNM" />
+	</property>
+	<property name="combNo" type="java.lang.String">
+		<column name="COMB_NO" />
+	</property>
+	<property name="mainDrug" type="java.lang.Integer">
+		<column name="MAIN_DRUG" length="1"/>
+	</property>
+	<property name="dfqFreq" type="java.lang.String">
+		<column name="DFQ_FREQ" />
+	</property>
+	<property name="dfqCexp" type="java.lang.String">
+		<column name="DFQ_CEXP" />
+	</property>
+	<property name="qtyTot" type="java.lang.Integer">
+		<column name="QTY_TOT" length="12"/>
+	</property>
+	<property name="stockUnit" type="java.lang.String">
+		<column name="STOCK_UNIT" />
+	</property>
+	<property name="unitPrice" type="java.lang.Double">
+		<column name="UNIT_PRICE" length="18"/>
+	</property>
+	<property name="useTime" type="java.util.Date">
+		<column name="USE_TIME" length="19"/>
+	</property>
+	<property name="emcFlag" type="java.lang.Integer">
+		<column name="EMC_FLAG" length="1"/>
+	</property>
+	<property name="validFlag" type="java.lang.Integer">
+		<column name="VALID_FLAG" length="1"/>
+	</property>
+	<property name="validDate" type="java.util.Date">
+		<column name="VALID_DATE" length="19"/>
+	</property>
+	<property name="validUsercd" type="java.lang.String">
+		<column name="VALID_USERCD" />
+	</property>
+	<property name="confirmFlag" type="java.lang.Integer">
+		<column name="CONFIRM_FLAG" length="1"/>
+	</property>
+	<property name="confirmDate" type="java.util.Date">
+		<column name="CONFIRM_DATE" length="19"/>
+	</property>
+	<property name="confirmUsercd" type="java.lang.String">
+		<column name="CONFIRM_USERCD" />
+	</property>
+	<property name="confirmDeptcd" type="java.lang.String">
+		<column name="CONFIRM_DEPTCD" />
+	</property>
+	<property name="execFlag" type="java.lang.Integer">
+		<column name="EXEC_FLAG" length="1"/>
+	</property>
+	<property name="execDate" type="java.util.Date">
+		<column name="EXEC_DATE" length="19"/>
+	</property>
+	<property name="execUsercd" type="java.lang.String">
+		<column name="EXEC_USERCD" />
+	</property>
+	<property name="execDeptcd" type="java.lang.String">
+		<column name="EXEC_DEPTCD" />
+	</property>
+	<property name="chargeFlag" type="java.lang.Integer">
+		<column name="CHARGE_FLAG" length="1"/>
+	</property>
+	<property name="chargeDate" type="java.util.Date">
+		<column name="CHARGE_DATE" length="19"/>
+	</property>
+	<property name="chargeUsercd" type="java.lang.String">
+		<column name="CHARGE_USERCD" />
+	</property>
+	<property name="chargeDeptcd" type="java.lang.String">
+		<column name="CHARGE_DEPTCD" />
+	</property>
+	<property name="itemNote" type="java.lang.String">
+		<column name="ITEM_NOTE" />
+	</property>
+	<property name="applyNo" type="java.lang.String">
+		<column name="APPLY_NO" />
+	</property>
+	<property name="moNote1" type="java.lang.String">
+		<column name="MO_NOTE1" />
+	</property>
+	<property name="moNote2" type="java.lang.String">
+		<column name="MO_NOTE2" />
+	</property>
+	<property name="decoDate" type="java.util.Date">
+		<column name="DECO_DATE" length="19"/>
+	</property>
+	<property name="firstDay" type="java.lang.Integer">
+		<column name="FIRST_DAY" length="1"/>
+	</property>
+	<property name="execPrnflag" type="java.lang.Integer">
+		<column name="EXEC_PRNFLAG" length="1" default="0"/>
+	</property>
+	<property name="execPrndate" type="java.util.Date">
+		<column name="EXEC_PRNDATE" length="19"/>
+	</property>
+	<property name="execPrnusercd" type="java.lang.String">
+		<column name="EXEC_PRNUSERCD" />
+	</property>
+	<property name="recipeNo" type="java.lang.String">
+		<column name=" RECIPE_NO" />
+	</property>
+	<property name="sequenceNo" type="java.lang.Integer">
+		<column name="SEQUENCE_NO" length="3"/>
+	</property>
+	<property name="subtblFlag" type="java.lang.Integer">
+		<column name="SUBTBL_FLAG" length="1"/>
+	</property>
+	<property name="labCode" type="java.lang.String">
+		<column name="LAB_CODE" />
+	</property>
+	<property name="labBarcode" type="java.lang.String">
+		<column name="LAB_BARCODE" />
+	</property>
+	<property name="chargePrnflag" type="java.lang.Integer">
+		<column name=" CHARGE_PRNFLAG" length="1" default="0"/>
+	</property>
+	<property name="chargePrndate" type="java.util.Date">
+		<column name="CHARGE_PRNDATE" length="19"/>
+	</property>
+	<property name="chargePrnusercd" type="java.lang.String">
+		<column name="CHARGE_PRNUSERCD" />
+	</property>
+	<property name="circultPrnflag" type="java.lang.Integer">
+		<column name="CIRCULT_PRNFLAG" length="1"/>
+	</property>
+	
+	<property name="deptName" type="java.lang.String">
+		<column name="DEPT_NAME" />
+	</property>
+	<property name="nurseCellName" type="java.lang.String">
+		<column name="NURSE_CELL_NAME" />
+	</property>
+	<property name="listDpcdName" type="java.lang.String">
+		<column name="LIST_DPCD_NAME" />
+	</property>
+	<property name="validUsercdName" type="java.lang.String">
+		<column name="VALID_USERCD_NAME" />
+	</property>
+	<property name="confirmUsercdName" type="java.lang.String">
+		<column name="CONFIRM_USERCD_NAME" />
+	</property>
+	<property name="confirmDeptcdName" type="java.lang.String">
+		<column name="CONFIRM_DEPTCD_NAME" />
+	</property>
+	<property name="execUsercdName" type="java.lang.String">
+		<column name="EXEC_USERCD_NAME" />
+	</property>
+	<property name="execDeptcdName" type="java.lang.String">
+		<column name="EXEC_DEPTCD_NAME" />
+	</property>
+	<property name="chargeUsercdName" type="java.lang.String">
+		<column name="CHARGE_USERCD_NAME" />
+	</property>
+	<property name="chargeDeptcdName" type="java.lang.String">
+		<column name="CHARGE_DEPTCD_NAME" />
+	</property>
+	
+	<property name="createUser" type="java.lang.String">
+        <column name="CREATEUSER"  />
+    </property>
+    <property name="createDept" type="java.lang.String">
+        <column name="CREATEDEPT" />
+    </property>        
+    <property name="createTime" type="java.sql.Timestamp">
+        <column name="CREATETIME" length="19" />
+    </property>
+    <property name="updateUser" type="java.lang.String">
+        <column name="UPDATEUSER" />
+    </property>      
+    <property name="updateTime" type="java.sql.Timestamp">
+        <column name="UPDATETIME" length="19" />
+    </property>
+    <property name="deleteUser" type="java.lang.String">
+        <column name="DELETEUSER" />
+    </property>      
+    <property name="deleteTime" type="java.sql.Timestamp">
+        <column name="DELETETIME" length="19" />
+    </property>        
+    <property name="del_flg" type="java.lang.Integer">
+        <column name="DEL_FLG" precision="1" scale="0">
+        	<comment>0：正常 1：删除</comment>
+        </column>
+    </property>
+    <property name="stop_flg" type="java.lang.Integer">
+        <column name="STOP_FLG" precision="1" scale="0">
+       		<comment>0:正常 1：停用</comment>
+        </column>
+    </property>
+    <!-- 新加字段 -->
+     <property name="hospitalId" type="java.lang.Integer">
+         <column name="HOSPITAL_ID" />
+     </property> 
+     <property name="areaCode" type="java.lang.String">
+         <column name="AREA_CODE" />
+     </property> 
+</class>
+</hibernate-mapping>

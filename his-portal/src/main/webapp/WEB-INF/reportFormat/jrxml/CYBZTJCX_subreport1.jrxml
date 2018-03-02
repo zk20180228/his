@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CYBZTJCX_subreport1" language="groovy" pageWidth="802" pageHeight="555" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="5afa6bda-f00b-4633-b3fa-b2d887a95e68">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="avgBedFee" class="java.lang.String">
+		<fieldDescription><![CDATA[avgBedFee]]></fieldDescription>
+	</field>
+	<field name="avgBeforeOperDay" class="java.lang.String">
+		<fieldDescription><![CDATA[avgBeforeOperDay]]></fieldDescription>
+	</field>
+	<field name="avgCheckTreat" class="java.lang.String">
+		<fieldDescription><![CDATA[avgCheckTreat]]></fieldDescription>
+	</field>
+	<field name="avgDrugFee" class="java.lang.String">
+		<fieldDescription><![CDATA[avgDrugFee]]></fieldDescription>
+	</field>
+	<field name="avgInpatDay" class="java.lang.String">
+		<fieldDescription><![CDATA[avgInpatDay]]></fieldDescription>
+	</field>
+	<field name="avgOperFee" class="java.lang.String">
+		<fieldDescription><![CDATA[avgOperFee]]></fieldDescription>
+	</field>
+	<field name="better" class="java.lang.String">
+		<fieldDescription><![CDATA[better]]></fieldDescription>
+	</field>
+	<field name="betterRate" class="java.lang.String">
+		<fieldDescription><![CDATA[betterRate]]></fieldDescription>
+	</field>
+	<field name="checkTreat" class="java.lang.String">
+		<fieldDescription><![CDATA[checkTreat]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="cost" class="java.lang.String">
+		<fieldDescription><![CDATA[cost]]></fieldDescription>
+	</field>
+	<field name="cure" class="java.lang.String">
+		<fieldDescription><![CDATA[cure]]></fieldDescription>
+	</field>
+	<field name="cureRate" class="java.lang.String">
+		<fieldDescription><![CDATA[cureRate]]></fieldDescription>
+	</field>
+	<field name="death" class="java.lang.String">
+		<fieldDescription><![CDATA[death]]></fieldDescription>
+	</field>
+	<field name="deathRate" class="java.lang.String">
+		<fieldDescription><![CDATA[deathRate]]></fieldDescription>
+	</field>
+	<field name="deptCode" class="java.lang.String">
+		<fieldDescription><![CDATA[deptCode]]></fieldDescription>
+	</field>
+	<field name="diseaseKind" class="java.lang.String">
+		<fieldDescription><![CDATA[diseaseKind]]></fieldDescription>
+	</field>
+	<field name="drugProp" class="java.lang.String">
+		<fieldDescription><![CDATA[drugProp]]></fieldDescription>
+	</field>
+	<field name="icd_code" class="java.lang.String">
+		<fieldDescription><![CDATA[icd_code]]></fieldDescription>
+	</field>
+	<field name="illCode" class="java.lang.String">
+		<fieldDescription><![CDATA[illCode]]></fieldDescription>
+	</field>
+	<field name="illName" class="java.lang.String">
+		<fieldDescription><![CDATA[illName]]></fieldDescription>
+	</field>
+	<field name="list" class="java.util.List">
+		<fieldDescription><![CDATA[list]]></fieldDescription>
+	</field>
+	<field name="notCure" class="java.lang.String">
+		<fieldDescription><![CDATA[notCure]]></fieldDescription>
+	</field>
+	<field name="num" class="java.lang.String">
+		<fieldDescription><![CDATA[num]]></fieldDescription>
+	</field>
+	<field name="other" class="java.lang.String">
+		<fieldDescription><![CDATA[other]]></fieldDescription>
+	</field>
+	<field name="outPatient" class="java.lang.String">
+		<fieldDescription><![CDATA[outPatient]]></fieldDescription>
+	</field>
+	<field name="subTotal" class="java.lang.String">
+		<fieldDescription><![CDATA[subTotal]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="9ab053f2-603c-44b7-8211-85377f24c869" x="0" y="0" width="50" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diseaseKind}==null?"":$F{diseaseKind}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="acf86dba-05eb-4b1d-8817-5041966f151b" x="50" y="0" width="59" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{icd_code}==null?"":$F{icd_code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2fa04f6b-f8f1-4829-839f-fc60f6107012" x="109" y="0" width="29" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{outPatient}==null?"":$F{outPatient}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="87095d1b-70d0-41e2-a749-35300286fa3f" x="138" y="0" width="31" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subTotal}==null?"":$F{subTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e2ce1282-fe44-4763-bd65-b5aefb454068" x="169" y="0" width="29" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cure}==null?"":$F{cure}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="37a4fcbb-7ed3-4e8b-8d4b-fd9477f210cc" x="198" y="0" width="29" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{better}==null?"":$F{better}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0543e883-6722-475d-b1d6-cb3b9e2738b1" x="227" y="0" width="30" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{notCure}==null?"":$F{notCure}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c930f626-79f2-45e8-93e2-de4d656e153f" x="257" y="0" width="32" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{death}==null?"":$F{death}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2b5def9a-3556-4e2c-b1f5-dfd6db57263d" x="289" y="0" width="30" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{other}==null?"":$F{other}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e005fedd-2afc-4741-8da6-a98e7f2ad572" x="319" y="0" width="32" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cureRate}==null?"":$F{cureRate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="da2aa7fb-0f85-4e26-9332-d99d380ddaa4" x="351" y="0" width="35" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{betterRate}==null?"":$F{betterRate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b49e0385-19e5-41b1-9a2b-66729777418c" x="386" y="0" width="33" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deathRate}==null?"":$F{deathRate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d509ff79-aa95-4dfb-aea8-3f38a629b686" x="419" y="0" width="33" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{avgInpatDay}==null?"":$F{avgInpatDay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="79dd467c-b4b3-4f3c-baf5-0d413a06d14f" x="451" y="0" width="32" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{avgBeforeOperDay}==null?"":$F{avgBeforeOperDay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b574bb8c-1fc9-4d3d-b7b7-f430e5c8b884" x="483" y="0" width="40" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cost}==null?"":$F{cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2efd45e9-6e25-4b3c-8a3a-ec6a7311b561" x="523" y="0" width="40" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{avgBedFee}==null?"":$F{avgBedFee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2b7c8aa2-dbaf-4a87-9527-bd5f56db416e" x="563" y="0" width="40" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{avgDrugFee}==null?"":$F{avgDrugFee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dc433012-8521-40fe-876c-9b8e7d696ba7" x="602" y="0" width="40" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{avgOperFee}==null?"":$F{avgOperFee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8c0444fc-0f0f-45a9-a7be-32d788f4ef25" x="642" y="0" width="40" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{avgCheckTreat}==null?"":$F{avgCheckTreat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7d866ad0-bc05-4d81-aa12-13def4494242" x="682" y="0" width="44" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugProp}==null?"":$F{drugProp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

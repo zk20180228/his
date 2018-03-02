@@ -1,0 +1,327 @@
+* {
+  box-sizing: border-box;
+}
+.w {
+  width: 1400px;
+}
+.nav-title-box {
+  width: 100%;
+  height: 28px;
+  background-color: #DCD8D9;
+}
+.nav-title-box .nav-title {
+  margin: 0 auto;
+}
+.nav-title-box .nav-title .nav-title-content {
+  float: right;
+  width: 288;
+  height: 28px;
+  line-height: 28px;
+}
+.nav-title-box .nav-title .nav-title-content ul li {
+  float: left;
+}
+.nav-title-box .nav-title .nav-title-content ul li a {
+  color: #2C2A2B;
+}
+.nav-title-box .nav-title .nav-title-content ul li:nth-child(2) a {
+  padding: 0 20px;
+  border-left: 1px solid #2C2A2B;
+  border-right: 1px solid #2C2A2B;
+  margin: 0 20px;
+}
+.logo-box {
+  height: 88px;
+  margin: 0 auto;
+}
+.logo-box .logo {
+  float: left;
+}
+.logo-box .logo a {
+  width: 330px;
+  height: 56px;
+  display: block;
+  margin-top: 17px;
+}
+.logo-box .logo a img {
+  width: 100%;
+  height: 100%;
+}
+.logo-box .seach {
+  float: right;
+  width: 300px;
+  height: 38px;
+  line-height: 36px;
+  margin-top: 27px;
+  position: relative;
+}
+.logo-box .seach .seach-text {
+  width: 235px;
+  height: 38px;
+  float: left;
+  text-indent: 50px;
+  font-size: 18px;
+}
+.logo-box .seach .seach-buttom {
+  width: 45px;
+  height: 38px;
+  float: left;
+  background-color: #509AE1;
+  color: #FFFFFF;
+}
+.logo-box .seach .info {
+  width: 50px;
+  height: 34px;
+  position: absolute;
+  left: 0;
+  text-align: center;
+}
+.nav-box {
+  width: 100%;
+  height: 50px;
+  background-color: #509AE1;
+}
+.nav-box .nav {
+  margin: 0 auto;
+  height: 50px;
+  line-height: 50px;
+}
+.nav-box .nav #news-ul {
+  width: 100%;
+  height: 50px;
+}
+.nav-box .nav #news-ul>li {
+  float: left;
+}
+.nav-box .nav #news-ul>li>a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  padding: 0 30px;
+  text-align: center;
+}
+.nav-box .nav #news-ul>li>a:hover {
+  background-color: #4787C4;
+}
+
+.view .imgBigInfo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 33px;
+  line-height: 33px;
+  text-indent: 30px;
+  font-size: 14px;
+  font-family: "微软雅黑";
+  color: #FFFFFF;
+  background-color: rgba(37, 37, 37, 0.4);
+}
+.img-container-box .imgsm {
+  width: 306px;
+  height: 108px;
+  margin-left: 12px;
+}
+
+.icon-box {
+  margin: 0 auto;
+  height: 142px;
+  background-color: #509AE1;
+}
+.icon-box ul {
+  width: 100%;
+  height: 100%;
+}
+.icon-box ul li {
+  width: 16.66%;
+  height: 100%;
+  float: left;
+}
+.icon-box ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-right: 1px solid #4080BD;
+  transition: all 0.2s;
+}
+.icon-box ul li a i {
+  text-align: center;
+  line-height: 60px;
+  color: #FFFFFF;
+  width: 100%;
+  height: 92px;
+  display: block;
+  font-size: 60px;
+  padding-top: 24px;
+}
+.icon-box ul li a p {
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  color: #FFFFFF;
+}
+.icon-box ul li a:hover {
+  background-color: #4080BD;
+}
+.icon-box ul li:last-child a {
+  border-right: none;
+}
+.mainInfo {
+  margin: 0 auto;
+}
+.mainInfo .info {
+  float: left;
+  height: 495px;
+  padding-top: 25px;
+}
+.mainInfo .info .infoHeader {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #D9D9D9;
+  line-height: 50px;
+  margin-bottom: 3px;
+}
+.mainInfo .info .infoHeader h2 {
+  float: left;
+  height: 51px;
+  border-bottom: 3px solid #509BDF;
+  padding: 0 25px;
+  font-size: 17px;
+  font-family: "微软雅黑";
+  color: #404040;
+  line-height: 51px;
+}
+.mainInfo .info .infoList {
+  margin-top: 30px;
+  width: 100%;
+  height: 375px;
+  background-color: #EEF2F5;
+}
+.mainInfo .info .infoList ul {
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+}
+.mainInfo .info .infoList ul li {
+  width: 100%;
+  line-height: 37px;
+  height: 37px;
+}
+.mainInfo .info .infoList ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.mainInfo .info .infoList ul li a span {
+  font-size: 14px;
+  font-family: "宋体";
+  color: #28292B;
+}
+.mainInfo .info .infoList ul li a .left {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 135px 0 40px;
+}
+.mainInfo .info .infoList ul li a .right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 135px;
+  text-align: center;
+}
+.mainInfo .info .infoList ul li a:hover span {
+  color: #509AE1;
+}
+.mainInfo .info .infoList ul li a:hover::after {
+  background-color: #509AE1;
+}
+.mainInfo .info .infoList ul li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #777576;
+}
+.mainInfo .infosm {
+  width: 50%;
+}
+.mainInfo .infoBig {
+  width: 100%;
+}
+.mainInfo .infoBig .infoList {
+  width: 50%;
+  float: left;
+}
+.mainInfo .infoBig .infoList2 {
+  float: left;
+  width: 50%;
+  margin-top: 30px;
+  height: 375px;
+  background-color: #EEF2F5;
+}
+.mainInfo .infoBig .infoList2 ul {
+  width: 100%;
+  height: 100%;
+  padding-left: 25px;
+}
+.mainInfo .infoBig .infoList2 ul li {
+  float: left;
+  width: 200px;
+  height: 160px;
+  padding-top: 28px;
+}
+.mainInfo .infoBig .infoList2 ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 130px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.mainInfo .infoBig .infoList2 ul li:nth-child(1) a {
+  background-color: #45BE89;
+}
+.mainInfo .infoBig .infoList2 ul li:nth-child(2) {
+  margin: 0 24px;
+}
+.mainInfo .infoBig .infoList2 ul li:nth-child(2) a {
+  background-color: #F2A553;
+}
+.mainInfo .infoBig .infoList2 ul li:nth-child(3) a {
+  background-color: #63A8EB;
+}
+.mainInfo .infoBig .infoList2 ul li:nth-child(4) a {
+  background-color: #F96768;
+}
+.mainInfo .infosm:nth-child(odd) {
+  padding-right: 17px;
+}
+.mainInfo .infosm:nth-child(even) {
+  padding-left: 17px;
+}
+.footer {
+  margin-top: 60px;
+  height: 137px;
+  background: url(../img/footer.png) no-repeat 100% 100%;
+}
+.footer .footFont {
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.footer .footFont p {
+  font-size: 12px;
+  text-align: center;
+  line-height: 30px;
+  color: #FFFFFF;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- RROR StatusLoggerNolog4j2 configuration file found.Usingdefaultconfiguration:logging only errors to the console. -->
+<configuration status="error">
+	<appenders>
+	</appenders>
+	<loggers>
+		<root level="info">
+		</root>
+	</loggers>
+</configuration>

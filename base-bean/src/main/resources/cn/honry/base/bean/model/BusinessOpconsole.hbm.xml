@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="cn.honry.base.bean.model">
+<class name="BusinessOpconsole" table="T_BUSINESS_OPCONSOLE">
+	<id name="id" type="java.lang.String" >
+		<column name="ID" />
+		<generator class="uuid" />
+	</id>
+	 <many-to-one name="roomCode" class="BusinessOproom" fetch="select">
+            <column name="ROOM_CODE" />
+     </many-to-one>
+	<property name="consoleCode" type="java.lang.String">
+		<column name="CONSOLE_CODE" />
+	</property>
+	<property name="consoleName" type="java.lang.String">
+		<column name="CONSOLE_NAME" />
+	</property>
+	<property name="inputCode" type="java.lang.String">
+		<column name="INPUT_CODE" />
+	</property>
+	<property name="deptCode" type="java.lang.String">
+		<column name="DEPT_CODE" />
+	</property>
+	<property name="validFlag" type="java.lang.Integer">
+		<column name="VALID_FLAG" length="1" default="1"/>
+	</property>
+	<property name="remark" type="java.lang.String">
+		<column name="REMARK" />
+	</property>
+	<property name="usingState" type="java.lang.Integer">
+		<column name="USING_STATE" default="0"/>
+	</property>
+	<property name="operationNo" type="java.lang.String">
+		<column name="OPERATION_NO" />
+	</property>
+	<property name="stepNum" type="java.lang.Integer">
+		<column name="STEP_NUM" length="3"/>
+	</property>
+		<property name="curstepSeq" type="java.lang.Integer">
+		<column name="CURSTEP_SEQ" length="3"/>
+	</property>
+	<property name="machineCode" type="java.lang.String">
+		<column name="MACHINE_CODE" />
+	</property>
+	<property name="monitorCode" type="java.lang.String">
+		<column name="MONITOR_CODE" />
+	</property>
+	<property name="machineName" type="java.lang.String">
+		<column name="MACHINE_NAME" />
+	</property>
+	<property name="monitorName" type="java.lang.String">
+		<column name="MONITOR_NAME" />
+	</property>
+	 <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" precision="1" scale="0">
+            	<comment>0：正常 1：删除</comment>
+            </column>
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" precision="1" scale="0">
+           		<comment>0:正常 1：停用</comment>
+            </column>
+        </property>
+</class>
+</hibernate-mapping>

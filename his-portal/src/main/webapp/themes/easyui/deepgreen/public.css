@@ -1,0 +1,224 @@
+.medchangeskin,.changecolor{
+	background:#bfe8e8 !important;
+}
+
+.tableCss .TDlabel,.tableLabel{
+	background:#bfe8e8 !important;
+}
+
+.tabs-header, .tabs-tool {
+    background-color: #bfe8e8;
+}
+.tabs li a.tabs-inner {
+	border-color:#058481;
+    background-color: #55ccca;
+    background: -webkit-linear-gradient(top,#caf3f2 0,#55ccca 100%);
+    background: -moz-linear-gradient(top,#caf3f2 0,#55ccca 100%);
+    background: -o-linear-gradient(top,#caf3f2 0,#55ccca 100%);
+    background: linear-gradient(to bottom,#caf3f2 0,#55ccca 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#caf3f2,endColorstr=#55ccca,GradientType=0);
+}
+.tabs li a.tabs-inner:hover {
+  background: #84d6d4;
+  filter: none;
+}
+.tableLabel,.changecolor,td.honry-lable{
+	background-color:#d4ecfb;
+}
+
+/*home页面*/
+.header{
+	border-color:#0086cd;
+    background-color: #55ccca;
+    background: -webkit-linear-gradient(top,#8ee0de 0,#55ccca 100%);
+    background: -moz-linear-gradient(top,#8ee0de 0,#55ccca 100%);
+    background: -o-linear-gradient(top,#8ee0de 0,#55ccca 100%);
+    background: linear-gradient(to bottom,#8ee0de 0,#55ccca 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#8ee0de,endColorstr=#55ccca,GradientType=0);
+}
+.header .head-title{
+	color: #07807d;
+    font-weight: bold;
+}
+.notice,.hot,.news,.video,.setting{
+	border: 1px solid #09a5a2;
+}
+.content ul li.even {
+    background: #a9e2e2;
+}
+.content ul li a,.content ul li span,.content ul li{
+    color: #008a88;
+}
+table.honry-table td{
+	border: 1px solid #26b5b3;	
+}
+table.honry-table{
+	border: 1px solid #26b5b3;
+}
+.tableLabel, .changecolor, td.honry-lable {
+    background-color: #bfe8e8;
+}
+.tabs-header, .tabs-scroller-left, .tabs-scroller-right, .tabs-tool, .tabs, .tabs-panels, .tabs li a.tabs-inner, .tabs li.tabs-selected a.tabs-inner, .tabs-header-bottom .tabs li.tabs-selected a.tabs-inner, .tabs-header-left .tabs li.tabs-selected a.tabs-inner, .tabs-header-right .tabs li.tabs-selected a.tabs-inner{
+	border-color: #26b5b3;
+}
+.fc-state-default{
+	text-shadow: 0 0px 0px rgba(255, 255, 255, 0.75) !important;
+}
+.tabs-scroller-left {
+  background: #55ccca url('images/tabs_icons.png') no-repeat 1px center !important;
+}
+.tabs-scroller-right {
+  background: #55ccca url('images/tabs_icons.png') no-repeat -15px center !important;
+}
+.inputCss{
+	border: 1px solid #26b5b3;
+}
+
+/********public样式设计end************/
+/*头部底部*/
+.chnav{
+	   background: url(images/nav_bg_deepgreen.jpg);
+}
+.main-top {
+    background: #3dd0d8 url('images/main_top_bg_deepgreen1.jpg') no-repeat;
+}
+.bottom{
+	background: url(images/main_bottom_bg_deepgreen.jpg);
+}
+ul#topnav li .sub{
+	background: #0a969d;
+}
+ul#topnav li.nav-menu:hover {background: url(images/nav_bg_deepgreen_.jpg);}
+
+/*字体颜色*/
+.tabs li a.tabs-inner,.tabs li.tabs-selected a.tabs-inner{
+	color:#000;
+}
+ul#topnav .sub ul li a:hover {color: #fff; background: #25b9b7;}
+ul#topnav .sub ul li:hover{
+	    background: #25b9b7;
+}
+ul#topnav .sub ul li.second-menu:hover{
+	background:#0a969d;
+}
+.setting .shortcut ul li a,.setting .shortcut ul li{
+	color: #008a88;
+}
+.loginLogNew{
+	border-top:1px solid #26b5b3 !important;
+	border-left:1px solid #26b5b3 !important
+}
+.window,.mod-dialog{
+/*     background-color: #55ccca; */
+/*     background: -webkit-linear-gradient(top,#aaeae9 0,#55ccca 20%); */
+/*     background: -moz-linear-gradient(top,#aaeae9 0,#55ccca 20%); */
+/*     background: -o-linear-gradient(top,#aaeae9 0,#55ccca 20%); */
+/*     background: linear-gradient(to bottom,#aaeae9 0,#55ccca 20%); */
+/*     background-repeat: repeat-x; */
+/*     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#aaeae9,endColorstr=#55ccca,GradientType=0); */
+}
+.mod-dialog .dialog-console a:hover{
+	background: #f4ffff;
+}
+/*选择角色样式*/
+.chose ul li{
+	color: #017973;
+}
+.chose ul li.selected{
+	background: #09a69f;
+	color:#fff;
+}
+.button .tijiao{
+	background: #017973;
+	color: #fff;
+}
+.chose .choseList .prevR{
+	left: 0;
+	background: url("images/prev.png") left center no-repeat;
+}
+.chose .choseList .prevD{
+	left: 0;
+	background: url("images/prev.png") left center no-repeat;
+}
+.chose .choseList .nextR{
+	right: 0;
+	background: url("images/next.png") left center no-repeat;
+}
+.chose .choseList .nextD{
+	right: 0;
+	background: url("images/next.png") left center no-repeat;
+}
+#roleDidId .role-D {
+	background-image: url('images/role-D.png');
+}
+#roleDidId .role-F {
+	background-image: url('images/role-F.png');
+}
+#roleDidId .role-M {
+	background-image: url('images/role-M.png');
+}
+#roleDidId .role-N {
+	background-image: url('images/role-N.png');
+}
+#roleDidId .role-O {
+	background-image: url('images/role-O.png');
+}
+#roleDidId .role-P {
+	background-image: url('images/role-P.png');
+}
+#roleDidId .role-R {
+	background-image: url('images/role-R.png');
+}
+#roleDidId .role-T {
+	background-image: url('images/role-T.png');
+}
+#deptDidId .dept-C {
+	background-image: url('images/dept-C.png');
+}
+#deptDidId .dept-D {
+	background-image: url('images/dept-D.png');
+}
+#deptDidId .dept-F {
+	background-image: url('images/dept-F.png');
+}
+#deptDidId .dept-I {
+	background-image: url('images/dept-I.png');
+}
+#deptDidId .dept-L {
+	background-image: url('images/dept-L.png');
+}
+#deptDidId .dept-N {
+	background-image: url('images/dept-N.png');
+}
+#deptDidId .dept-O {
+	background-image: url('images/dept-O.png');
+}
+#deptDidId .dept-OP {
+	background-image: url('images/dept-OP.png');
+}
+#deptDidId .dept-P {
+	background-image: url('images/dept-P.png');
+}
+#deptDidId .dept-PI {
+	background-image: url('images/dept-PI.png');
+}
+#deptDidId .dept-S {
+	background-image: url('images/dept-S.png');
+}
+#deptDidId .dept-T {
+	background-image: url('images/dept-T.png');
+}
+.main-more{
+	font-size: 13px !important;
+    color: #07807d !important;
+    margin-right:10px;
+}
+#buttonListId{
+	border-left:1px solid #26b5b3;
+}
+/* 关闭按钮颜色修改 */
+ .window .panel-header .panel-tool .panel-tool-close{
+  	  	background-color: #CB4646;
+  	}

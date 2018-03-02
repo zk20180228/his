@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="MetComDiagnose" table="T_MET_COM_DIAGNOSE" >
+        <comment>手术诊断表</comment>
+       <id name="id" type="java.lang.String" >
+            <column name="ID"/>
+            <generator class="uuid" />
+        </id>
+        <property name="inpatientNo" type="java.lang.String">
+            <column name="INPATIENT_NO" length="14">
+                <comment>住院流水号</comment>
+            </column>
+        </property>
+         <property name="happenNo" type="java.lang.Integer">
+            <column name="HAPPEN_NO" >
+            </column>
+        </property>
+         <property name="cardNo" type="java.lang.String">
+            <column name="CARD_NO"  length="10">
+            </column>
+        </property>
+        <property name="diagKind" type="java.lang.String">
+            <column name="DIAG_KIND" length="50">
+            </column>
+        </property>
+        <property name="icdCode" type="java.lang.String">
+            <column name="ICD_CODE" length="20">
+            </column>
+        </property>
+        <property name="diagName" type="java.lang.String">
+            <column name="DIAG_NAME" length="128">
+            </column>
+        </property>
+        <property name="diagDate" type="java.util.Date">
+            <column name="DIAG_DATE" length="7">
+            </column>
+        </property>
+        <property name="doctCode" type="java.lang.String">
+            <column name="DOCT_CODE" length="50">
+            </column>
+        </property>
+        <property name="diagDocName" type="java.lang.String">
+            <column name="DIAG_DOC_NAME" length="10">
+            </column>
+        </property>
+        <property name="diagFlag" type="java.lang.String">
+            <column name="DIAG_FLAG" length="1">
+            </column>
+        </property>
+        <property name="deptCode" type="java.lang.String">
+            <column name="DEPT_CODE" length="50">
+            </column>
+        </property>
+        <property name="mainFlag" type="java.lang.String">
+            <column name="MAIN_FLAG" length="1">
+            </column>
+        </property>
+        <property name="operationNo" type="java.lang.String">
+            <column name="OPERATIONNO" length="50">
+            </column>
+        </property>
+        <property name="mark" type="java.lang.String">
+            <column name="MARK" length="200">
+            </column>
+        </property>
+          <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" />
+        </property>
+    </class>
+</hibernate-mapping>

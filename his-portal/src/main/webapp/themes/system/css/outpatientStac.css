@@ -1,0 +1,118 @@
+ul,li{
+	list-style-type: none;
+}
+select{
+	outline: none;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.main{
+	width: 100%;
+	overflow: auto;
+	height: inherit;
+}
+.table1top,.table1bottom{
+	overflow: hidden;
+	width: 90%;
+	margin:0 auto;
+	font-size: 14px;
+}
+.table1top{
+	margin-top:15px;
+}
+.table1top h2,.table1bottom h2,.tbb1 h2{
+	font-size: 16px;
+	font-family: "黑体";
+	background-color: #daecf9;
+	line-height: 26px;
+	border-radius: 8px 8px 0 0;
+	text-indent: 16px;
+	padding-bottom: 2px;
+	height: 26px;
+	overflow: hidden;
+}
+.ybp{
+	width: 93%;
+	overflow: hidden;
+	height: 320px;
+	margin-top: 18px;
+	margin-left:6%
+}
+#ybp1,#ybp2,#ybp3,#ybp4,#ybp5{
+	/*width: 20%;
+	float: left;*/
+	width: 100%;
+	height: 320px;
+}
+
+.tbb1,.tbb2,.tbb3{
+	float: left;
+	width: 24%;
+	overflow: hidden;
+}
+.tbb2{
+	margin-left: 1%;
+}
+.tbb3{
+	margin-left: 1%;
+}
+.tbb4{
+	overflow: hidden;
+	width: 25%;
+	float: left;
+	margin-left: 1%;
+}
+.tbb1 table,.tbb2 table,.tbb3 table{
+	width: 99.9%;
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+.tbb1 table td,.tbb2 table td,.tbb3 table td {
+    border: 1px solid #B0ADAD;
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    padding-right: 2px;
+}
+.mz {
+    font-size: 15px;
+    text-indent: 30px;
+    background: url("../images/icon.png") no-repeat 6px center;
+    line-height: 27px;
+}
+.table1bottom{
+	overflow:hidden;
+	padding-bottom:20px;
+}
+.table1bottom .tr1{
+	background-color: #ebf0f2;
+}
+.td1{
+	text-indent: 3px;
+}
+.jjlist li,.jjlist1 li,.jjlist2 li,.jjlist3 li, .jjlist4 li{
+	margin-left: 18px;
+	line-height: 26px;
+}
+.blue1{
+	background-color: #deecf2;
+}
+.blue2{
+	background-color: #a9cfe0;
+}
+#piechart{
+	height: 300px;
+	width: 90%;
+	margin-top: 20px;
+	margin-left:4%;
+}
+/*特效*/
+.none{
+	display: none;
+}
+.block{
+	display: block;
+}

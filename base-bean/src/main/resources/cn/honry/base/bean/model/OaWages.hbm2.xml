@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="OaWages" table="T_OA_WAGES">
+        <id name="wagesId" type="java.lang.String" >
+            <column name="ID"/>
+            <generator class="uuid" />
+        </id>
+        <property name="wagesAccount" type="java.lang.String">
+            <column name="WAGES_ACCOUNT" >
+                <comment>用户名</comment>
+            </column>
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="WAGES_NAME" >
+                <comment>姓名</comment>
+            </column>
+        </property>
+        <property name="deptName" type="java.lang.String">
+            <column name="DEPTNAME" >
+                <comment>部门</comment>
+            </column>
+        </property>
+        <property name="category" type="java.lang.String">
+            <column name="CATEGORY" >
+                <comment>人员类别</comment>
+            </column>
+        </property>
+        <property name="postPay" type="java.lang.String">
+            <column name="POSTPAY">
+                <comment>岗位工资</comment>
+            </column>
+        </property>
+        <property name="basePay" type="java.lang.String">
+            <column name="BASEPAY" >
+                <comment>基本工资</comment>
+            </column>
+        </property>
+        <property name="nursinTeach" type="java.lang.String">
+            <column name="NURSINTEACH" length="7">
+                <comment>救护10</comment>
+            </column>
+        </property>
+        <property name="achievements" type="java.lang.String">
+            <column name="ACHIEVEMENTS" >
+                <comment>绩效</comment>
+            </column>
+        </property>
+        <property name="nursinTeaching" type="java.lang.String">
+            <column name="NURSINTEACHING" >
+                <comment>救护</comment>
+            </column>
+        </property>
+        <property name="keepThink" type="java.lang.String">
+            <column name="KEEPTHINK" >
+                <comment>保留项</comment>
+            </column>
+        </property>
+        <property name="healthAllowance" type="java.lang.String">
+            <column name="HEALTH_ALLOWANCE" >
+                <comment>卫津</comment>
+            </column>
+        </property>
+        <property name="onlyChildFee" type="java.lang.String">
+            <column name="ONLYCHILDFEE" >
+                <comment>独子费</comment>
+            </column>
+        </property>
+        <property name="hygieneFee" type="java.lang.String">
+            <column name="HYGIENEFEE" >
+                <comment>卫生费</comment>
+            </column>
+        </property>
+        <property name="PHDFee" type="java.lang.String">
+            <column name="PHDFEE" >
+                <comment>博导贴</comment>
+            </column>
+        </property>
+        <property name="subsidyFee" type="java.lang.String">
+            <column name="SUBSIDYFEE">
+                <comment>补工资</comment>
+            </column>
+        </property>
+        <property name="increased" type="java.lang.String">
+            <column name="INCREASED" >
+                <comment>预增资201410</comment>
+            </column>
+        </property>
+        <property name="increasing" type="java.lang.String">
+            <column name="INCREASING" >
+                <comment>预增资20160607</comment>
+            </column>
+        </property>
+        <property name="totalShould" type="java.lang.String">
+            <column name="TOTALSHOULD" >
+                <comment>应发合计</comment>
+            </column>
+        </property>
+        <property name="deductRent" type="java.lang.String">
+            <column name="DEDUCTRENT" >
+                <comment>扣房租</comment>
+            </column>
+        </property>
+        <property name="housingFund" type="java.lang.String">
+            <column name="HOUSINGFUND">
+                <comment>公积金</comment>
+            </column>
+        </property>
+        <property name="boardingFee" type="java.lang.String">
+            <column name="BOARDINGFEE">
+                <comment>扣托费</comment>
+            </column>
+        </property>
+        <property name="medicalInsurance" type="java.lang.String">
+            <column name="MEDICAL_INSURANCE">
+                <comment>医疗保险</comment>
+            </column>
+        </property>
+        <property name="overallPlanning" type="java.lang.String">
+            <column name="OVERALL_PLANNING" >
+                <comment>统筹金</comment>
+            </column>
+        </property>
+        <property name="unemploymentInsurance" type="java.lang.String">
+            <column name="UNEMPLOYMENT_INSURANCE" >
+                <comment>失业险</comment>
+            </column>
+        </property>
+        <property name="deductWages" type="java.lang.String">
+            <column name="DEDUCTWAGES" >
+                <comment>扣工资</comment>
+            </column>
+        </property>
+        <property name="heatingCosts" type="java.lang.String">
+            <column name="HEATINGCOSTS" >
+                <comment>代扣暖气费</comment>
+            </column>
+        </property>
+        <property name="accountEeceivable" type="java.lang.String">
+            <column name="ACCOUNT_EECEIVABLE" >
+                <comment>收账</comment>
+            </column>
+        </property>
+        <property name="totalActual" type="java.lang.String">
+            <column name="TOTALACTUAL" >
+                <comment>实发工资</comment>
+            </column>
+        </property>
+        <property name="providentFundAccount" type="java.lang.String">
+            <column name="PROVIDENTFUNDACCOUNT" >
+           		 <comment>公积金账号</comment>
+            </column>
+        </property>
+        <property name="IDCard" type="java.lang.String">
+            <column name="IDCARD" >
+            	<comment>身份证号码</comment>
+            </column>
+        </property>
+        <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer"> 
+            <column name="DEL_FLG" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" />
+        </property>
+        <property name="wagesTime" type="java.sql.Timestamp">
+            <column name="WAGES_TIME" />
+        </property>
+    </class>
+</hibernate-mapping>

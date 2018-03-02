@@ -1,0 +1,101 @@
+package cn.honry.statistics.bi.inpatient.peopleInHospital.service.impl;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import cn.honry.base.bean.model.BusinessDictionary;
+import cn.honry.base.bean.model.SysDepartment;
+import cn.honry.inner.baseinfo.code.dao.CodeInInterDAO;
+import cn.honry.statistics.bi.inpatient.peopleInHospital.dao.PeopleInHospitalDao;
+import cn.honry.statistics.bi.inpatient.peopleInHospital.service.PeopleInHospitalService;
+import cn.honry.statistics.bi.inpatient.peopleInHospital.vo.PeopleInHospital2Vo;
+import cn.honry.statistics.bi.inpatient.peopleInHospital.vo.PeopleInHospitalVo;
+import cn.honry.statistics.bi.register.dao.RegisterDao;
+import cn.honry.statistics.util.ResultUtils;
+import cn.honry.statistics.util.dateVo.DateVo;
+import cn.honry.utils.JSONUtils;
+@Service("peopleInHospitalService")
+@Transactional
+@SuppressWarnings({"all"})
+public class PeopleInHospitalServiceImpl implements PeopleInHospitalService {
+
+	@Autowired
+	@Qualifier(value="peopleInHospitalDao")
+	private PeopleInHospitalDao peopleInHospitalDao;
+	@Autowired
+	@Qualifier(value = "registerDao")
+	private RegisterDao registerDao;
+	@Autowired
+	@Qualifier(value = "innerCodeDao")
+	private CodeInInterDAO innerCodeDao;
+	@Override
+	public PeopleInHospitalVo get(String arg0) {
+		return null;
+	}
+
+	@Override
+	public void removeUnused(String arg0) {
+		
+	}
+
+	@Override
+	public void saveOrUpdate(PeopleInHospitalVo arg0) {
+		
+	}
+
+	
+
+
+	public Map<String, String> depMap() {
+		HashMap<String,String> depMap=new HashMap<String,String>();
+		List<SysDepartment> depList = registerDao.queryAllDept();
+		for(SysDepartment s : depList){
+			depMap.put(s.getDeptCode(), s.getDeptName());
+		}
+		return depMap;
+	}
+
+
+
+
+	@Override
+	public String queryregisterid(DateVo datevo, String[] dimStringArray, int dateType, String dimensionValue) {
+		//组织参数list：list中的元素为map
+		List<Map<String,List<String>>> list=new ArrayList<Map<String,List<String>>>();
+		list=ResultUtils.prepareParamList(dimensionValue);
+		
+		//组织参数map：key为各维度的名字（code），value为各维度所选择的值的list
+		Map<String,List<String>> map=new HashMap<String, List<String>>();
+		map=ResultUtils.prepareParamMap(dimensionValue);
+		
+		//组织参数：将Vo类中的维度字段按照页面的显示顺序排列好放入数组中
+		String [] voArray=new String[]{"hospitalPerson","percentage"};
+		//将维度种类拆分放入到数组中
+		List<PeopleInHospitalVo> volist=peopleInHospitalDao.queryregisterid(dimStringArray, list, dateType,datevo);
+		List<String> listJson=new ArrayList<String>();
+		for(int i=0;i<volist.size();i++){
+			//查询出来的结果集的每一个对象转换为json
+			String json=JSONUtils.toJson(volist.get(i));
+			json=json.replace("deptName", "dept_code");
+			json=json.replace("sex", "report_sex");
+			json=json.replace("sourceName", "in_source");
+			json=json.replace("criticalName", "critical_flag");
+			String json1=ResultUtils.getnewJson(json, dateType, voArray, volist.get(i).getTimeChose());
+			//将json字符串添加到listJson中
+			listJson.add(json1);
+		}
+		//获得最终的json字符串
+		String result=ResultUtils.getResult(datevo,dateType,listJson,map,voArray.length);
+		return result;
+	}
+
+
+	
+}

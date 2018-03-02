@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Collectfees " language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="173b60fa-b521-49e7-aab7-00866ee98628">
+	<property name="ireport.callouts" value="##Sat Feb 25 18:02:59 CST 2017"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\iReportDate\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="cost" class="java.lang.String"/>
+	<parameter name="hospitalName" class="java.lang.String"/>
+	<parameter name="serviceHopital" class="java.lang.String"/>
+	<parameter name="feeName" class="java.lang.String"/>
+	<parameter name="feeCode" class="java.lang.String"/>
+	<parameter name="totcost" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="feeCode" class="java.lang.String">
+		<fieldDescription><![CDATA[feeCode]]></fieldDescription>
+	</field>
+	<field name="feeName" class="java.lang.String">
+		<fieldDescription><![CDATA[feeName]]></fieldDescription>
+	</field>
+	<field name="totcost" class="java.lang.Double">
+		<fieldDescription><![CDATA[totcost]]></fieldDescription>
+	</field>
+	<field name="feeDetailvo" class="java.util.List">
+		<fieldDescription><![CDATA[feeDetailvo]]></fieldDescription>
+	</field>
+	<variable name="index" class="java.lang.String">
+		<variableExpression><![CDATA[$V{index}.valueOf(1)]]></variableExpression>
+		<initialValueExpression><![CDATA[1]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement uuid="6f849e15-a5bd-4b9d-90e8-15cc98a97f0f" x="87" y="39" width="345" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hospitalName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="53a09e49-f25b-4206-bd8c-4ae3c5d4a83a" x="232" y="59" width="100" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{serviceHopital}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement uuid="3cce5fe9-3723-4608-8eaf-19d509004c6b" x="455" y="59" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="2" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="4b15193a-1f3d-495f-a53c-125f90d9768f" x="0" y="21" width="34" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[姓名:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="70c38984-1955-441c-8516-297025dc959c" x="34" y="21" width="100" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{feeName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="299d92b3-9055-40f5-bdb3-9ee4de7d3723" x="134" y="21" width="53" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[入院日期：]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="65acbc4a-e0ac-40f4-aca4-0adc673d9d6d" x="187" y="21" width="100" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{feeCode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8872a4eb-6d1b-4229-b9a5-6ece62c7109f" x="287" y="21" width="45" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[余额：]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="8cffad13-5d69-4bbf-97eb-9ab48e512cdc" x="332" y="21" width="100" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totcost}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="42ba65ed-a401-4fc1-bbfa-1c1e30783d7e" x="87" y="41" width="100" height="20"/>
+				<textElement>
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[编码]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="09f20171-9001-4c88-8405-4957fe6f7947" x="259" y="41" width="100" height="20"/>
+				<textElement>
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[类别名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="63bc0ccc-e154-48dc-ab22-2ab4589bf184" x="418" y="41" width="100" height="20"/>
+				<textElement>
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[金额]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="50a2a5d6-7f94-424e-aa8a-9093ce2a9176" x="34" y="0" width="521" height="20"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{feeDetailvo})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Collectfees_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="3" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

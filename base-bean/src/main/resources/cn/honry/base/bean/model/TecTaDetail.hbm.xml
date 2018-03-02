@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="TecTaDetail" table="T_TEC_TA_DETAIL" >
+        <comment>终端确认业务子表</comment>
+        <id name="id" type="java.lang.String">
+            <column name="ID" />
+            <generator class="uuid" />
+        </id>
+        <property name="currentSequence" type="java.lang.String">
+            <column name="CURRENT_SEQUENCE" />
+        </property>
+        <property name="applyCode" type="java.lang.String">
+            <column name="APPLY_CODE" precision="14" scale="0" />
+        </property>
+        <property name="patientType" type="java.lang.String">
+            <column name="PATIENT_TYPE" />
+        </property>
+        <property name="cardCode" type="java.lang.String">
+            <column name="CARD_CODE" />
+        </property>
+        <property name="clinicCode" type="java.lang.String">
+            <column name="CLINIC_CODE" />
+        </property>
+        <property name="itemCode" type="java.lang.String">
+            <column name="ITEM_CODE" />
+        </property>
+        <property name="itemName" type="java.lang.String">
+            <column name="ITEM_NAME" />
+        </property>
+        <property name="qty" type="java.lang.Double">
+            <column name="QTY"/>
+        </property>
+        <property name="confirmNumber" type="java.lang.Integer">
+            <column name="CONFIRM_NUMBER" />
+        </property>
+        <property name="freeNumber" type="java.lang.Integer">
+            <column name="FREE_NUMBER" />
+        </property>
+        <property name="confirmDate" type="java.util.Date">
+            <column name="CONFIRM_DATE" length="7" />
+        </property>
+        <property name="confirmDepartment" type="java.lang.String">
+            <column name="CONFIRM_DEPARTMENT" />
+        </property>
+        <property name="confirmEmployee" type="java.lang.String">
+            <column name="CONFIRM_EMPLOYEE" />
+        </property>
+        <property name="status" type="java.lang.String">
+            <column name="STATUS" />
+        </property>
+        <property name="extendField1" type="java.lang.String">
+            <column name="EXTEND_FIELD1" />
+        </property>
+        <property name="extendField2" type="java.lang.String">
+            <column name="EXTEND_FIELD2" />
+        </property>
+        <property name="extendField3" type="java.lang.String">
+            <column name="EXTEND_FIELD3" />
+        </property>
+        <property name="operCode" type="java.lang.String">
+            <column name="OPER_CODE" />
+        </property>
+        <property name="operDate" type="java.util.Date">
+            <column name="OPER_DATE" length="7" />
+        </property>
+        <property name="cancleOper" type="java.lang.String">
+            <column name="CANCLE_OPER" />
+        </property>
+        <property name="cancleDate" type="java.util.Date">
+            <column name="CANCLE_DATE" length="7" />
+        </property>
+        <property name="execDevice" type="java.lang.String">
+            <column name="EXEC_DEVICE"  />
+        </property>
+        <property name="execOper" type="java.lang.String">
+            <column name="EXEC_OPER"  />
+        </property>
+        <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER"  />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ZYFYFZLTJ" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7b50a7fc-e050-4ab3-8650-8b4e5473e389">
+	<property name="ireport.zoom" value="1.6105100000000045"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="firstTime" class="java.lang.String"/>
+	<parameter name="endTime" class="java.lang.String"/>
+	<parameter name="deptName" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\conglin\\Desktop\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="applyDate" class="java.lang.String">
+		<fieldDescription><![CDATA[applyDate]]></fieldDescription>
+	</field>
+	<field name="applyNum" class="java.lang.Double">
+		<fieldDescription><![CDATA[applyNum]]></fieldDescription>
+	</field>
+	<field name="applyOpercode" class="java.lang.String">
+		<fieldDescription><![CDATA[applyOpercode]]></fieldDescription>
+	</field>
+	<field name="applyoutId" class="java.lang.String">
+		<fieldDescription><![CDATA[applyoutId]]></fieldDescription>
+	</field>
+	<field name="approveDate" class="java.util.Date">
+		<fieldDescription><![CDATA[approveDate]]></fieldDescription>
+	</field>
+	<field name="approveOpercode" class="java.lang.String">
+		<fieldDescription><![CDATA[approveOpercode]]></fieldDescription>
+	</field>
+	<field name="approveOpername" class="java.lang.String">
+		<fieldDescription><![CDATA[approveOpername]]></fieldDescription>
+	</field>
+	<field name="arkBillCode" class="java.lang.String">
+		<fieldDescription><![CDATA[arkBillCode]]></fieldDescription>
+	</field>
+	<field name="arkFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[arkFlag]]></fieldDescription>
+	</field>
+	<field name="batchNo" class="java.lang.String">
+		<fieldDescription><![CDATA[batchNo]]></fieldDescription>
+	</field>
+	<field name="bedName" class="java.lang.String">
+		<fieldDescription><![CDATA[bedName]]></fieldDescription>
+	</field>
+	<field name="beforeOutSum" class="java.lang.Double">
+		<fieldDescription><![CDATA[beforeOutSum]]></fieldDescription>
+	</field>
+	<field name="billclassCode" class="java.lang.String">
+		<fieldDescription><![CDATA[billclassCode]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="companyCode" class="java.lang.String">
+		<fieldDescription><![CDATA[companyCode]]></fieldDescription>
+	</field>
+	<field name="companyName" class="java.lang.String">
+		<fieldDescription><![CDATA[companyName]]></fieldDescription>
+	</field>
+	<field name="createDept" class="java.lang.String">
+		<fieldDescription><![CDATA[createDept]]></fieldDescription>
+	</field>
+	<field name="createTime" class="java.util.Date">
+		<fieldDescription><![CDATA[createTime]]></fieldDescription>
+	</field>
+	<field name="createUser" class="java.lang.String">
+		<fieldDescription><![CDATA[createUser]]></fieldDescription>
+	</field>
+	<field name="del_flg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[del_flg]]></fieldDescription>
+	</field>
+	<field name="deleteTime" class="java.util.Date">
+		<fieldDescription><![CDATA[deleteTime]]></fieldDescription>
+	</field>
+	<field name="deleteUser" class="java.lang.String">
+		<fieldDescription><![CDATA[deleteUser]]></fieldDescription>
+	</field>
+	<field name="dfqFreq" class="java.lang.String">
+		<fieldDescription><![CDATA[dfqFreq]]></fieldDescription>
+	</field>
+	<field name="differentId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[differentId]]></fieldDescription>
+	</field>
+	<field name="doseOnce" class="java.lang.String">
+		<fieldDescription><![CDATA[doseOnce]]></fieldDescription>
+	</field>
+	<field name="doseUnit" class="java.lang.String">
+		<fieldDescription><![CDATA[doseUnit]]></fieldDescription>
+	</field>
+	<field name="drugCnameinputcode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCnameinputcode]]></fieldDescription>
+	</field>
+	<field name="drugCnamepinyin" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCnamepinyin]]></fieldDescription>
+	</field>
+	<field name="drugCnamewb" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCnamewb]]></fieldDescription>
+	</field>
+	<field name="drugCode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCode]]></fieldDescription>
+	</field>
+	<field name="drugCommonname" class="java.lang.String">
+		<fieldDescription><![CDATA[drugCommonname]]></fieldDescription>
+	</field>
+	<field name="drugDeptCode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugDeptCode]]></fieldDescription>
+	</field>
+	<field name="drugDeptName" class="java.lang.String">
+		<fieldDescription><![CDATA[drugDeptName]]></fieldDescription>
+	</field>
+	<field name="drugDosageform" class="java.lang.String">
+		<fieldDescription><![CDATA[drugDosageform]]></fieldDescription>
+	</field>
+	<field name="drugMinimumunit" class="java.lang.String">
+		<fieldDescription><![CDATA[drugMinimumunit]]></fieldDescription>
+	</field>
+	<field name="drugName" class="java.lang.String">
+		<fieldDescription><![CDATA[drugName]]></fieldDescription>
+	</field>
+	<field name="drugNameinputcode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugNameinputcode]]></fieldDescription>
+	</field>
+	<field name="drugNamepinyin" class="java.lang.String">
+		<fieldDescription><![CDATA[drugNamepinyin]]></fieldDescription>
+	</field>
+	<field name="drugNamewb" class="java.lang.String">
+		<fieldDescription><![CDATA[drugNamewb]]></fieldDescription>
+	</field>
+	<field name="drugOutstoreList" class="java.util.List">
+		<fieldDescription><![CDATA[drugOutstoreList]]></fieldDescription>
+	</field>
+	<field name="drugPackagingnum" class="java.lang.Integer">
+		<fieldDescription><![CDATA[drugPackagingnum]]></fieldDescription>
+	</field>
+	<field name="drugPackagingunit" class="java.lang.String">
+		<fieldDescription><![CDATA[drugPackagingunit]]></fieldDescription>
+	</field>
+	<field name="drugPurchaseprice" class="java.lang.Double">
+		<fieldDescription><![CDATA[drugPurchaseprice]]></fieldDescription>
+	</field>
+	<field name="drugQuality" class="java.lang.String">
+		<fieldDescription><![CDATA[drugQuality]]></fieldDescription>
+	</field>
+	<field name="drugRetailprice" class="java.lang.Double">
+		<fieldDescription><![CDATA[drugRetailprice]]></fieldDescription>
+	</field>
+	<field name="drugSpec" class="java.lang.String">
+		<fieldDescription><![CDATA[drugSpec]]></fieldDescription>
+	</field>
+	<field name="drugStorageCode" class="java.lang.String">
+		<fieldDescription><![CDATA[drugStorageCode]]></fieldDescription>
+	</field>
+	<field name="drugStorageName" class="java.lang.String">
+		<fieldDescription><![CDATA[drugStorageName]]></fieldDescription>
+	</field>
+	<field name="drugType" class="java.lang.String">
+		<fieldDescription><![CDATA[drugType]]></fieldDescription>
+	</field>
+	<field name="drugWholesaleprice" class="java.lang.Double">
+		<fieldDescription><![CDATA[drugWholesaleprice]]></fieldDescription>
+	</field>
+	<field name="drugedBill" class="java.lang.String">
+		<fieldDescription><![CDATA[drugedBill]]></fieldDescription>
+	</field>
+	<field name="drugedName" class="java.lang.String">
+		<fieldDescription><![CDATA[drugedName]]></fieldDescription>
+	</field>
+	<field name="examDate" class="java.util.Date">
+		<fieldDescription><![CDATA[examDate]]></fieldDescription>
+	</field>
+	<field name="examNum" class="java.lang.Double">
+		<fieldDescription><![CDATA[examNum]]></fieldDescription>
+	</field>
+	<field name="examOpercode" class="java.lang.String">
+		<fieldDescription><![CDATA[examOpercode]]></fieldDescription>
+	</field>
+	<field name="examOpername" class="java.lang.String">
+		<fieldDescription><![CDATA[examOpername]]></fieldDescription>
+	</field>
+	<field name="flagId" class="java.lang.String">
+		<fieldDescription><![CDATA[flagId]]></fieldDescription>
+	</field>
+	<field name="getPerson" class="java.lang.String">
+		<fieldDescription><![CDATA[getPerson]]></fieldDescription>
+	</field>
+	<field name="getPersonName" class="java.lang.String">
+		<fieldDescription><![CDATA[getPersonName]]></fieldDescription>
+	</field>
+	<field name="groupCode" class="java.lang.String">
+		<fieldDescription><![CDATA[groupCode]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="inBillCode" class="java.lang.String">
+		<fieldDescription><![CDATA[inBillCode]]></fieldDescription>
+	</field>
+	<field name="inListCode" class="java.lang.String">
+		<fieldDescription><![CDATA[inListCode]]></fieldDescription>
+	</field>
+	<field name="manufacturerName" class="java.lang.String">
+		<fieldDescription><![CDATA[manufacturerName]]></fieldDescription>
+	</field>
+	<field name="medId" class="java.lang.String">
+		<fieldDescription><![CDATA[medId]]></fieldDescription>
+	</field>
+	<field name="minUnit" class="java.lang.String">
+		<fieldDescription><![CDATA[minUnit]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="namePinyin" class="java.lang.String">
+		<fieldDescription><![CDATA[namePinyin]]></fieldDescription>
+	</field>
+	<field name="nameWb" class="java.lang.String">
+		<fieldDescription><![CDATA[nameWb]]></fieldDescription>
+	</field>
+	<field name="notPrintDate" class="java.lang.String">
+		<fieldDescription><![CDATA[notPrintDate]]></fieldDescription>
+	</field>
+	<field name="num" class="java.lang.Double">
+		<fieldDescription><![CDATA[num]]></fieldDescription>
+	</field>
+	<field name="oldRetailPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[oldRetailPrice]]></fieldDescription>
+	</field>
+	<field name="opType" class="java.lang.String">
+		<fieldDescription><![CDATA[opType]]></fieldDescription>
+	</field>
+	<field name="outBillCode" class="java.lang.String">
+		<fieldDescription><![CDATA[outBillCode]]></fieldDescription>
+	</field>
+	<field name="outDate" class="java.util.Date">
+		<fieldDescription><![CDATA[outDate]]></fieldDescription>
+	</field>
+	<field name="outListCode" class="java.lang.String">
+		<fieldDescription><![CDATA[outListCode]]></fieldDescription>
+	</field>
+	<field name="outNum" class="java.lang.Double">
+		<fieldDescription><![CDATA[outNum]]></fieldDescription>
+	</field>
+	<field name="outSerialCode" class="java.lang.String">
+		<fieldDescription><![CDATA[outSerialCode]]></fieldDescription>
+	</field>
+	<field name="outState" class="java.lang.Integer">
+		<fieldDescription><![CDATA[outState]]></fieldDescription>
+	</field>
+	<field name="outType" class="java.lang.String">
+		<fieldDescription><![CDATA[outType]]></fieldDescription>
+	</field>
+	<field name="outlCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[outlCost]]></fieldDescription>
+	</field>
+	<field name="packQty" class="java.lang.Double">
+		<fieldDescription><![CDATA[packQty]]></fieldDescription>
+	</field>
+	<field name="packUnit" class="java.lang.String">
+		<fieldDescription><![CDATA[packUnit]]></fieldDescription>
+	</field>
+	<field name="placeCode" class="java.lang.Double">
+		<fieldDescription><![CDATA[placeCode]]></fieldDescription>
+	</field>
+	<field name="printDate" class="java.lang.String">
+		<fieldDescription><![CDATA[printDate]]></fieldDescription>
+	</field>
+	<field name="printEmpl" class="java.lang.String">
+		<fieldDescription><![CDATA[printEmpl]]></fieldDescription>
+	</field>
+	<field name="producerCode" class="java.lang.String">
+		<fieldDescription><![CDATA[producerCode]]></fieldDescription>
+	</field>
+	<field name="producerName" class="java.lang.String">
+		<fieldDescription><![CDATA[producerName]]></fieldDescription>
+	</field>
+	<field name="purchaseCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[purchaseCost]]></fieldDescription>
+	</field>
+	<field name="purchasePrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[purchasePrice]]></fieldDescription>
+	</field>
+	<field name="recipeNo" class="java.lang.String">
+		<fieldDescription><![CDATA[recipeNo]]></fieldDescription>
+	</field>
+	<field name="remark" class="java.lang.String">
+		<fieldDescription><![CDATA[remark]]></fieldDescription>
+	</field>
+	<field name="retailCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[retailCost]]></fieldDescription>
+	</field>
+	<field name="retailPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[retailPrice]]></fieldDescription>
+	</field>
+	<field name="returnNum" class="java.lang.Double">
+		<fieldDescription><![CDATA[returnNum]]></fieldDescription>
+	</field>
+	<field name="returnOutCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[returnOutCost]]></fieldDescription>
+	</field>
+	<field name="sendType" class="java.lang.String">
+		<fieldDescription><![CDATA[sendType]]></fieldDescription>
+	</field>
+	<field name="sequenceNo" class="java.lang.String">
+		<fieldDescription><![CDATA[sequenceNo]]></fieldDescription>
+	</field>
+	<field name="serialCode" class="java.lang.String">
+		<fieldDescription><![CDATA[serialCode]]></fieldDescription>
+	</field>
+	<field name="showFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[showFlag]]></fieldDescription>
+	</field>
+	<field name="showUnit" class="java.lang.String">
+		<fieldDescription><![CDATA[showUnit]]></fieldDescription>
+	</field>
+	<field name="signPerson" class="java.lang.String">
+		<fieldDescription><![CDATA[signPerson]]></fieldDescription>
+	</field>
+	<field name="signPersonName" class="java.lang.String">
+		<fieldDescription><![CDATA[signPersonName]]></fieldDescription>
+	</field>
+	<field name="specialFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[specialFlag]]></fieldDescription>
+	</field>
+	<field name="specs" class="java.lang.String">
+		<fieldDescription><![CDATA[specs]]></fieldDescription>
+	</field>
+	<field name="stop_flg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[stop_flg]]></fieldDescription>
+	</field>
+	<field name="storeCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[storeCost]]></fieldDescription>
+	</field>
+	<field name="storeNum" class="java.lang.Double">
+		<fieldDescription><![CDATA[storeNum]]></fieldDescription>
+	</field>
+	<field name="storeSum" class="java.lang.Double">
+		<fieldDescription><![CDATA[storeSum]]></fieldDescription>
+	</field>
+	<field name="strikeFlag" class="java.lang.Integer">
+		<fieldDescription><![CDATA[strikeFlag]]></fieldDescription>
+	</field>
+	<field name="tradeName" class="java.lang.String">
+		<fieldDescription><![CDATA[tradeName]]></fieldDescription>
+	</field>
+	<field name="updateTime" class="java.util.Date">
+		<fieldDescription><![CDATA[updateTime]]></fieldDescription>
+	</field>
+	<field name="updateUser" class="java.lang.String">
+		<fieldDescription><![CDATA[updateUser]]></fieldDescription>
+	</field>
+	<field name="useName" class="java.lang.String">
+		<fieldDescription><![CDATA[useName]]></fieldDescription>
+	</field>
+	<field name="validDate" class="java.util.Date">
+		<fieldDescription><![CDATA[validDate]]></fieldDescription>
+	</field>
+	<field name="validState" class="java.lang.String">
+		<fieldDescription><![CDATA[validState]]></fieldDescription>
+	</field>
+	<field name="wholesaleCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[wholesaleCost]]></fieldDescription>
+	</field>
+	<field name="wholesalePrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[wholesalePrice]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="044251f7-73c9-430b-a3a1-15b4e92ef186" x="0" y="0" width="749" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[住院发药工作量统计]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d54298af-1102-4d48-a469-a606ce3334f2" x="0" y="41" width="41" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[床号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b02010ae-e458-451f-84f2-c485b758ddd0" x="41" y="41" width="40" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7fc945da-6716-432a-8e69-41070a44c07a" x="81" y="41" width="60" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[药品名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f66fad3b-751c-4584-a8ce-ee311d442f84" x="141" y="41" width="38" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[频次]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="49df3d41-4e79-47d0-9042-72007c4ea7b7" x="179" y="41" width="30" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[用法]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="130b3dcf-c0f7-4ea4-b249-3fe778c62acc" x="209" y="41" width="30" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[总量]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f8179942-1f1c-4318-bcf6-baa60457496d" x="239" y="41" width="40" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[最小单位]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3110606b-d2de-4d68-aa22-a108a7fc2af5" x="279" y="41" width="50" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[取药药房]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e70d2c10-4d58-4f70-93f9-e6d86f01f274" x="329" y="41" width="40" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[发送类型]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="00baecd3-da31-4ab2-8cac-36f7a090f77c" x="369" y="41" width="50" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[摆药单]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f07caf06-1270-44a7-a3c0-33ca31e17eda" x="419" y="41" width="50" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[发送人]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="248d83ed-9c0c-486b-91f9-390ae94429e8" x="469" y="41" width="75" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[发送时间]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f7bf2ab2-42ec-440d-acfb-d441b4fa39ed" x="544" y="41" width="50" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[发药人]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a354eedf-9515-43c6-b00f-a04318ebab33" x="594" y="41" width="75" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[发药时间]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="675e4896-b8da-4b68-8a8e-00a1cead4fd5" x="669" y="41" width="40" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[有效性]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b952ccea-5d03-465d-8e76-085fcfc3b052" x="710" y="41" width="40" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[是否摆药]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fca22a8d-a58b-41dc-b3e4-f13fb3b4021e" x="0" y="21" width="69" height="20"/>
+				<textElement>
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[开始时间：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a53c1493-9f29-4fac-9e72-2ee3d8976b40" x="180" y="21" width="67" height="20"/>
+				<textElement>
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[结束时间：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8710801c-765c-495c-9b13-855a3ecdadec" x="360" y="21" width="41" height="20"/>
+				<textElement>
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[药房：]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b294c39b-2263-43a6-aa08-cea4fedddff5" x="69" y="21" width="100" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{firstTime}==null?"":$P{firstTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1d5cee5e-6048-43f9-a30d-58721371cac2" x="247" y="21" width="100" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{endTime}==null?"":$P{endTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b59cfcab-7697-42e0-b8ff-e47a46f02d95" x="401" y="21" width="100" height="20"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{deptName}==null?"":$P{deptName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="102" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="fabf125f-8e1b-47d2-b9d2-b55a30c7626c" x="1" y="0" width="751" height="100"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{drugOutstoreList})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "ZYFYFZLTJ_subreport.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

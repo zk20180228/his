@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="linshiyizhudanzibiao"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="595"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="mid" isForPrompting="false" class="java.lang.String"/>
+	<queryString><![CDATA[select t.DATE_BGN2,
+       t.DATE_BGN1,
+       t.DATE_BGN,
+       t.DATE_END2,
+       t.DATE_END1,
+       t.DATE_END,
+       t.ITEM_NAME,
+       t.DOC_CODE,
+       t.confirm_usercd,
+       t.confirm_date,
+       t.dc_docnm,
+        t.sortId,      
+       t.execute_date,
+       t.EXECUTE_USERCD,
+        t.combNo,
+         t.decmpsState，
+          t.mainDrug,
+           t.inpatientNo
+  from (select to_char(a.DATE_BGN, 'hh:mm') as DATE_BGN2,
+       to_char(a.DATE_BGN, 'yyyy-MM-dd') as DATE_BGN1,
+       a.DATE_BGN as DATE_BGN,
+       a.SORT_ID            as sortId,
+       to_char(a.DATE_END, 'hh:mm') as DATE_END2,
+       to_char(a.DATE_END, 'yyyy-MM-dd') as DATE_END1,
+       a.DATE_END as DATE_END,
+        a.DECMPS_STATE       as decmpsState,
+       a.ITEM_NAME as ITEM_NAME,
+       a.COMB_NO            as combNo,
+       (select d.EMPLOYEE_NAME from t_employee d where d.employee_jobno = a.DOC_CODE) as DOC_CODE,
+       (select d.EMPLOYEE_NAME
+          from t_employee d
+         where d.employee_jobno = a.confirm_usercd) as confirm_usercd,
+       a.confirm_date,
+       a.dc_docnm,
+       a.execute_date,
+        a.MAIN_DRUG          as mainDrug,
+         a.INPATIENT_NO       as inpatientNo,
+       (select d.EMPLOYEE_NAME
+          from t_employee d
+         where d.employee_jobno = a.EXECUTE_USERCD) as EXECUTE_USERCD 
+          from HONRYHIS.T_INPATIENT_ORDER_NOW a
+         where a.stop_flg = 0
+           and a.del_flg = 0
+           and nvl(to_char(a.SUBTBL_FLAG), 'xx') != '1'
+           and a.MO_STAT != 3
+           and a.mo_stat != 4
+        union
+       select to_char(b.DATE_BGN, 'hh:mm') as DATE_BGN2,
+       to_char(b.DATE_BGN, 'yyyy-MM-dd') as DATE_BGN1,
+       b.DATE_BGN as DATE_BGN,
+       b.SORT_ID            as sortId,
+       to_char(b.DATE_END, 'hh:mm') as DATE_END2,
+       to_char(b.DATE_END, 'yyyy-MM-dd') as DATE_END1,
+       b.DATE_END as DATE_END,
+        b.DECMPS_STATE       as decmpsState,
+       b.ITEM_NAME as ITEM_NAME,
+       b.COMB_NO            as combNo,
+       (select d.EMPLOYEE_NAME from t_employee d where d.employee_jobno = b.DOC_CODE) as DOC_CODE,
+       (select d.EMPLOYEE_NAME
+          from t_employee d
+         where d.employee_jobno = b.confirm_usercd) as confirm_usercd,
+       b.confirm_date,
+       b.dc_docnm,
+       b.execute_date,
+        b.MAIN_DRUG          as mainDrug,
+         b.INPATIENT_NO       as inpatientNo,
+       (select d.EMPLOYEE_NAME
+          from t_employee d
+         where d.employee_jobno = b.EXECUTE_USERCD) as EXECUTE_USERCD 
+          from HONRYHIS.T_INPATIENT_ORDER_NOW b
+         where b.MO_STAT = 3
+           and b.DATE_END >=
+               to_date((select  sysdate - interval '7' day  from dual), 'yyyy-mm-dd hh24:mi:ss')) t
+ where t.mainDrug = 1
+   and t.inpatientNo = $P{mid}
+   and t.decmpsState = 0
+ ORDER BY t.combNo, t.sortId
+       
+
+   ]]></queryString>
+
+	<field name="DATE_BGN2" class="java.lang.String"/>
+	<field name="DATE_BGN1" class="java.lang.String"/>
+	<field name="DATE_BGN" class="java.sql.Timestamp"/>
+	<field name="DATE_END2" class="java.lang.String"/>
+	<field name="DATE_END1" class="java.lang.String"/>
+	<field name="DATE_END" class="java.sql.Timestamp"/>
+	<field name="ITEM_NAME" class="java.lang.String"/>
+	<field name="DOC_CODE" class="java.lang.String"/>
+	<field name="CONFIRM_USERCD" class="java.lang.String"/>
+	<field name="CONFIRM_DATE" class="java.sql.Timestamp"/>
+	<field name="DC_DOCNM" class="java.lang.String"/>
+	<field name="SORTID" class="java.math.BigDecimal"/>
+	<field name="EXECUTE_DATE" class="java.sql.Timestamp"/>
+	<field name="EXECUTE_USERCD" class="java.lang.String"/>
+	<field name="COMBNO" class="java.lang.String"/>
+	<field name="DECMPSSTATE" class="java.math.BigDecimal"/>
+	<field name="MAINDRUG" class="java.math.BigDecimal"/>
+	<field name="INPATIENTNO" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="35"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="60"
+						height="35"
+						key="textField-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{DATE_BGN1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="119"
+						y="0"
+						width="132"
+						height="35"
+						key="textField-2"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ITEM_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="251"
+						y="0"
+						width="40"
+						height="35"
+						key="textField-3"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{DOC_CODE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="291"
+						y="0"
+						width="91"
+						height="35"
+						key="textField-4"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.sql.Timestamp"><![CDATA[$F{DATE_BGN}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="382"
+						y="0"
+						width="40"
+						height="35"
+						key="textField-5"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{EXECUTE_USERCD}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="422"
+						y="0"
+						width="60"
+						height="35"
+						key="textField-6"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{DATE_END1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="60"
+						y="0"
+						width="59"
+						height="35"
+						key="textField-7"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{DATE_BGN2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="482"
+						y="0"
+						width="49"
+						height="35"
+						key="textField-8"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" pdfFontName="STSong-Light" size="10" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{DATE_END2}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

@@ -1,0 +1,185 @@
+*{
+	font-size:13px
+}
+body, ul, li, form, hr, p, h1, h2, h3, h4, h5, h6, table, tr, td, input, a, span, img, dl, dt, dd,#divLayout .changeskin legend{
+	font-size:15px
+}
+.main-top .t-menu .middle a, a:link,.main-top .t-menu,.chnav .spreadlogo,.chnav .t-menu .middle a{
+	font-size:13px;
+}
+ul#topnav li.nav-menu a{
+	font-size:17px;
+}
+.header .head-title,.setting .shortcut ul li a,.content ul li a,.content ul li span,ul#topnav li .sub a,.l-btn-text,.user-info,.home-info,.time-info,.pagination span,
+.datagrid-cell, .datagrid-cell-group, .datagrid-header-rownumber, .datagrid-cell-rownumber,.datagrid-header .datagrid-cell span,.tabs-title,.tree-title,.textbox .textbox-prompt,
+.panel-title,.panel-body,.panel-body div,.tableLabel,.textbox .textbox-text,#buttonListId option,#selectBut option,.honry-view option,.xmenu dl dt,.select-info .top-label,.role-info{
+	font-size:15px;
+}
+.header .head-title span{
+	font-size:21px;
+}
+.panel-body-noheader font,#toolbarId>span,#longda>div>span,#infEditForm .birth,#audEl .layout-panel-north span,.halfwaytip,.sfont,.hisAdviceTip,.nurseViewFont,#ananEl span,.adviceFontSize span,
+.herbalSize1 span{
+	font-size:13px !important;
+}
+td.honry-lable,.tableCss .TDlabel,#infEditForm .sub_title font,#infEditForm .birthTip,#div1 font,#cc font.tip,#searchTab .tip,
+#divLayout .tip,#divLayout .icd,.tecCarrierTip,.jcfx select,.tb3chart p,.tbmid_c p,.outpatientFont1,.monthlyTit th,
+.sevenConfirmed #tableTitle,.sevenConfirmedFont,.treatmentFontYear,.manufacturertEditFont .honry-lable span,.supplyEditFont .honry-lable span,
+#toolbarId #totalPrice,.noticeEditFont label,.bedUseConditionList .datagrid-header .datagrid-cell span b,.panel-body-noheader #sqxinxi font,
+.infectiousViewSize font{
+	font-size:15px !important;
+}
+#baocun .panel-body-noheader font,.panel-body-noheader .title,.dosageTit,#dosageViewFontSize,.panel-body-noheader font.consultationListFontSize{
+	font-size:33px !important;
+}
+#cc h5,.nurseCharge{
+	font-size:31px !important;
+}
+#infEditForm .title{
+	font-size:29px !important;
+}
+.panel-body-noheader font.outpatienttit,.panel-body-noheader font.empWorkTit{
+	font-size:34px !important;
+}
+.panel-body-noheader font.outpatientsubtit,.threeTestFont{
+	font-size:25px !important;
+}
+.konwledgeBaseFont p span{
+	font-size:25px !important;
+	font-weight:normal;
+	font-family:"宋体", "SimSun";
+}
+.panel-body-noheader font.stopReason,.drugDispensTit,#outpatientStop{
+	font-size:26px !important;
+}
+.wzadjustTit{
+	font-size:27px !important;
+}
+.adjustNum,.table1top h2, .table1bottom h2, .tbb1 h2,.table3top h2, .table3bottom h2,.topleft h2, .topright h2, .table2bottom h2,.outpatientFont,.monthlyTit1 th{
+	font-size:17px !important;
+}
+.mz,.table3top .fk,.sevenConfirmed .TDlabel1 th{
+	font-size:16px !important;
+}
+.operbilling,.cleft h2, .cright h2{
+	font-size:19px !important;
+}
+.reportname select,.top_se .time,.top_se .danw,.table2bottom .tbleft select, .table2bottom .tbmid select,#msgWinId #showDetail,#toolbarId .webPreregisterFont,
+.docsetList .honry-lable span{
+	font-size:14px !important;
+}
+.treatmentFont{
+	font-size:21px !important;
+}
+ul#topnav li.nav-menu{
+	width:152px;
+}
+ul#topnav li .sub ul{
+	width:160px;
+}
+#begintime,#endtime,#cc #login,#cc #end,#editForm .Wdate,#bb .Wdate,.informationChange .Wdate,.DrugSpedrugApply .Wdate,.leaveOrderListSize .Wdate,.inpatientNumberSize #beganTime,
+.invoiceInspectListSize .Wdate,.inpatientApplicationMZ #shijian,.inpatientApplication #shijian,.deliveryEditDateSize .Wdate,.patientInfoDateSize .Wdate,.arrangementList .Wdate,
+.docAdvDetailNewDateSize .Wdate,.permissionDateSize .Wdate,.nurseImplementDateSize .Wdate{
+	width:170px !important;
+}
+.operationDept #endtime,.operationCostList #endTime{
+	width:125px !important;
+}
+.operationDept .middleSize,.herbalSize,#adNotDrugSamJudgeTitleTdId,.stackModelSize{
+	width:75px !important;
+}
+.synEndTime #endTime,.syntheticalStatList #endtime{
+	width:110px !important;
+}
+.chargeBillistSize #endTime,.medicalFeeDetailSize #endTime,.nurseDrugDispensSize #endTime{
+	width:100px !important;
+}
+.newMenu .menuInput .ksnew{
+	padding-bottom:1px;
+}
+.stack>span{
+	margin-left:-12px;
+}
+.middleSize{
+	width: 250px !important;
+}
+.dischargePersonList #dept,.dischargePersonList #quarter,.dischargePersonList #day,.anesthesiaList #endtime{
+	width:150px !important;
+}
+.dischargePersonList #year,.dischargePersonList #month,.arrangeListSize #endtime,.registrationListSize #endtime{
+	width:145px !important;
+}
+.inpatientInfoSize1,.inpatientSize1{
+	width:73px !important;
+}
+.inpatientSize2,.inpatientSize4{
+	width:210px !important;
+}
+.inpatientInfoSize2,.inpatientInfoSize4{
+	width:210px !important;
+}
+.inpatientInfoSize2>input,.inpatientInfoSize4>input{
+	width: 170px !important;
+}
+.inpatientSize2>span,.inpatientSize4>span,.daybalance #startTime{
+	width: 170px !important;
+}
+.inpatientSize2>span>input,.inpatientSize4>span>input{
+	width: 152px !important;
+}
+.inpatientInfoSize3,.inpatientInfoSize5,.inpatientSize3,.inpatientSize5{
+	width:80px !important;
+}
+.anaerecordList #endTime,.arrangementList1 #endtime{
+	width:120px !important;
+}
+.inpatientFeeBalSumSize>span{
+	width:138px !important;
+}
+.operationDept .operationDeptList{
+	width:230px !important;
+}
+.checkBalanceList .combo,.checkInventory .combo{
+	width:135px !important;
+}
+.checkBalanceList .combo input,.checkInventory .combo input{
+	width:113px !important;
+}
+.orders_kcgl .combo{
+	width:148px !important;
+}
+.chnav .spreadlogo{
+	width: 54px;
+}
+.chnav .t-menu,.chnav .t-menu .middle{
+	width:200px;
+}
+.change{
+	width: 75px;
+}
+.DrugSpedrugApplyDateSize #inDate,.registrationListSize1 .Wdate,.anesthesiaListDateSize .Wdate,#secTable .Wdate,#editForm .businessExtcor .Wdate{
+	width:172px !important;
+}
+.recipelStatList #endTime,.anesthesiaList #endtime{
+	width:120px !important;
+}
+.incomeStatisticSize1{
+	width:75px !important;
+}
+.incomeStatisticSize2{
+	width:436px !important;
+}
+.medicalFeeDetailSize{
+	width:876px;
+}
+.deptLeadDrugListSize1{
+	width:380px;
+}
+.yuyueSize{
+	width:75px !important;
+}
+.nurseBedView{
+	width:190px !important;
+	margin:12px !important;
+	padding:20px 8px !important;
+}

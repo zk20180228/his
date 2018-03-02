@@ -1,0 +1,89 @@
+{"total":1,"rows":[
+	{"order":"1","date":"2014/8/1","openOrder1":"10","fee1":"158.00","openOrder2":"7","fee1":"1114.40","openOrder3":"1","fee1":"530.00",
+	"openOrder4":"52","fee4":"7124.00","openOrder5":"1","fee5":"240.00","openOrder6":"2","fee6":"444.00","openOrder7":"73","fee7":"9610.40",
+	"openOrder8":"53","fee8":"18656.00","openOrder9":"1","fee9":"36.30","openOrder10":"0","fee10":"0.00","openOrder11":"54","fee11":"18692.30",
+	"countIncome":"9664.40"},
+	{"order":"2","date":"2014/8/4","openOrder1":"5","fee1":"85.00","openOrder2":"9","fee1":"460.80","openOrder3":"5","fee1":"2650.00",
+	"openOrder4":"33","fee4":"5511.00","openOrder5":"2","fee5":"480.00","openOrder6":"3","fee6":"36.00","openOrder7":"57","fee7":"9222.80",
+	"openOrder8":"63","fee8":"22176.00","openOrder9":"6","fee9":"396.00","openOrder10":"0","fee10":"0.00","openOrder11":"69","fee11":"22572.00",
+	"countIncome":"9291.80"},
+	{"order":"3","date":"2014/8/5","openOrder1":"13","fee1":"754.00","openOrder2":"3","fee1":"177.60","openOrder3":"4","fee1":"2120.00",
+	"openOrder4":"16","fee4":"2190.00","openOrder5":"0","fee5":"0.00","openOrder6":"0","fee6":"0.00","openOrder7":"36","fee7":"5243.60",
+	"openOrder8":"85","fee8":"29920.00","openOrder9":"5","fee9":"122.50","openOrder10":"0","fee10":"0.00","openOrder11":"90","fee11":"30042.50",
+	"countIncome":"5333.60"},
+	{"order":"4","date":"2014/8/6","openOrder1":"15","fee1":"2842.50","openOrder2":"5","fee1":"296.00","openOrder3":"1","fee1":"530.00",
+	"openOrder4":"31","fee4":"3441.00","openOrder5":"0","fee5":"0.00","openOrder6":"0","fee6":"0.00","openOrder7":"52","fee7":"7109.50",
+	"openOrder8":"32","fee8":"11264.00","openOrder9":"4","fee9":"151.60","openOrder10":"0","fee10":"0.00","openOrder11":"36","fee11":"11415.60",
+	"countIncome":"7145.50"},
+	{"order":"5","date":"2014/8/7","openOrder1":"7","fee1":"843.50","openOrder2":"7","fee1":"414.40","openOrder3":"4","fee1":"2120.00",
+	"openOrder4":"24","fee4":"3288.00","openOrder5":"3","fee5":"720.00","openOrder6":"0","fee6":"0.00","openOrder7":"45","fee7":"7385.90",
+	"openOrder8":"89","fee8":"31328.00","openOrder9":"8","fee9":"348.00","openOrder10":"0","fee10":"0.00","openOrder11":"97","fee11":"31676.00",
+	"countIncome":"7482.90"},
+	{"order":"6","date":"2014/8/9","openOrder1":"5","fee1":"895.00","openOrder2":"6","fee1":"355.20","openOrder3":"3","fee1":"1590.00",
+	"openOrder4":"45","fee4":"5760.00","openOrder5":"0","fee5":"0.00","openOrder6":"0","fee6":"0.00","openOrder7":"59","fee7":"8600.20",
+	"openOrder8":"75","fee8":"26400.00","openOrder9":"5","fee9":"232.50","openOrder10":"0","fee10":"0.00","openOrder11":"80","fee11":"26632.50",
+	"countIncome":"8680.20"},
+	{"order":"7","date":"2014/8/11","openOrder1":"12","fee1":"1773.60","openOrder2":"9","fee1":"532.80","openOrder3":"3","fee1":"1590.00",
+	"openOrder4":"22","fee4":"3014.00","openOrder5":"4","fee5":"960.00","openOrder6":"0","fee6":"0.00","openOrder7":"50","fee7":"7870.40",
+	"openOrder8":"125","fee8":"44000.00","openOrder9":"13","fee9":"455.00","openOrder10":"0","fee10":"0.00","openOrder11":"138","fee11":"44455.00",
+	"countIncome":"8008.40"},
+	{"order":"8","date":"2014/8/12","openOrder1":"9","fee1":"1750.50","openOrder2":"9","fee1":"532.80","openOrder3":"6","fee1":"3180.00",
+	"openOrder4":"64","fee4":"11840.00","openOrder5":"0","fee5":"0.00","openOrder6":"0","fee6":"0.00","openOrder7":"88","fee7":"17303.30",
+	"openOrder8":"58","fee8":"20416.00","openOrder9":"16","fee9":"848.00","openOrder10":"0","fee10":"0.00","openOrder11":"74","fee11":"21264.00",
+	"countIncome":"17377.30"},
+	{"order":"9","date":"2014/8/13","openOrder1":"15","fee1":"2730.00","openOrder2":"4","fee1":"236.80","openOrder3":"3","fee1":"1590.00",
+	"openOrder4":"22","fee4":"3014.00","openOrder5":"0","fee5":"0.00","openOrder6":"0","fee6":"0.00","openOrder7":"44","fee7":"7570.80",
+	"openOrder8":"90","fee8":"31680.00","openOrder9":"11","fee9":"6996.60","openOrder10":"0","fee10":"0.00","openOrder11":"101","fee11":"32379.60",
+	"countIncome":"7671.80"},
+	{"order":"10","date":"2014/8/14","openOrder1":"19","fee1":"3412.40","openOrder2":"8","fee1":"473.60","openOrder3":"3","fee1":"1590.00",
+	"openOrder4":"68","fee4":"9316.00","openOrder5":"0","fee5":"0.00","openOrder6":"0","fee6":"0.00","openOrder7":"98","fee7":"14792.00",
+	"openOrder8":"96","fee8":"33792.00","openOrder9":"11","fee9":"470.80","openOrder10":"0","fee10":"0.00","openOrder11":"107","fee11":"34262.80",
+	"countIncome":"14899.00"},
+	{"order":"11","date":"2014/8/16","openOrder1":"11","fee1":"1633.50","openOrder2":"2","fee1":"118.40","openOrder3":"2","fee1":"1060.00",
+	"openOrder4":"36","fee4":"4932.00","openOrder5":"0","fee5":"0.00","openOrder6":"0","fee6":"0.00","openOrder7":"51","fee7":"7743.90",
+	"openOrder8":"85","fee8":"29920.00","openOrder9":"4","fee9":"149.60","openOrder10":"0","fee10":"0.00","openOrder11":"89","fee11":"30069.60",
+	"countIncome":"7832.90"},
+	{"order":"12","date":"2014/8/18","openOrder1":"14","fee1":"3028.20","openOrder2":"7","fee1":"414.40","openOrder3":"1","fee1":"530.00",
+	"openOrder4":"86","fee4":"15910.00","openOrder5":"0","fee5":"0.00","openOrder6":"3","fee6":"135.00","openOrder7":"111","fee7":"20017.60",
+	"openOrder8":"48","fee8":"16896.00","openOrder9":"7","fee9":"444.50","openOrder10":"0","fee10":"0.00","openOrder11":"55","fee11":"17340.50",
+	"countIncome":"20072.60"},
+	{"order":"13","date":"2014/8/19","openOrder1":"17","fee1":"3583.60","openOrder2":"3","fee1":"177.60","openOrder3":"5","fee1":"2650.00",
+	"openOrder4":"33","fee4":"4521.00","openOrder5":"0","fee5":"0.00","openOrder6":"0","fee6":"0.00","openOrder7":"58","fee7":"10932.20",
+	"openOrder8":"75","fee8":"26400.00","openOrder9":"2","fee9":"73.60","openOrder10":"0","fee10":"0.00","openOrder11":"77","fee11":"26473.60",
+	"countIncome":"11009.20"},
+	{"order":"14","date":"2014/8/20","openOrder1":"18","fee1":"3794.40","openOrder2":"6","fee1":"355.20","openOrder3":"2","fee1":"1060.00",
+	"openOrder4":"15","fee4":"2430.00","openOrder5":"0","fee5":"0.00","openOrder6":"0","fee6":"0.00","openOrder7":"41","fee7":"7639.60",
+	"openOrder8":"24","fee8":"8448.00","openOrder9":"6","fee9":"319.20","openOrder10":"0","fee10":"0.00","openOrder11":"30","fee11":"8767.20",
+	"countIncome":"7669.60"},
+	{"order":"15","date":"2014/8/21","openOrder1":"29","fee1":"6113.20","openOrder2":"7","fee1":"414.40","openOrder3":"5","fee1":"2650.00",
+	"openOrder4":"37","fee4":"5069.00","openOrder5":"0","fee5":"0.00","openOrder6":"0","fee6":"0.00","openOrder7":"78","fee7":"14246.60",
+	"openOrder8":"48","fee8":"16896.00","openOrder9":"8","fee9":"428.00","openOrder10":"0","fee10":"0.00","openOrder11":"56","fee11":"17324.00",
+	"countIncome":"14302.60"},
+	
+	
+	{"order":"汇总","openOrder1":"199","fee1":"33397.40",
+	"openOrder2":"92","fee1":"6074.40",
+	"openOrder3":"48","fee1":"25440.00",
+	"openOrder4":"584","fee4":"87362.00",
+	"openOrder5":"10","fee5":"2400.00",
+	"openOrder6":"8","fee6":"615.00",
+	"openOrder7":"941","fee7":"155288.80",
+	"openOrder8":"1046","fee8":"368192.00",
+	"openOrder9":"107","fee9":"5175.20",
+	"openOrder10":"0","fee10":"0.00",
+	"openOrder11":"1153","fee11":"373367.20",
+	"countIncome":"156441.80"}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+]}

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/javascript" src="./calendar.js"></script>
+<script type="text/javascript" src="./config.js"></script>
+<script type="text/javascript" src="./WdatePicker.js"></script>
+</head>
+<!-------------------------------------------------------->
+<body>
+<input id="d11" type="text" onClick="WdatePicker()"/>
+<!-------------------------------------------------------->
+<hr noshade="noshade"/>
+<input id="d12" type="text"/>
+<img onclick="WdatePicker({el:$dp.$('d12')})" src="skin/datePicker.gif" width="16" height="22" align="absmiddle">
+<!-------------------------------------------------------->
+<hr />
+<div id="div1"></div>
+<script>
+WdatePicker({eCont:'div1',onpicked:function(dp){alert('你选择的日期是:'+dp.cal.getDateStr())}})
+</script>
+<!-------------------------------------------------------->
+<hr />
+<input type="text" id="d233" onFocus="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss',alwaysUseStartDate:true})"/>lll
+<!-------------------------------------------------------->
+<hr />
+<input type="text" id="d241" onfocus="WdatePicker({dateFmt:'yyyy年MM月dd日 HH时mm分ss秒'})" class="Wdate" style="width:300px"/>
+<!-------------------------------------------------------->
+<hr />
+<input type="text" id="d242" onfocus="WdatePicker({skin:'whyGreen',dateFmt:'H:mm:ss'})" class="Wdate"/>
+<!-------------------------------------------------------->
+<hr />
+<input type="text" id="d242" onfocus="WdatePicker({skin:'whyGreen'})" class="Wdate"/>
+<!-------------------------------------------------------->
+<hr />
+<input id="d312" class="Wdate" type="text" onFocus="WdatePicker({lang:'en'})"/>
+<!-------------------------------------------------------->
+<hr />
+<input id="d411" class="Wdate" type="text" onfocus="WdatePicker({skin:'whyGreen',minDate:'2006-09-10',maxDate:'2008-12-20'})"/>
+<!-------------------------------------------------------->
+<hr />
+<input id="d421" class="Wdate" type="text" onfocus="WdatePicker({skin:'whyGreen',maxDate:'%y-%M-%d'})"/>
+<!-------------------------------------------------------->
+<hr />
+<input id="d422" class="Wdate" type="text" onfocus="WdatePicker({minDate:'%y-%M-#{%d}'})"/>
+<!-------------------------------------------------------->
+<hr />
+<input id="d5221" class="Wdate" type="text" onFocus="var d5222=$dp.$('d5222');WdatePicker({onpicked:function(){d5222.focus();},skin:'whyGreen',minDate:'%y-%M-#{%d}'})"/>
+至
+<input id="d5222" class="Wdate" type="text" onFocus="WdatePicker({skin:'whyGreen',minDate:'#F{$dp.$D(\'d5221\')}'})"/>
+
+<!-------------------------------------------------------->
+<hr />
+
+<input id="arriveDate" class="Wdate" type="text" onfocus="var leavedate=$dp.$('leavedate');WdatePicker({onpicked:function(){leavedate.focus();},skin:'whyGreen',minDate:'%y-%M-#{%d}'})"/>
+至
+<input id="leavedate" class="Wdate" type="text" onfocus="WdatePicker({skin:'whyGreen',minDate:'#F{$dp.$D(\'arriveDate\')}'})"/>
+
+</body>
+</html>

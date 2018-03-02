@@ -1,0 +1,22 @@
+.tableCss {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid #95b8e7;
+	width: 100%;
+}
+
+.tableCss td {
+	border: 1px solid #95b8e7;
+	padding: 5px 15px;
+	word-break: keep-all;
+	white-space: nowrap;
+}
+
+.tableCss .TDlabel {
+	background: #E0ECFF;
+	text-align: right;
+	width: 10%;
+}
+.tableCss .TDinput {
+	width: 20%;
+}

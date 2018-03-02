@@ -1,0 +1,48 @@
+<div class="modal" ng-controller="KisBpmConditionExpressionPopupCtrl">
+<div class="modal-dialog">
+	<div ng-class="conditionClass" class="ifBox" style="position: absolute;top: 0;left:0;width: 100%;height: 100%;background-color: #fff;min-height: 470px;">
+		<iframe id = "conditionIf" src="/his-portal/oa/formInfo/conditionActiviti.action" style="border: none;box-shadow: none;width: 100%; height: calc(100% - 40px);"></iframe>
+		<div class="footerContent" style="width: 100%;height: 40px;text-align: center;">
+			<div class="navBtnBox">
+				<button type="submit" ng-click="conditionSave($event)" class="btn btn-theme">保存</button>
+				<button type="button" ng-click="conditionCloseWin($event)" class="btn btn-default">关闭</button>
+			</div>
+		</div>
+	</div>
+<div class="modal-content">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="close()">&times;</button>
+    <h2 translate>PROPERTY.SEQUENCEFLOW.CONDITION.TITLE</h2>
+</div>
+<div class="modal-body">
+	
+    <div class="detail-group clearfix">
+        <div class="form-group clearfix mouldHide">
+            <div class="col-xs-12">
+                <label class="col-xs-3">{{'PROPERTY.SEQUENCEFLOW.CONDITION.STATIC' | translate}}</label>
+                <div class="col-xs-9">
+                    <textarea class="form-control" ng-model="conditionExpression.value" style="width:90%; height:100%; max-width: 100%; max-height: 100%; min-height: 100px"/>
+                </div>
+            </div>
+        </div>
+        <div class="form-group clearfix">
+            <div class="col-xs-12">
+                <label class="col-xs-3">{{'PROPERTY.SEQUENCEFLOW.CONDITION.STATIC' | translate}}</label>
+                <div class="col-xs-9">
+                	<p style="line-height: 30px;font-size: 16px;" ng-bind-html="conValue"></p>
+                	<button ng-click="isShowFn()" style="float: right;" class="btn btn-primary" ng-bind="addOrEgit" ></button>
+                	<button ng-class="clearAllStyle" style="float: right;" ng-click="clearAll()" class="btn btn-primary" >清空</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <div class="modal-footer">
+        <button ng-click="close()" class="btn btn-primary" translate>ACTION.CANCEL</button>
+        <button ng-click="save()" class="btn btn-primary" translate>ACTION.SAVE</button>
+    </div>
+</div>
+</div>
+</div>

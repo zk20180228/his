@@ -1,0 +1,65 @@
+table.honry-stable td {
+	border-right: 1px solid #95b8e7;
+	padding: 5px 15px;
+	word-break: keep-all;
+	white-space:nowrap;
+}
+
+table.honry-table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-left: 1px solid #95b8e7;
+	border-top: 1px solid #95b8e7;
+	width:95%;
+}
+
+table.honry-table td {
+	border-right: 1px solid #95b8e7;
+	border-bottom: 1px solid #95b8e7;
+	padding: 5px 15px;
+	word-break: keep-all;
+	white-space:nowrap;
+}
+
+td.honry-info input {
+	width: 90%;
+}
+
+td.honry-rows {
+	width: 25%;
+	text-align: left;
+}
+
+td.honry-lable {
+	width: 25%;
+	background: #E0ECFF;	
+	text-align: right;
+}
+
+
+td.honry-info,td.honry-view {
+	text-align: left;
+	width: 50%;
+}
+.searchTable{
+	width:100%;
+	border:1px solid #95b8e7;
+	padding:5px;
+}
+/**
+*输入框样式：蓝色边框
+**/
+.inputCss{
+	padding:0px;
+	background-color: #fff;
+    border: 1px solid #95b8e7;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+	white-space: nowrap;
+}
+/********public样式设计end************/

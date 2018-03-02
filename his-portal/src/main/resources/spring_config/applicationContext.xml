@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+         http://www.springframework.org/schema/context 
+         http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+	<!-- spring管理properties文件 -->
+	<context:property-placeholder location="classpath:elasticsearch.properties" ignore-unresolvable="true"/>
+	<context:property-placeholder location="classpath:rabbitmq.properties" ignore-unresolvable="true"/>
+
+	<!-- <context:annotation-config/> -->
+	<!-- component-scan自动搜索@Component , @Controller , @Service , @Repository等标注的类 -->
+	<context:component-scan base-package="cn.honry.base.*" />
+	<context:component-scan base-package="cn.honry.baseinfo.*" />
+	<context:component-scan base-package="cn.honry.drug.*" />
+	<context:component-scan base-package="cn.honry.system.*" />
+	<context:component-scan base-package="cn.honry.portal.*" />
+	<context:component-scan base-package="cn.honry.patient.*" />
+	<context:component-scan base-package="cn.honry.emrs.*" />
+	<context:component-scan base-package="cn.honry.technical.*" />
+	<context:component-scan base-package="cn.honry.inner.*" />
+	<context:component-scan base-package="cn.honry.sys.*" />
+	<context:component-scan base-package="cn.honry.patinent.*" />
+	<context:component-scan base-package="cn.honry.business.*" />
+	<context:component-scan base-package="cn.honry.register.*" />
+	<context:component-scan base-package="cn.honry.outpatient.*" />
+	<context:component-scan base-package="cn.honry.inpatient.*" />
+	<context:component-scan base-package="cn.honry.material.*" />
+	<context:component-scan base-package="cn.honry.nursestation.*" />
+	<context:component-scan base-package="cn.honry.publics.*" />
+	<context:component-scan base-package="cn.honry.statistics.*" />
+	<context:component-scan base-package="cn.honry.finance.*" />
+	<context:component-scan base-package="cn.honry.publics.*" />
+	<context:component-scan base-package="cn.honry.operation.*" />
+	<context:component-scan base-package="cn.honry.report.*" />
+	<context:component-scan base-package="cn.honry.except.*" />
+	<context:component-scan base-package="cn.honry.search.*" />
+	<context:component-scan base-package="cn.honry.hiasMongo.*" />
+	<context:component-scan base-package="cn.honry.oa.*" />
+	<context:component-scan base-package="cn.honry.mobile.*" />
+	<context:component-scan base-package="cn.honry.mq.*" />
+	<context:component-scan base-package="cn.honry.migrate.*" />
+	<context:component-scan base-package="cn.honry.assets.*" />
+</beans>

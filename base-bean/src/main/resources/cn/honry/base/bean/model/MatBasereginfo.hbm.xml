@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="MatBaseRegInfo" table="T_MAT_BASEREGINFO">
+        <comment>物资字典对应生产厂家注册认证的附属表</comment>
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="50" />
+             <generator class="uuid" />
+        </id>
+        <property name="itemCode" type="java.lang.String">
+            <column name="ITEM_CODE" length="50" not-null="true">
+                <comment>物品编码</comment>
+            </column>
+        </property>
+        <property name="factoryCode" type="java.lang.String">
+            <column name="FACTORY_CODE" length="50" not-null="true">
+                <comment>生产厂家</comment>
+            </column>
+        </property>
+        <property name="specs" type="java.lang.String">
+            <column name="SPECS" length="100">
+                <comment>规格</comment>
+            </column>
+        </property>
+        <property name="packUnit" type="java.lang.String">
+            <column name="PACK_UNIT" length="50">
+                <comment>大包装单位</comment>
+            </column>
+        </property>
+        <property name="packQty" type="java.lang.Long">
+            <column name="PACK_QTY" precision="14" scale="0">
+                <comment>大包装数量</comment>
+            </column>
+        </property>
+        <property name="packPrice" type="java.lang.Double">
+            <column name="PACK_PRICE" precision="14" scale="4">
+                <comment>大包装价格</comment>
+            </column>
+        </property>
+        <property name="registerCode" type="java.lang.String">
+            <column name="REGISTER_CODE" length="50">
+                <comment>注册号</comment>
+            </column>
+        </property>
+        <property name="specialType" type="java.lang.String">
+            <column name="SPECIAL_TYPE" length="50">
+                <comment>特殊类别</comment>
+            </column>
+        </property>
+        <property name="registerDate" type="java.util.Date">
+            <column name="REGISTER_DATE" length="7">
+                <comment>注册时间</comment>
+            </column>
+        </property>
+        <property name="overDate" type="java.util.Date">
+            <column name="OVER_DATE" length="7">
+                <comment>到期时间</comment>
+            </column>
+        </property>
+        <property name="defaultFlag" type="java.lang.Integer">
+            <column name="DEFAULT_FLAG">
+                <comment>是否为当前字典默认(1-是,0-否)</comment>
+            </column>
+        </property>
+        <property name="validFlag" type="java.lang.Integer">
+            <column name="VALID_FLAG">
+                <comment>有效标记(0－停用,1－有效)</comment>
+            </column>
+        </property>
+        <property name="mader" type="java.lang.String">
+            <column name="MADER" length="50">
+                <comment>生产者</comment>
+            </column>
+        </property>
+        <property name="memo" type="java.lang.String">
+            <column name="MEMO" length="100">
+                <comment>备注</comment>
+            </column>
+        </property>
+        <property name="operCode" type="java.lang.String">
+            <column name="OPER_CODE" length="50">
+                <comment>操作员</comment>
+            </column>
+        </property>
+        <property name="operDate" type="java.util.Date">
+            <column name="OPER_DATE" length="7">
+                <comment>操作日期</comment>
+            </column>
+        </property>
+         <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.honry.base.bean.model">
+    <class name="DrugAdjustPriceInfo" table="T_DRUG_ADJUSTPRICEINFO">
+        <id name="id" type="java.lang.String">
+            <column name="ID" />
+             <generator class="uuid" />
+        </id>
+        <property name="drugDept" type="java.lang.String">
+            <column name="DRUG_DEPT" >
+                <comment>库房编码</comment>
+            </column>
+        </property>
+        <property name="drugCode" type="java.lang.String">
+            <column name="DRUG_CODE" >
+                <comment>药品编码</comment>
+            </column>
+        </property>
+        <property name="drugType" type="java.lang.String">
+            <column name="DRUG_TYPE" >
+                <comment>药品类别</comment>
+            </column>
+        </property>
+        <property name="drugQuality" type="java.lang.String">
+            <column name="DRUG_QUALITY" >
+                <comment>药品性质</comment>
+            </column>
+        </property>
+        <property name="preRetailPrice" type="java.lang.Double">
+            <column name="PRE_RETAIL_PRICE" precision="18" scale="4">
+                <comment>调价前零售价格</comment>
+            </column>
+        </property>
+        <property name="preWholesalePrice" type="java.lang.Double">
+            <column name="PRE_WHOLESALE_PRICE" precision="18" scale="4">
+                <comment>调价前批发价格</comment>
+            </column>
+        </property>
+        <property name="retailPrice" type="java.lang.Double">
+            <column name="RETAIL_PRICE" precision="18" scale="4">
+                <comment>调价后零售价格</comment>
+            </column>
+        </property>
+        <property name="wholesalePrice" type="java.lang.Double">
+            <column name="WHOLESALE_PRICE" precision="18" scale="4">
+                <comment>调价后批发价格</comment>
+            </column>
+        </property>
+        <property name="adjustBillCode" type="java.lang.String">
+            <column name="ADJUST_BILL_CODE" >
+                <comment>调价单据号</comment>
+            </column>
+        </property>
+        <property name="prePurchasePrice" type="java.lang.Double">
+            <column name="PRE_PURCHASE_PRICE" precision="18" scale="4">
+                <comment>调价前购入价</comment>
+            </column>
+        </property>
+        <property name="purchasePrice" type="java.lang.Double">
+            <column name="PURCHASE_PRICE" precision="18" scale="4">
+                <comment>调价后购入价</comment>
+            </column>
+        </property>
+        <property name="storeSum" type="java.lang.Double">
+            <column name="STORE_SUM" precision="18" scale="4">
+                <comment>调价时药库库存量</comment>
+            </column>
+        </property>
+        <property name="profitFlag" type="java.lang.Integer">
+            <column name="PROFIT_FLAG" >
+                <comment>盈亏标记1-盈，0-亏</comment>
+            </column>
+        </property>
+        <property name="inureTime" type="java.util.Date">
+            <column name="INURE_TIME" length="7">
+                <comment>调价执行时间</comment>
+            </column>
+        </property>
+        <property name="ddAdjustMark" type="java.lang.Integer">
+            <column name="DD_ADJUST_MARK" >
+                <comment>药库调价标记</comment>
+            </column>
+        </property>
+        <property name="dsAdjustMark" type="java.lang.Integer">
+            <column name="DS_ADJUST_MARK" >
+                <comment>药房调价标记</comment>
+            </column>
+        </property>
+        <property name="tradeName" type="java.lang.String">
+            <column name="TRADE_NAME" >
+                <comment>药品商品名</comment>
+            </column>
+        </property>
+        <property name="specs" type="java.lang.String">
+            <column name="SPECS" >
+                <comment>规格</comment>
+            </column>
+        </property>
+        <property name="producer" type="java.lang.String">
+            <column name="PRODUCER" >
+                <comment>生产厂家</comment>
+            </column>
+        </property>
+        <property name="packUnit" type="java.lang.String">
+            <column name="PACK_UNIT" >
+                <comment>包装单位</comment>
+            </column>
+        </property>
+        <property name="packQty" type="java.lang.Short">
+            <column name="PACK_QTY" precision="4" scale="0">
+                <comment>包装数</comment>
+            </column>
+        </property>
+        <property name="minUnit" type="java.lang.String">
+            <column name="MIN_UNIT" >
+                <comment>最小单位</comment>
+            </column>
+        </property>
+        <property name="currentState" type="java.lang.Integer">
+            <column name="CURRENT_STATE">
+                <comment>调价单状态：0、未调价；1、已调价；2、无效</comment>
+            </column>
+        </property>
+        <property name="abolishOper" type="java.lang.String">
+            <column name="ABOLISH_OPER" >
+                <comment>作废人编码</comment>
+            </column>
+        </property>
+        <property name="abolishDate" type="java.util.Date">
+            <column name="ABOLISH_DATE" length="7">
+                <comment>作废时间</comment>
+            </column>
+        </property>
+        <property name="fileNo" type="java.lang.String">
+            <column name="FILE_NO" >
+                <comment>招标文件号</comment>
+            </column>
+        </property>
+        <property name="lastCompanycode" type="java.lang.String">
+            <column name="LAST_COMPANYCODE" >
+                <comment>最近一次的供货单位</comment>
+            </column>
+        </property>
+        <property name="lastInsum" type="java.lang.Double">
+            <column name="LAST_INSUM" precision="18" scale="4">
+                <comment>最近一次供货单位的入库数量</comment>
+            </column>
+        </property>
+        <property name="lastPurchase" type="java.lang.Double">
+            <column name="LAST_PURCHASE" precision="18" scale="4">
+                <comment>最近一次供货单位的购入价</comment>
+            </column>
+        </property>
+        <property name="lastWholesale" type="java.lang.Double">
+            <column name="LAST_WHOLESALE" precision="18" scale="4">
+                <comment>最近一次供货单位的批发价</comment>
+            </column>
+        </property>
+        <property name="lastRetail" type="java.lang.Double">
+            <column name="LAST_RETAIL" precision="18" scale="4">
+                <comment>最近一次供货单位的零售价</comment>
+            </column>
+        </property>
+        <property name="lastInbillcode" type="java.lang.String">
+            <column name="LAST_INBILLCODE" >
+                <comment>最近一次的供货入库单号</comment>
+            </column>
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="REMARK" >
+                <comment>备注</comment>
+            </column>
+        </property>
+        
+        <property name="adjustReason" type="java.lang.String">
+            <column name="ADJUST_REASON" >
+                <comment>调价依据</comment>
+            </column>
+        </property>
+        <property name="adjustMode" type="java.lang.Integer">
+            <column name="ADJUST_MODE" >
+                <comment>调价方式</comment>
+            </column>
+        </property>
+        <property name="checkUser" type="java.lang.String">
+            <column name="CHECK_USER" >
+                <comment>审核人</comment>
+            </column>
+        </property>
+        <property name="checkDept" type="java.lang.String">
+            <column name="CHECK_DEPT" >
+                <comment>审核部门</comment>
+            </column>
+        </property>
+        <property name="checkOpinion" type="java.lang.String">
+            <column name="CHECK_OPINION" >
+                <comment>审核意见</comment>
+            </column>
+        </property>
+        <property name="checkTime" type="java.sql.Timestamp">
+            <column name="CHECK_TIME" length="19">
+                <comment>审核时间</comment>
+            </column>
+        </property>
+        <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER" />
+        </property>
+        <property name="createDept" type="java.lang.String">
+            <column name="CREATEDEPT" />
+        </property>        
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="CREATETIME" length="19" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>      
+        <property name="updateTime" type="java.sql.Timestamp">
+            <column name="UPDATETIME" length="19" />
+        </property>
+        <property name="deleteUser" type="java.lang.String">
+            <column name="DELETEUSER" />
+        </property>      
+        <property name="deleteTime" type="java.sql.Timestamp">
+            <column name="DELETETIME" length="19" />
+        </property>        
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" />
+        </property>
+        <property name="hospitalId" type="java.lang.Integer">
+            <column name="HOSPITAL_ID">
+                <comment>所属医院</comment>
+            </column>
+        </property>
+        <property name="areaCode" type="java.lang.String">
+            <column name="AREA_CODE" length="20">
+                <comment>所属院区</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

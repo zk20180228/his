@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.honry.base.bean.model">
+	<class name="MailMessage" table="T_OA_MAIL_MESSAGE">
+		<id name="id" type="java.lang.String">
+			<column name="ID"/>
+			<generator class="uuid"/>
+		</id>
+		<property name="cid" type="java.lang.String">
+			<column name="CID"/>
+		</property>
+		<property name="receiveType" type="java.lang.String">
+			<column name="RECEIVE_TYPE"/>
+		</property>
+		<property name="uidd" type="java.lang.String">
+			<column name="UIDD"/>
+		</property>
+		<property name="subject" type="java.lang.String">
+			<column name="SUBJECT"/>
+		</property>
+		<property name="content" type="java.lang.String">
+			<column name="CONTENT"/>
+		</property>
+		<property name="sendEmail" type="java.lang.String">
+			<column name="SEND_EMAIL"/>
+		</property>
+		<property name="sendName" type="java.lang.String">
+			<column name="SEND_NAME"/>
+		</property>
+		<property name="sendDate" type="java.sql.Timestamp">
+			<column name="SEND_DATE"/>
+		</property>
+		<property name="receiveEmail" type="java.lang.String">
+			<column name="RECEIVE_EMAIL"/>
+		</property>
+		<property name="receiveName" type="java.lang.String">
+			<column name="RECEIVE_NAME"/>
+		</property>
+		<property name="receiveDate" type="java.sql.Timestamp">
+			<column name="RECEIVE_DATE"/>
+		</property>
+		<property name="cc" type="java.lang.String">
+			<column name="CC"/>
+		</property>
+		<property name="bcc" type="java.lang.String">
+			<column name="BCC"/>
+		</property>
+		<property name="replyTo" type="java.lang.String">
+			<column name="REPLY_TO"/>
+		</property>
+		<property name="attachFlg" type="java.lang.Integer">
+			<column name="ATTACH_FLG"/>
+		</property>
+		<property name="starFlg" type="java.lang.Integer">
+			<column name="STAR_FLG"/>
+		</property>
+		<property name="folder" type="java.lang.Integer">
+			<column name="FOLDER"/>
+		</property>
+		<property name="oldFolder" type="java.lang.String">
+			<column name="OLD_FOLDER"/>
+		</property>
+		<property name="unreadFlg" type="java.lang.Integer">
+			<column name="UNREAD_FLG"/>
+		</property>
+		<property name="emailSize" type="java.lang.Integer">
+			<column name="EMAIL_SIZE"/>
+		</property>
+		<property name="priority" type="java.lang.Integer">
+			<column name="PRIORITY"/>
+		</property>
+		<property name="receipt" type="java.lang.Integer">
+			<column name="RECEIPT"/>
+		</property>
+		<property name="answered" type="java.lang.Integer">
+			<column name="ANSWERED"/>
+		</property>
+		<property name="createTime" type="java.sql.Timestamp">
+			<column name="CREATETIME"/>
+		</property>
+		<property name="updateTime" type="java.sql.Timestamp">
+			<column name="UPDATETIME"/>
+		</property>
+	</class>
+</hibernate-mapping>

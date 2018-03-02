@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="iReportDetail_subreport1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="26015570-9d5d-429e-ae08-426035d6e3c3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="drugedOper" class="java.lang.String">
+		<fieldDescription><![CDATA[drugedOper]]></fieldDescription>
+	</field>
+	<field name="drugedTerminal" class="java.lang.String">
+		<fieldDescription><![CDATA[drugedTerminal]]></fieldDescription>
+	</field>
+	<field name="drugedTerminalID" class="java.lang.String">
+		<fieldDescription><![CDATA[drugedTerminalID]]></fieldDescription>
+	</field>
+	<field name="jobNo" class="java.lang.String">
+		<fieldDescription><![CDATA[jobNo]]></fieldDescription>
+	</field>
+	<field name="recipeCount" class="java.lang.Double">
+		<fieldDescription><![CDATA[recipeCount]]></fieldDescription>
+	</field>
+	<field name="recipeCost" class="java.lang.Double">
+		<fieldDescription><![CDATA[recipeCost]]></fieldDescription>
+	</field>
+	<field name="recipeQty" class="java.lang.Double">
+		<fieldDescription><![CDATA[recipeQty]]></fieldDescription>
+	</field>
+	<field name="sumDays" class="java.lang.Double">
+		<fieldDescription><![CDATA[sumDays]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="9e698880-5787-46e4-b9fd-0a67e1dfbd63" x="0" y="0" width="108" height="28"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugedTerminal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0" isBlankWhenNull="true">
+				<reportElement uuid="0bb32977-a615-4745-ab24-a8796b3e4ebd" x="111" y="0" width="108" height="28"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{recipeCount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0" isBlankWhenNull="true">
+				<reportElement uuid="606ac0b4-de4f-49c3-a741-3ca848e8bcb1" x="222" y="0" width="108" height="28"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{recipeQty}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="89d0bc10-b232-401a-b6ef-4dc13d59f0ab" x="333" y="0" width="108" height="28"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{recipeCost}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0" isBlankWhenNull="true">
+				<reportElement uuid="4013d280-e35a-4cee-8a09-5f0bdea302f0" x="444" y="0" width="108" height="28"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sumDays}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="65f3faf2-5e3f-42ef-9407-3a26ec7dd1cd" x="554" y="0" width="1" height="28"/>
+			</line>
+			<line>
+				<reportElement uuid="a57a7686-1a1d-49ae-81c0-9bd2d48d8639" x="0" y="27" width="555" height="1"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

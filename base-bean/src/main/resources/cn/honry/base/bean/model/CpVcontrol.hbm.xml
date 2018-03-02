@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-11-14 18:48:21 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.honry.base.bean.model.CpVcontrol" table="T_CP_VCONTROL">
+        <comment>临床路径版本控制</comment>
+        <id name="Id" type="java.lang.String">
+            <column name="ID" />
+            <generator class="uuid" />
+        </id>
+        <property name="cpId" type="string">
+            <column name="CP_ID">
+                <comment>临床路径ID</comment>
+            </column>
+        </property>
+        <property name="cpName" type="string">
+            <column name="CP_NAME">
+                <comment>临床路径ID</comment>
+            </column>
+        </property>
+        <property name="versionNo" type="string">
+            <column name="VERSION_NO">
+                <comment>临床路径版号</comment>
+            </column>
+        </property>
+        <property name="standCode" type="string">
+            <column name="STAND_CODE" length="16">
+                <comment>标准代码</comment>
+            </column>
+        </property>
+        <property name="standVersionNo" type="string">
+            <column name="STAND_VERSION_NO" length="8">
+                <comment>标准版本号</comment>
+            </column>
+        </property>
+        <property name="versionMemo" type="string">
+            <column name="VERSION_MEMO" length="50">
+                <comment>版本说明</comment>
+            </column>
+        </property>
+        <property name="versionDate" type="date">
+            <column name="VERSION_DATE" length="7" not-null="true">
+                <comment>版本日期</comment>
+            </column>
+        </property>
+        <property name="applyScope" type="string">
+            <column name="APPLY_SCOPE">
+                <comment>适用范围</comment>
+            </column>
+        </property>
+        <property name="approvalUser" type="string">
+            <column name="APPROVAL_USER" length="8">
+                <comment>审批人</comment>
+            </column>
+        </property>
+        <property name="approvalDate" type="date">
+            <column name="APPROVAL_DATE" length="7">
+                <comment>审批日期</comment>
+            </column>
+        </property>
+        <property name="approvalFlag" type="string">
+            <column name="APPROVAL_FLAG" length="1">
+                <comment>审批标志</comment>
+            </column>
+        </property>
+        <property name="standardDate" type="string">
+            <column name="STANDARD_DATE" length="50" not-null="true">
+                <comment>标准住院日</comment>
+            </column>
+        </property>
+        <property name="dateUnit" type="string">
+            <column name="DATE_UNIT" length="4" not-null="true">
+                <comment>日期单位</comment>
+            </column>
+        </property>
+         <property name="createUser" type="java.lang.String">
+            <column name="CREATEUSER">
+                <comment>创建人</comment>
+            </column>
+        </property>
+        <property name="createTime" type="java.util.Date">
+            <column name="CREATETIME">
+                <comment>创建时间</comment>
+            </column>
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER">
+            </column>
+        </property>
+        <property name="updateTime" type="java.util.Date">
+            <column name="UPDATETIME">
+            </column>
+        </property>
+        <property name="hospitalId" type="java.lang.String">
+            <column name="HOSPITAL_ID">
+                <comment>所属医院</comment>
+            </column>
+        </property>
+        <property name="areaCode" type="java.lang.String">
+            <column name="AREA_CODE">
+                <comment>所属院区</comment>
+            </column>
+        </property>
+        <property name="del_flg" type="java.lang.Integer">
+            <column name="DEL_FLG" />
+        </property>
+        <property name="stop_flg" type="java.lang.Integer">
+            <column name="STOP_FLG" />
+        </property>
+    </class>
+</hibernate-mapping>
